@@ -2,8 +2,8 @@ const PhoneCall = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="mx-auto"
-    width="28"
-    height="28"
+    width="30"
+    height="30"
     viewBox="0 0 24 24"
     strokeWidth="1.5"
     stroke="#2c3e50"
