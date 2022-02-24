@@ -6,11 +6,19 @@ export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
     <nav className=" h-16">
-      <div className=" flex justify-between items-center h-full mx-7">
+      <div className=" flex justify-between items-center h-full ">
         {/* Main Nav */}
-        <div className=" cursor-pointer">Froshital</div>
+        <Link href="/">
+          <a>
+            <div className=" cursor-pointer">Froshital</div>
+          </a>
+        </Link>
         <ul className="hidden sm:flex gap-3 relative">
-          <li className=" cursor-pointer">Home</li>
+          <Link href="/">
+            <a>
+              <li className=" cursor-pointer">Home</li>
+            </a>
+          </Link>
           <li className=" cursor-pointer">
             <Link href="/about">
               <a>About Us</a>
@@ -26,27 +34,25 @@ export default function Navbar() {
             {/* Service Dropdown */}
             <ul className="absolute hidden text-gray-700 pt-1 group-hover:block">
               <li className="">
-                <Link href="#">
+                <Link href="/services/hospital-referrals">
                   <a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
-                    One
+                    Hospital Referrals
                   </a>
                 </Link>
               </li>
               <li className="">
-                <a
-                  className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                  href="#"
-                >
-                  Two
-                </a>
+                <Link href="/services/medical-tourism">
+                  <a className="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
+                    Medical Tourism
+                  </a>
+                </Link>
               </li>
               <li className="">
-                <a
-                  className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                  href="#"
-                >
-                  Three is the magic number
-                </a>
+                <Link href="/services/lab-booking">
+                  <a className="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
+                    Lab Booking
+                  </a>
+                </Link>
               </li>
             </ul>
             {/* Service Dropdown Ends */}
