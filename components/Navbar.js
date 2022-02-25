@@ -13,7 +13,7 @@ export default function Navbar() {
             <div className=" cursor-pointer">Froshital</div>
           </a>
         </Link>
-        <ul className="hidden sm:flex gap-3 relative">
+        <ul className="hidden sm:flex gap-4 relative">
           <Link href="/">
             <a>
               <li className=" cursor-pointer">Home</li>

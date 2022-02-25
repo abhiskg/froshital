@@ -23,7 +23,7 @@ export default function About() {
         <div className="flex flex-wrap gap-8">
           {leaders.map((leader) => (
             <div key={leader.id} className="flex items-center gap-2">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden">
+              <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-lg">
                 <Image src={leader.image} alt="profile pic" layout="fill" />
               </div>
               <div>

@@ -3,7 +3,7 @@ import { IconFb, IconInsta, IconTwitter } from "../icons";
 
 export default function Footer() {
   return (
-    <footer className="flex justify-around mt-20 flex-wrap  ">
+    <footer className="flex justify-around mt-20 mb-10 flex-wrap  ">
       <div>
         <div className="font-medium mb-2">Froshital Logo</div>
         <p className="text-sm">
