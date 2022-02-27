@@ -11,6 +11,7 @@ import Head from "next/head";
 //   IconSend,
 // } from "../components/icons";
 import ButtonLoader from "../components/ButtonLoader";
+import { PhoneCall } from "../icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -29,20 +30,10 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className="overflow-x-hidden h-screen relative ">
+      <div className="overflow-x-hidden  relative ">
         <Head>
-          <title>Abhishek Sengupta | Contact</title>
+          <title>Froshital | Contact</title>
         </Head>
-        <nav className="flex items-center justify-between h-[4.5rem] md:mx-12 mx-5 ">
-          <Link href="/">
-            <a>{/* <IconLogo /> */}</a>
-          </Link>
-          <Link href="/">
-            <a className="px-3 py-2 text-sm font-medium  text-red-500 border border-red-500 rounded hover:bg-red-500/5 transition-colors duration-200 ">
-              Close X
-            </a>
-          </Link>
-        </nav>
         <section className="lg:w-9/12 w-[89%] mx-auto max-w-screen-xl mt-5 md:mt-16 lg:mt-28 ">
           <div className=" flex flex-col md:flex-row p-2 gap-4 ">
             <div className="md:w-2/5 ">
@@ -57,32 +48,21 @@ const Contact = () => {
                   <h3 className=" font-medium">Email</h3>
                   <a
                     className="font-body text-sm"
-                    href="mailto:abhiskg20@gmail.com"
+                    href="mailto:froshital@gmail.com"
                   >
-                    abhiskg20@gmail.com
+                    forshital@gmail.com
                   </a>
                 </div>
               </div>
               <div className="flex gap-3 items-start my-3">
                 <div className="border p-2 rounded-full bg-primary-300 text-white">
-                  {/* <IconPhone /> */}
+                  {/* {dfbdf} */}
                 </div>
                 <div>
                   <h3 className=" font-medium">Phone</h3>
-                  <a className="font-body text-sm" href="tel:+88-01885077250">
-                    +88-01885077250
+                  <a className="font-body text-sm" href="tel:+91 84334 37690">
+                    +91 84334 37690
                   </a>
-                </div>
-              </div>
-              <div className="flex gap-3 items-start">
-                <div className="border p-2 rounded-full bg-primary-300 text-white">
-                  {/* <IconMap /> */}
-                </div>
-                <div>
-                  <h3 className=" font-medium">Address</h3>
-                  <span className="font-body text-sm">
-                    Chittagong, Bangladesh
-                  </span>
                 </div>
               </div>
             </div>
@@ -96,7 +76,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit}>
                 <div className="flex flex-col lg:flex-row gap-3 mb-3">
                   <label className="w-full">
-                    <span className="block   after:content-['*'] after:ml-0.5 after:text-red-500">
+                    <span className="block after:content-['*'] after:ml-0.5 after:text-red-500">
                       Name
                     </span>
                     <input
@@ -131,9 +111,11 @@ const Contact = () => {
                   </label>
                 </div>
                 <label>
-                  <span className="block  ">Subject</span>
+                  <span className="block  after:content-['*'] after:ml-0.5 after:text-red-500 ">
+                    Service
+                  </span>
                   <input
-                    className=" mb-3 border border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-primary-200 focus:ring-1 focus:ring-primary-300"
+                    className=" mb-3 border  border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-primary-200 focus:ring-1 focus:ring-primary-300"
                     required
                     placeholder="Enter your subject"
                     type="text"
@@ -143,9 +125,7 @@ const Contact = () => {
                   />
                 </label>
                 <label>
-                  <span className="block   after:content-['*'] after:ml-0.5 after:text-red-500">
-                    Message
-                  </span>
+                  <span className="block  ">Additional Message</span>
                   <textarea
                     className={`border ${
                       error &&

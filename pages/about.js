@@ -5,7 +5,7 @@ import leaders from "../utils/leaders";
 export default function About() {
   return (
     <Layout>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-36 ">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-36 max-w-7xl md:w-9/12 w-[89%] mx-auto ">
         <div>
           <h2 className="text-4xl mb-4">Meet Our Leadership</h2>
           <h3>

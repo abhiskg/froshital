@@ -5,15 +5,15 @@ import { ArrowDown } from "../icons";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   return (
-    <nav className=" h-16">
-      <div className=" flex justify-between items-center h-full ">
+    <nav className="h-16 bg-[#1F2937] text-white">
+      <div className=" flex justify-between items-center h-full max-w-7xl md:w-9/12 w-[89%] mx-auto ">
         {/* Main Nav */}
         <Link href="/">
           <a>
             <div className=" cursor-pointer">Froshital</div>
           </a>
         </Link>
-        <ul className="hidden sm:flex gap-4 relative">
+        <ul className="hidden sm:flex items-center gap-4 relative">
           <Link href="/">
             <a>
               <li className=" cursor-pointer">Home</li>
@@ -25,12 +25,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li className=" group">
-            <Link href="/services">
-              <a className="flex items-center  cursor-pointer">
-                Services
-                <ArrowDown />
-              </a>
-            </Link>
+            <div className="flex items-center cursor-pointer">
+              Services
+              <ArrowDown />
+            </div>
+
             {/* Service Dropdown */}
             <ul className="absolute hidden text-gray-700 pt-1 group-hover:block">
               <li className="">
@@ -57,9 +56,9 @@ export default function Navbar() {
             </ul>
             {/* Service Dropdown Ends */}
           </li>
-          <li className=" cursor-pointer">
+          <li className=" cursor-pointer bg-green-400 rounded px-3 py-2">
             <Link href="/contact">
-              <a>Book an appoinment</a>
+              <a>Book an Service</a>
             </Link>
           </li>
         </ul>
