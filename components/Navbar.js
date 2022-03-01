@@ -16,22 +16,22 @@ export default function Navbar() {
         <ul className="hidden sm:flex items-center gap-4 relative">
           <Link href="/">
             <a>
-              <li className=" cursor-pointer">Home</li>
+              <li className=" cursor-pointer text-gray-400">Home</li>
             </a>
           </Link>
-          <li className=" cursor-pointer">
+          <li className=" cursor-pointer text-gray-400">
             <Link href="/about">
               <a>About Us</a>
             </Link>
           </li>
           <li className=" group">
-            <div className="flex items-center cursor-pointer">
+            <div className="flex items-center cursor-pointer text-gray-400">
               Services
               <ArrowDown />
             </div>
 
             {/* Service Dropdown */}
-            <ul className="absolute hidden text-gray-700 pt-1 group-hover:block">
+            <ul className="absolute hidden text-gray-400 pt-1 group-hover:block">
               <li className="">
                 <Link href="/services/hospital-referrals">
                   <a className="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap">
@@ -56,10 +56,12 @@ export default function Navbar() {
             </ul>
             {/* Service Dropdown Ends */}
           </li>
-          <li className=" cursor-pointer bg-green-400 rounded px-3 py-2">
+          <li className=" relative cursor-pointer group text-gray-400 hover:text-white  rounded px-3 py-2">
             <Link href="/contact">
               <a>Book an Service</a>
             </Link>
+            <span className="absolute h-1 top-0 left-0 bg-gradient-to-br from-green-500 to-blue-500 w-full -translate-y-3 group-hover:translate-y-0 transition duration-200 ease-linear opacity-0 group-hover:opacity-100  "></span>
+            <span className="absolute h-1 bottom-0 left-0 bg-gradient-to-br from-green-500 to-blue-500 w-full translate-y-3 group-hover:translate-y-0 transition duration-200 ease-linear opacity-0 group-hover:opacity-100 "></span>
           </li>
         </ul>
         {/* Hamburger Menu */}
