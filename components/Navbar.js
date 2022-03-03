@@ -34,7 +34,7 @@ export default function Navbar() {
             </div>
 
             {/* Service Dropdown */}
-            <ul className="absolute hidden text-gray-400 pt-1 group-hover:block bg-[#141d2b] rounded">
+            <ul className="absolute hidden text-gray-400 pt-1 group-hover:block z-10 bg-[#141d2b] rounded">
               <li className="">
                 <Link href="/services/hospital-referrals">
                   <a className="rounded-t hover:text-white py-2 px-4 block whitespace-no-wrap">
@@ -113,7 +113,13 @@ export default function Navbar() {
             className="flex items-center cursor-pointer justify-between text-gray-400 hover:text-white"
           >
             Services
-            <ArrowDown />
+            <span
+              className={`${
+                serviceState && "rotate-180 transition-transform duration-200"
+              }`}
+            >
+              <ArrowDown />
+            </span>
           </li>
 
           {/* Service Dropdown */}

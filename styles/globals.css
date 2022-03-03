@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Scrollbar Styles */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #f3f4f6 #1f2937;
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #1f2937;
+  border: 3px solid #f3f4f6;
+  border-radius: 10px;
+}

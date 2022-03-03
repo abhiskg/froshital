@@ -11,7 +11,7 @@ import Head from "next/head";
 //   IconSend,
 // } from "../components/icons";
 import ButtonLoader from "../components/ButtonLoader";
-import { PhoneCall } from "../icons";
+import { IconMail, IconPhone, IconSend, PhoneCall } from "../icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -34,15 +34,15 @@ const Contact = () => {
         <Head>
           <title>Froshital | Contact</title>
         </Head>
-        <section className="lg:w-9/12 w-[89%] mx-auto max-w-screen-xl mt-5 md:mt-16 lg:mt-28 ">
+        <section className="lg:w-9/12 w-[89%] mx-auto max-w-screen-xl mt-5 mb-5 md:mt-16 lg:mt-28 ">
           <div className=" flex flex-col md:flex-row p-2 gap-4 ">
             <div className="md:w-2/3 ">
               <h1 className="mb-6 mt-2  text-lg text-primary-200 font-medium">
                 Contact Information
               </h1>
               <div className="flex gap-3 items-start">
-                <div className="p-2 rounded-full bg-primary-300 text-white">
-                  {/* <IconMail /> */}
+                <div className="p-2 rounded-full bg-gray-800 text-white">
+                  <IconMail />
                 </div>
                 <div>
                   <h3 className=" font-medium">Email</h3>
@@ -55,8 +55,8 @@ const Contact = () => {
                 </div>
               </div>
               <div className="flex gap-3 items-start my-3">
-                <div className="border p-2 rounded-full bg-primary-300 text-white">
-                  {/* {dfbdf} */}
+                <div className="border p-2 rounded-full bg-gray-800 text-white">
+                  <IconPhone />
                 </div>
                 <div>
                   <h3 className=" font-medium">Phone</h3>
@@ -84,7 +84,7 @@ const Contact = () => {
                       className={`border ${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm  placeholder-slate-400 focus:outline-none focus:border-primary-200 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm  placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
                       placeholder="Enter your name"
                       type="text"
                       required
@@ -104,7 +104,7 @@ const Contact = () => {
                       className={`border ${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-primary-200 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
                       placeholder="Enter your email"
                       type="email"
                       required
@@ -124,7 +124,7 @@ const Contact = () => {
                       className={`border ${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm  placeholder-slate-400 focus:outline-none focus:border-primary-200 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm  placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
                       placeholder="Enter your name"
                       type="number"
                       required
@@ -144,7 +144,7 @@ const Contact = () => {
                       className={`${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } mb-3 border border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-primary-200 focus:ring-1 focus:ring-primary-300`}
+                      } mb-3 border border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300`}
                       required
                       placeholder="Enter your subject"
                       type="text"
@@ -165,7 +165,7 @@ const Contact = () => {
                   <label>
                     <span className="block  ">Additional Message</span>
                     <textarea
-                      className={`border border-slate-300 mb-4  px-3 pt-2 pb-16 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-primary-200 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      className={`border border-slate-300 mb-4  px-3 pt-2 pb-16 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
                       placeholder="Enter your message"
                       name="message"
                       value={message}
@@ -177,15 +177,17 @@ const Contact = () => {
                 <button
                   onClick={() => setError(true)}
                   type="submit"
-                  className="font-medium  mb-4  text-sm py-2 w-20 rounded border border-primary-200  text-primary-200 hover:bg-primary-200/10 transition-colors duration-200"
+                  className="font-medium text-sm py-2 w-20 rounded border border-gray-800  text-primary-200 hover:bg-gray-800 hover:text-white transition-colors duration-200"
                 >
                   {loading ? (
                     <ButtonLoader />
                   ) : (
-                    <span>
-                      {/* <IconSend /> */}
-                      Send
-                    </span>
+                    <div className="flex justify-center items-center gap-1">
+                      <span>
+                        <IconSend />
+                      </span>
+                      <span>Send</span>
+                    </div>
                   )}
                 </button>
               </form>
@@ -197,7 +199,7 @@ const Contact = () => {
             emailSend ? "opacity-100" : "opacity-0"
           } absolute top-16 left-0 right-0 flex justify-center transition-opacity duration-1000 ease-linear`}
         >
-          <p className="bg-primary-300 font-body p-3 text-sm rounded text-white">
+          <p className="bg-gray-800 font-body p-3 text-sm rounded text-white">
             Thankyou! Your message has been delivered.
           </p>
         </div>

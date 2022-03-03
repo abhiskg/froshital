@@ -49,7 +49,7 @@ export default function Home() {
             <MainSvg />
           </div>
         </div>
-        <div className="rotate-180">
+        <div className="rotate-180 -mt-1">
           <Layer />
         </div>
         <Service />
