@@ -5,7 +5,7 @@ export default function LabBooking() {
   return (
     <Layout>
       <section>
-        <div className="relative w-full sm:h-96 h-52">
+        <div className="relative h-52 w-full sm:h-96">
           <Image
             src="/medical_lab.jpg"
             alt="hospital-referrals banner"
@@ -13,7 +13,7 @@ export default function LabBooking() {
             objectFit="cover"
           />
         </div>
-        <h1 className="text-4xl text-center font-bold bg-gradient-to-tr from-emerald-500 to-blue-500 text-transparent bg-clip-text my-14">
+        <h1 className="my-14 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
           Comming Soon
         </h1>
       </section>

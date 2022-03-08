@@ -5,12 +5,12 @@ import leaders from "../utils/leaders";
 export default function About() {
   return (
     <Layout>
-      <h1 className="text-center text-4xl font-bold bg-gradient-to-tr from-emerald-500 to-blue-500 text-transparent bg-clip-text mt-14">
+      <h1 className="mt-14 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
         Company Profile
       </h1>
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-36 max-w-7xl md:w-9/12 w-[89%] mx-auto ">
+      <div className="mx-auto mt-36 grid w-[89%] max-w-7xl grid-cols-1 gap-10 md:w-9/12 md:grid-cols-2 ">
         <div>
-          <h2 className="text-4xl mb-4">Meet Our Leadership</h2>
+          <h2 className="mb-4 text-4xl">Meet Our Leadership</h2>
           <h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
             corrupti impedit veniam tempore nesciunt doloremque vero blanditiis
@@ -26,7 +26,7 @@ export default function About() {
         <div className="flex flex-wrap gap-8">
           {leaders.map((leader) => (
             <div key={leader.id} className="flex items-center gap-2">
-              <div className="relative w-16 h-16 rounded-full overflow-hidden shadow-lg">
+              <div className="relative h-16 w-16 overflow-hidden rounded-full shadow-lg">
                 <Image src={leader.image} alt="profile pic" layout="fill" />
               </div>
               <div>

@@ -4,8 +4,8 @@ import { cardData, whyUsData1, whyUsData2 } from "../utils/whyUsData";
 
 export default function WhyUs() {
   return (
-    <section className="lg:-mt-20 pb-20 flex flex-col items-center text-[#F3F4F6] bg-[#1F2937]">
-      <h2 className=" text-3xl sm:text-4xl font-bold bg-gradient-to-br from-emerald-500 to-blue-500 text-transparent bg-clip-text ">
+    <section className="flex flex-col items-center bg-[#1F2937] pb-20 text-[#F3F4F6] lg:-mt-20">
+      <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl ">
         Why Choose Us
       </h2>
 
@@ -47,32 +47,32 @@ export default function WhyUs() {
       </div> */}
       <dl className="mt-10 text-center sm:mx-auto sm:flex sm:justify-center sm:gap-8 ">
         <div className="flex flex-col">
-          <dd className="text-5xl font-bold bg-gradient-to-br from-emerald-500 to-blue-500 text-transparent bg-clip-text ">
+          <dd className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-5xl font-bold text-transparent ">
             100+
           </dd>
-          <dt className="text-lg font-medium text-white leading-6">
+          <dt className="text-lg font-medium leading-6 text-white">
             Client Satisfaction
           </dt>
         </div>
-        <div className="flex flex-col my-5 sm:my-0">
-          <dd className="text-5xl font-bold bg-gradient-to-br from-emerald-500 to-blue-500 text-transparent bg-clip-text ">
+        <div className="my-5 flex flex-col sm:my-0">
+          <dd className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-5xl font-bold text-transparent ">
             1K+
           </dd>
-          <dt className="text-lg font-medium text-white leading-6">
+          <dt className="text-lg font-medium leading-6 text-white">
             Lab Booking
           </dt>
         </div>
         <div className="flex flex-col">
-          <dd className="text-5xl font-bold bg-gradient-to-br from-emerald-500 to-blue-500 text-transparent bg-clip-text ">
+          <dd className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-5xl font-bold text-transparent ">
             100+
           </dd>
-          <dt className="text-lg font-medium text-white leading-6">
+          <dt className="text-lg font-medium leading-6 text-white">
             Hospital Referrals
           </dt>
         </div>
       </dl>
       <Link href="/contact">
-        <a className="py-3 px-5 mt-10 rounded bg-gradient-to-br from-green-500 to-blue-500 text-xl text-gray-100 font-semibold tracking-wider transition-all duration-150 ease-out transform hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white">
+        <a className="mt-10 transform rounded bg-gradient-to-br from-green-500 to-blue-500 py-3 px-5 text-xl font-semibold tracking-wider text-gray-100 transition-all duration-150 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white">
           CONTACT US
         </a>
       </Link>

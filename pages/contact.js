@@ -34,14 +34,14 @@ const Contact = () => {
         <Head>
           <title>Froshital | Contact</title>
         </Head>
-        <section className="lg:w-9/12 w-[89%] mx-auto max-w-screen-xl mt-5 mb-5 md:mt-16 lg:mt-28 ">
-          <div className=" flex flex-col md:flex-row p-2 gap-4 ">
+        <section className="mx-auto mt-5 mb-5 w-[89%] max-w-screen-xl md:mt-16 lg:mt-28 lg:w-9/12 ">
+          <div className=" flex flex-col gap-4 p-2 md:flex-row ">
             <div className="md:w-2/3 ">
-              <h1 className="mb-6 mt-2  text-lg text-primary-200 font-medium">
+              <h1 className="text-primary-200 mb-6  mt-2 text-lg font-medium">
                 Contact Information
               </h1>
-              <div className="flex gap-3 items-start">
-                <div className="p-2 rounded-full bg-gray-800 text-white">
+              <div className="flex items-start gap-3">
+                <div className="rounded-full bg-gray-800 p-2 text-white">
                   <IconMail />
                 </div>
                 <div>
@@ -54,8 +54,8 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex gap-3 items-start my-3">
-                <div className="border p-2 rounded-full bg-gray-800 text-white">
+              <div className="my-3 flex items-start gap-3">
+                <div className="rounded-full border bg-gray-800 p-2 text-white">
                   <IconPhone />
                 </div>
                 <div>
@@ -67,8 +67,8 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex justify-between items-center">
-                <h2 className="mb-6 mt-2  text-lg text-primary-200 font-medium">
+              <div className="flex items-center justify-between">
+                <h2 className="text-primary-200 mb-6  mt-2 text-lg font-medium">
                   Send me a message
                 </h2>
                 {/* <IconEmail /> */}
@@ -77,14 +77,14 @@ const Contact = () => {
               <form className="space-y-2" onSubmit={handleSubmit}>
                 <div>
                   <label className="w-full">
-                    <span className="block after:content-['*'] after:ml-0.5 after:text-red-500">
+                    <span className="block after:ml-0.5 after:text-red-500 after:content-['*']">
                       Name
                     </span>
                     <input
                       className={`border ${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm  placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      } focus:ring-primary-300 w-full rounded border-slate-300 px-3 py-2 text-sm  placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
                       placeholder="Enter your name"
                       type="text"
                       required
@@ -97,14 +97,14 @@ const Contact = () => {
 
                 <div>
                   <label className="w-full">
-                    <span className="block   after:content-['*'] after:ml-0.5 after:text-red-500">
+                    <span className="block   after:ml-0.5 after:text-red-500 after:content-['*']">
                       Email
                     </span>
                     <input
                       className={`border ${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      } focus:ring-primary-300 w-full rounded border-slate-300 px-3 py-2 text-sm placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
                       placeholder="Enter your email"
                       type="email"
                       required
@@ -117,14 +117,14 @@ const Contact = () => {
 
                 <div>
                   <label className="w-full">
-                    <span className="block after:content-['*'] after:ml-0.5 after:text-red-500">
+                    <span className="block after:ml-0.5 after:text-red-500 after:content-['*']">
                       Telephone No
                     </span>
                     <input
                       className={`border ${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm  placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      } focus:ring-primary-300 w-full rounded border-slate-300 px-3 py-2 text-sm  placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
                       placeholder="Enter your name"
                       type="number"
                       required
@@ -137,14 +137,14 @@ const Contact = () => {
 
                 <div>
                   <label>
-                    <span className="block  after:content-['*'] after:ml-0.5 after:text-red-500 ">
+                    <span className="block  after:ml-0.5 after:text-red-500 after:content-['*'] ">
                       Service
                     </span>
                     <select
                       className={`${
                         error &&
                         "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } mb-3 border border-slate-300 px-3 py-2 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300`}
+                      } focus:ring-primary-300 mb-3 w-full rounded border border-slate-300 px-3 py-2 text-sm placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1`}
                       required
                       placeholder="Enter your subject"
                       type="text"
@@ -165,7 +165,7 @@ const Contact = () => {
                   <label>
                     <span className="block  ">Additional Message</span>
                     <textarea
-                      className={`border border-slate-300 mb-4  px-3 pt-2 pb-16 rounded w-full text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-gray-800 focus:ring-1 focus:ring-primary-300  disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none `}
+                      className={`focus:ring-primary-300 mb-4 w-full  rounded border border-slate-300 px-3 pt-2 pb-16 text-sm placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
                       placeholder="Enter your message"
                       name="message"
                       value={message}
@@ -177,12 +177,12 @@ const Contact = () => {
                 <button
                   onClick={() => setError(true)}
                   type="submit"
-                  className="font-medium text-sm py-2 w-20 rounded border border-gray-800  text-primary-200 hover:bg-gray-800 hover:text-white transition-colors duration-200"
+                  className="text-primary-200 w-20 rounded border border-gray-800 py-2 text-sm  font-medium transition-colors duration-200 hover:bg-gray-800 hover:text-white"
                 >
                   {loading ? (
                     <ButtonLoader />
                   ) : (
-                    <div className="flex justify-center items-center gap-1">
+                    <div className="flex items-center justify-center gap-1">
                       <span>
                         <IconSend />
                       </span>
@@ -199,7 +199,7 @@ const Contact = () => {
             emailSend ? "opacity-100" : "opacity-0"
           } absolute top-16 left-0 right-0 flex justify-center transition-opacity duration-1000 ease-linear`}
         >
-          <p className="bg-gray-800 font-body p-3 text-sm rounded text-white">
+          <p className="rounded bg-gray-800 p-3 font-body text-sm text-white">
             Thankyou! Your message has been delivered.
           </p>
         </div>

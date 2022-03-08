@@ -3,22 +3,22 @@ import { IconFb, IconInsta, IconTwitter } from "../icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-gray-100 hover:text-white ">
-      <div className="flex justify-between gap-14 py-10 flex-wrap max-w-7xl md:w-9/12 w-[89%] mx-auto">
+    <footer className="bg-gray-800 text-gray-100 hover:text-white">
+      <div className="mx-auto flex w-[89%] max-w-7xl flex-wrap justify-between gap-14 py-10 md:w-9/12">
         <div>
-          <div className="font-medium mb-2">Froshital Logo</div>
+          <div className="mb-2 font-medium">Froshital Logo</div>
           <p className="text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing
           </p>
-          <h3 className="font-medium my-2">Follow Us On</h3>
+          <h3 className="my-2 font-medium">Follow Us On</h3>
           <div className="flex gap-3">
-            <span className="p-2 bg-green-400 rounded-lg">
+            <span className="rounded-lg bg-green-400 p-2">
               <IconFb />
             </span>
-            <span className="p-2 bg-green-400 rounded-lg">
+            <span className="rounded-lg bg-green-400 p-2">
               <IconInsta />
             </span>
-            <span className="p-2 bg-green-400 rounded-lg">
+            <span className="rounded-lg bg-green-400 p-2">
               <IconTwitter />
             </span>
           </div>
@@ -26,7 +26,7 @@ export default function Footer() {
         <div>
           <Link href="/about">
             <a>
-              <h2 className="font-medium mb-2">About Us</h2>
+              <h2 className="mb-2 font-medium">About Us</h2>
             </a>
           </Link>
           <Link href="/about">
@@ -56,7 +56,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h2 className="font-medium mb-2">Quick Contact</h2>
+          <h2 className="mb-2 font-medium">Quick Contact</h2>
           <p className="text-sm">01293423483</p>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function MedicalTourism() {
   return (
     <Layout>
       <section>
-        <div className="relative w-full h-96">
+        <div className="relative h-96 w-full">
           <Image
             src="/medical_tour.png"
             alt="hospital-referrals banner"
@@ -13,7 +13,7 @@ export default function MedicalTourism() {
             objectFit="cover"
           />
         </div>
-        <h1 className="text-center text-4xl font-bold bg-gradient-to-tr from-emerald-500 to-blue-500 text-transparent bg-clip-text mt-14">
+        <h1 className="mt-14 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
           Medical Tourism
         </h1>
       </section>

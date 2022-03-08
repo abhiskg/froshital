@@ -14,3 +14,5 @@ export { default as MainSvg } from "./MainSvg";
 export { default as IconSend } from "./IconSend";
 export { default as IconMail } from "./IconMail";
 export { default as IconPhone } from "./IconPhone";
+export { default as IconLab } from "./IconLab";
+export { default as IconHospital } from "./IconHospital";
