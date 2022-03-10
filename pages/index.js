@@ -6,6 +6,8 @@ import {
   FooterLayer,
   IconHospital,
   IconLab,
+  IconMedical,
+  IconPhone,
   Layer,
   Mail,
   MainSvg,
@@ -18,22 +20,22 @@ export default function Home() {
     <Layout>
       <main className="">
         <div className="bg-gray-800 ">
-          <div className="mx-auto flex w-[89%] max-w-7xl flex-wrap items-center justify-between md:w-9/12 lg:flex-nowrap ">
-            <div className="mt-36 ">
-              {/* <h2 className=" mt-5 bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-center text-xl font-bold text-transparent sm:text-xl lg:text-left">
-                We Offer,
-              </h2> */}
-              <h3 className="bg-gradient-to-tr  from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
-                Medical Tourism
-              </h3>
+          <div className="mx-auto flex w-11/12 flex-wrap items-center justify-between py-28 md:w-10/12 lg:flex-nowrap 2xl:w-auto  2xl:max-w-7xl ">
+            <div className="">
+              <div className="flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
+                <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
+                  <IconMedical />
+                </span>
+                <h2>Medical Tourism</h2>
+              </div>
               <div className="mt-5 flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
-                <span>
+                <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                   <IconHospital />
                 </span>
                 <h2>Hospital Referrals</h2>
               </div>
               <div className="mt-5 flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
-                <span>
+                <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                   <IconLab />
                 </span>
                 <h2>Lab Booking</h2>
@@ -41,7 +43,20 @@ export default function Home() {
               <h1 className=" mt-5 bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-center text-2xl font-bold text-transparent sm:text-3xl lg:text-left">
                 We Are The One Stop Solution For All Medical Services In India
               </h1>
-              <div className="mt-10 mb-32 flex items-center justify-center gap-3 lg:justify-start">
+              <div className="mt-10 flex items-center justify-center gap-3 lg:justify-start">
+                <div>
+                  <Link href="/contact">
+                    <a className="flex transform items-center gap-2 rounded bg-gradient-to-br from-green-500 to-blue-500 py-2.5 px-5 text-lg font-semibold tracking-wider text-gray-100 transition-all duration-150 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white">
+                      <span className="rotate-12">
+                        <IconPhone />
+                      </span>
+                      <span>CALL US</span>
+                    </a>
+                  </Link>
+                </div>
+                <div className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-2xl font-bold text-transparent">
+                  OR
+                </div>
                 <div>
                   <Link href="/contact">
                     <a className="transform rounded  bg-gradient-to-br from-green-500 to-blue-500 py-3 px-5 text-lg font-semibold tracking-wider text-gray-100 transition-all duration-150 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white">
@@ -49,17 +64,12 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div>
-                  <Link href="/contact">
-                    <a className="transform rounded bg-gradient-to-br from-green-500 to-blue-500 py-3 px-5 text-lg font-semibold tracking-wider text-gray-100 transition-all duration-150 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white">
-                      CALL US
-                    </a>
-                  </Link>
-                </div>
               </div>
             </div>
 
-            <MainSvg />
+            <div className="">
+              <MainSvg />
+            </div>
           </div>
         </div>
         <div className="-mt-1 rotate-180">

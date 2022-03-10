@@ -16,3 +16,5 @@ export { default as IconMail } from "./IconMail";
 export { default as IconPhone } from "./IconPhone";
 export { default as IconLab } from "./IconLab";
 export { default as IconHospital } from "./IconHospital";
+export { default as IconMedical } from "./IconMedical";
+export { default as IconMission } from "./IconMission";

@@ -1,41 +1,85 @@
 import Image from "next/image";
 import Layout from "../components/Layout";
-import leaders from "../utils/leaders";
+import { IconFb, IconInsta, IconMission } from "../icons";
+import { leaders, values } from "../utils/about";
 
 export default function About() {
   return (
     <Layout>
-      <h1 className="mt-14 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
-        Company Profile
-      </h1>
-      <div className="mx-auto mt-36 grid w-[89%] max-w-7xl grid-cols-1 gap-10 md:w-9/12 md:grid-cols-2 ">
-        <div>
-          <h2 className="mb-4 text-4xl">Meet Our Leadership</h2>
-          <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-            corrupti impedit veniam tempore nesciunt doloremque vero blanditiis
-            ipsum, eligendi quia nisi ratione, quidem itaque consectetur, ea
-            ducimus nemo quas saepe. Quasi laudantium id porro ea perspiciatis
-            quas, aliquam quaerat recusandae earum, doloribus quo? Molestiae
-            deserunt amet nulla officia earum assumenda? Quaerat quia doloribus
-            iure corrupti provident suscipit rerum, ratione eveniet. Vero porro
-            neque voluptatibus nesciunt exercitationem laudantium dolorum. Id,
-            consectetur expedita tempore provident maiores, dolorem doloribus
-          </h3>
-        </div>
-        <div className="flex flex-wrap gap-8">
-          {leaders.map((leader) => (
-            <div key={leader.id} className="flex items-center gap-2">
-              <div className="relative h-16 w-16 overflow-hidden rounded-full shadow-lg">
-                <Image src={leader.image} alt="profile pic" layout="fill" />
+      <div className="mx-auto my-10 w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+        <section className=" flex items-center justify-between">
+          <div>
+            <h2 className="mb-4 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
+              Our Mission
+            </h2>
+            <p className="w-2/3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eos
+              eligendi dolorum suscipit voluptas ipsa iusto incidunt provident
+              doloribus optio perspiciatis accusantium quam tempore error
+              excepturi eum! Ullam, consequatur ducimus! Nihil similique dolore
+              eum fuga eius quam
+            </p>
+          </div>
+          <IconMission />
+        </section>
+
+        <section>
+          <h2 className="mb-4 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+            Meet Our Team
+          </h2>
+          <div className="flex flex-wrap justify-center gap-8">
+            {leaders.map((leader) => (
+              <div
+                key={leader.id}
+                className="group flex flex-col items-center justify-center rounded bg-slate-800 p-10 shadow-lg"
+              >
+                <div className="relative h-52 w-52 overflow-hidden rounded-full shadow-lg ">
+                  <Image
+                    src={leader.image}
+                    alt="profile pic"
+                    layout="fill"
+                    className="transition-transform duration-500 ease-in group-hover:scale-105"
+                  />
+                </div>
+                <div className="mt-4 text-center text-lg font-semibold text-gray-100">
+                  {leader.name}
+                </div>
+                <div className="text-center text-gray-100">
+                  {leader.position}
+                </div>
+                <div className="mt-2 flex items-center gap-3">
+                  <span className="rounded-full bg-gradient-to-tr from-green-500 to-blue-500 p-1.5 text-gray-100">
+                    <IconFb />
+                  </span>
+                  <span className="rounded-full bg-gradient-to-tr from-green-500 to-blue-500 p-1.5 text-gray-100">
+                    <IconInsta />
+                  </span>
+                </div>
               </div>
-              <div>
-                <span>{leader.name}</span>
-                <span className="block">{leader.position}</span>
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="my-7 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+            Our Values
+          </h2>
+          <div className="flex  flex-wrap items-center justify-center gap-5 ">
+            {values.map((value) => (
+              <div
+                key={value.id}
+                className="flex h-56 w-56 flex-col items-center justify-center rounded bg-slate-800 p-2 shadow"
+              >
+                <h3 className="text-center font-medium text-gray-100">
+                  {value.title}
+                </h3>
+                <p className="mt-2 text-center text-sm text-gray-100">
+                  {value.description}
+                </p>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </section>
       </div>
     </Layout>
   );

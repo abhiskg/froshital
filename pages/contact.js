@@ -30,10 +30,80 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className=" relative ">
+      <div className="relative ">
         <Head>
           <title>Froshital | Contact</title>
         </Head>
+
+        {/* :DOTS BACKGROUND */}
+        <div>
+          {/* ::Dots 1 */}
+          <span className="absolute -top-24 left-0 hidden opacity-10 md:block">
+            <svg
+              width={250}
+              height={600}
+              fill="none"
+              viewBox="0 0 250 600"
+              aria-hidden="true"
+            >
+              <pattern
+                id="pattern-rectangles"
+                x={0}
+                y={0}
+                width={40}
+                height={40}
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x={0}
+                  y={0}
+                  width={10}
+                  height={10}
+                  className="text-green-500"
+                  fill="currentColor"
+                />
+              </pattern>
+              <rect width={250} height={600} fill="url(#pattern-rectangles)" />
+            </svg>
+          </span>
+          {/* ::Dots 2 */}
+          <span className="absolute bottom-0 right-0 opacity-20">
+            <svg
+              width={300}
+              height={300}
+              fill="none"
+              viewBox="0 0 300 300"
+              aria-hidden="true"
+            >
+              <pattern
+                id="pattern-circles"
+                x="0"
+                y="0"
+                width="30"
+                height="30"
+                patternUnits="userSpaceOnUse"
+                patternContentUnits="userSpaceOnUse"
+              >
+                <circle
+                  id="pattern-circle"
+                  cx="10"
+                  cy="10"
+                  r="5"
+                  className="fill-current text-green-500"
+                />
+              </pattern>
+              <rect
+                id="rect"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                fill="url(#pattern-circles)"
+              />
+            </svg>
+          </span>
+        </div>
+
         <section className="mx-auto mt-5 mb-5 w-[89%] max-w-screen-xl md:mt-16 lg:mt-28 lg:w-9/12 ">
           <div className=" flex flex-col gap-4 p-2 md:flex-row ">
             <div className="md:w-2/3 ">
@@ -64,6 +134,20 @@ const Contact = () => {
                     +91 84334 37690
                   </a>
                 </div>
+              </div>
+
+              <div className="relative mt-10 mr-3 rounded border-2 border-gray-200">
+                {/* Embed Google map */}
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8827.330741966553!2d2.308756110118289!3d48.87000842543867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47407434935db!2s18%20Av.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1635492407441!5m2!1sfr!2sfr"
+                  title="map"
+                  scrolling="no"
+                  frameBorder="0"
+                  width="100%"
+                  height="300"
+                  className=""
+                  loading="lazy"
+                />
               </div>
             </div>
             <div className="w-full">
