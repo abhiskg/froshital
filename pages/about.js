@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Layout from "../components/Layout";
 import { IconFb, IconInsta, IconMission } from "../icons";
-import { leaders, values } from "../utils/about";
+import { leaders, values } from "../utils/aboutData";
 
 export default function About() {
   return (
     <Layout>
-      <div className="mx-auto my-10 w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-        <section className=" flex items-center justify-between">
+      <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+        <section className="mt-5 flex items-center justify-between">
           <div>
             <h2 className="mb-4 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
               Our Mission
@@ -20,10 +20,12 @@ export default function About() {
               eum fuga eius quam
             </p>
           </div>
-          <IconMission />
+          <div>
+            <IconMission />
+          </div>
         </section>
 
-        <section>
+        <section className="mt-12">
           <h2 className="mb-4 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
             Meet Our Team
           </h2>
@@ -60,9 +62,9 @@ export default function About() {
           </div>
         </section>
 
-        <section>
-          <h2 className="my-7 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
-            Our Values
+        <section className="my-7">
+          <h2 className="mb-5 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
+            Things We Value
           </h2>
           <div className="flex  flex-wrap items-center justify-center gap-5 ">
             {values.map((value) => (
@@ -76,6 +78,20 @@ export default function About() {
                 <p className="mt-2 text-center text-sm text-gray-100">
                   {value.description}
                 </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="my-7">
+          <h2 className="mb-5 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
+            Things We Value
+          </h2>
+          <div className="flex flex-col justify-center gap-3 ">
+            {values.map((value) => (
+              <div key={value.id} className="flex w-96 flex-col justify-center">
+                <h3 className="font-medium ">{value.title}</h3>
+                <p className="mt-1  text-sm ">{value.description}</p>
               </div>
             ))}
           </div>

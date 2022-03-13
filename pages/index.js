@@ -18,7 +18,7 @@ import {
 export default function Home() {
   return (
     <Layout>
-      <main className="">
+      <div className="">
         <div className="bg-gray-800 ">
           <div className="mx-auto flex w-11/12 flex-wrap items-center justify-between py-28 md:w-10/12 lg:flex-nowrap 2xl:w-auto  2xl:max-w-7xl ">
             <div className="">
@@ -87,7 +87,7 @@ export default function Home() {
             <Whatsapp />
           </span>
         </aside>
-      </main>
+      </div>
 
       <FooterLayer />
       <WhyUs />

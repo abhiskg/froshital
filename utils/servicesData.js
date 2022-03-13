@@ -1,11 +1,11 @@
 const medicalTourism = [
   {
     id: 1,
-    facility: "Train/Air/Hotel booking",
+    facility: "Hospital booking",
   },
   {
     id: 2,
-    facility: "Train/Air/Hotel booking",
+    facility: "Doctors Appointment",
   },
   {
     id: 3,
