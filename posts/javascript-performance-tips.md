@@ -1,6 +1,6 @@
 ---
 title: "JavaScript Performance Tips"
-date: "May 4, 2021"
+date: "May 10, 2021"
 excerpt: "We will look at 10 simple tips and tricks to increase the speed of your code when writing JS"
 cover_image: "https://res.cloudinary.com/abhiskg/image/upload/v1643185575/Portfolio/netflix_clone_qpvq28.jpg"
 category: "JavaScript"

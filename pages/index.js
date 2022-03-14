@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Layout from "../components/Layout";
-import Service from "../components/Service";
-import WhyUs from "../components/WhyUs";
+import Layout from "@/components/Layout";
+import Service from "@/components/Service";
+import WhyUs from "@/components/WhyUs";
 import {
   FooterLayer,
   IconHospital,

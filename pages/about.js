@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Layout from "../components/Layout";
+import Layout from "@/components/Layout";
 import { IconFb, IconInsta, IconMission } from "../icons";
-import { leaders, values } from "../utils/aboutData";
+import { leaders, values } from "@/utils/aboutData";
 
 export default function About() {
   return (
