@@ -19,3 +19,4 @@ export { default as IconHospital } from "./IconHospital";
 export { default as IconMedical } from "./IconMedical";
 export { default as IconMission } from "./IconMission";
 export { default as ArrowLeft } from "./ArrowLeft";
+export { default as IconSearch } from "./IconSearch";

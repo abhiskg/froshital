@@ -2,11 +2,10 @@ import Link from "next/link";
 
 export default function CategoryLabel({ children }) {
   const colorKey = {
-    JavaScript: "bg-green-600",
-    Python: "bg-red-600",
-    PHP: "bg-amber-600",
-    CSS: "bg-lime-600",
-    Ruby: "bg-green-600",
+    Dermatology: "bg-green-600",
+    Obsterics: "bg-red-600",
+    Cardiology: "bg-amber-600",
+    Gynaecology: "bg-lime-600",
   };
 
   return (

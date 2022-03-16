@@ -18,13 +18,10 @@ export default function BlogPost({
     <Layout>
       <div className="mx-auto w-11/12  md:w-10/12 xl:w-auto xl:max-w-6xl">
         <article>
-          <header className="mt-3 mb-5 border-b-2 pb-2 text-center">
+          <header className="mt-3 mb-5 border-b-2 pb-2">
             <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-5xl">
               {title}
             </h1>
-            <div className="mt-1 text-base font-medium leading-6 text-gray-500">
-              {date}
-            </div>
           </header>
 
           <div className="mb-5 flex items-center justify-between">
@@ -50,7 +47,9 @@ export default function BlogPost({
                 className="rounded"
               />
             </div>
-
+            <div className="mt-1 text-sm font-medium leading-6 text-gray-500">
+              {date}
+            </div>
             <div
               className="prose my-5 max-w-none"
               dangerouslySetInnerHTML={{ __html: marked(content) }}

@@ -1,11 +1,9 @@
 ---
-title: "JavaScript Performance Tips"
+title: "Reason for Obsterics"
 date: "May 10, 2021"
 excerpt: "We will look at 10 simple tips and tricks to increase the speed of your code when writing JS"
 cover_image: "https://res.cloudinary.com/abhiskg/image/upload/v1643185575/Portfolio/netflix_clone_qpvq28.jpg"
-category: "JavaScript"
-author: "John Doe"
-author_image: "https://randomuser.me/api/portraits/men/11.jpg"
+category: "Obsterics"
 ---
 
 <!-- Markdow generator - https://jaspervdj.be/lorem-markdownum/ -->
