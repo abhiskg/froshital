@@ -50,9 +50,11 @@ export default function BlogPost({
                 className="rounded"
               />
             </div>
-            <div className="blog-text mt-5">
-              <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-            </div>
+
+            <div
+              className="prose my-5 max-w-none"
+              dangerouslySetInnerHTML={{ __html: marked(content) }}
+            ></div>
           </div>
         </article>
       </div>
