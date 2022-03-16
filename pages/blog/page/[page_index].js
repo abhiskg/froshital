@@ -8,7 +8,6 @@ import { getPosts } from "@/lib/post";
 import CategoryList from "@/components/CategoryList";
 
 export default function BlogPage({ posts, numPages, currentPage, categories }) {
-  console.log(posts);
   return (
     <Layout>
       <section className=" mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
@@ -16,11 +15,12 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
           Froshital Blog
         </h1>
 
-        <div className="mt-7 flex justify-between gap-10 md:flex-row">
-          <div className=" w-2/6 ">
+        <div className="mt-7 mb-5 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+          <div className="w-full min-w-fit md:w-1/4 ">
             <CategoryList categories={categories} />
           </div>
-          <div className="w-5/6">
+
+          <div className="w-full md:w-3/4">
             <div className="grid gap-5 lg:grid-cols-2 ">
               {posts.map((post, index) => (
                 <Post key={index} post={post} />
@@ -46,7 +46,7 @@ export async function getStaticPaths() {
       params: { page_index: i.toString() },
     });
   }
-  console.log(paths);
+
   return {
     paths,
     fallback: false,

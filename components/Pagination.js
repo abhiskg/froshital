@@ -12,26 +12,29 @@ export default function Pagination({ currentPage, numPages }) {
     <div className="mt-6">
       <ul className="my-2 flex list-none pl-0">
         {!isFirst && (
-          <li className="relative mr-1 block cursor-pointer border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-800 hover:bg-gray-200">
+          <li>
             <Link href={prevPage}>
-              <a>Previous</a>
+              <a className="mr-1 block border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-800 hover:bg-gray-200">
+                Previous
+              </a>
             </Link>
           </li>
         )}
         {Array.from({ length: numPages }, (_, i) => (
-          <li
-            key={`page-${i}`}
-            className="relative mr-1 block cursor-pointer border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-800 hover:bg-gray-200"
-          >
+          <li key={`page-${i}`}>
             <Link href={`/blog/page/${i + 1}`}>
-              <a>{i + 1}</a>
+              <a className="relative mr-1 block cursor-pointer border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-800 hover:bg-gray-200">
+                {i + 1}
+              </a>
             </Link>
           </li>
         ))}
         {!isLast && (
-          <li className="relative mr-1 block cursor-pointer border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-800 hover:bg-gray-200">
+          <li>
             <Link href={nextPage}>
-              <a>Next</a>
+              <a className="relative mr-1 block cursor-pointer border border-gray-300 bg-white py-2 px-3 leading-tight text-gray-800 hover:bg-gray-200">
+                Next
+              </a>
             </Link>
           </li>
         )}

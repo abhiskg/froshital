@@ -8,28 +8,30 @@ export default function Post({ post }) {
       <Image
         src={post.frontmatter.cover_image}
         alt=""
-        height={420}
-        width={600}
-        className="mb-4 rounded"
+        height={400}
+        width={650}
+        className="mb-2"
       />
-      <div className="flex items-center justify-between">
-        <span className="font-light text-gray-600">
+      <div className="flex justify-between">
+        <span className="font-light text-gray-500">
           {post.frontmatter.date}
         </span>
         <CategoryLabel>{post.frontmatter.category}</CategoryLabel>
       </div>
       <h2 className="mt-2">
         <Link href={`/blog/${post.slug}`}>
-          <a className="text-2xl font-bold text-gray-700 hover:underline">
+          <a className="text-xl font-bold text-gray-700 hover:underline">
             {post.frontmatter.title}
           </a>
         </Link>
       </h2>
-      <p className="mt-2 text-gray-600">{post.frontmatter.excerpt}</p>
+      <p className="mt-1 text-sm text-gray-600">{post.frontmatter.excerpt}</p>
 
-      <div className="mt-3">
+      <div className="mt-1">
         <Link href={`/blog/${post.slug}`}>
-          <a className="text-gray-900 hover:text-blue-600">Read More</a>
+          <a className="text-base font-semibold text-indigo-600 hover:text-indigo-500">
+            Read More
+          </a>
         </Link>
       </div>
     </div>

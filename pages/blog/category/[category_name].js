@@ -9,22 +9,23 @@ import { getPosts } from "@/lib/post";
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
     <Layout>
-      <div className="flex justify-between">
-        <div className="w-1/4">
-          <CategoryList categories={categories} />
-        </div>
-        <div className="mr-10 w-3/4">
-          <h1 className="border-b-4 p-5 text-5xl font-bold">
-            Posts in {categoryName}
-          </h1>
-
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post, index) => (
-              <Post key={index} post={post} />
-            ))}
+      <section className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+        <h1 className="mt-10 border-b-2 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold text-transparent">
+          Posts in {categoryName}
+        </h1>
+        <div className="mt-7 mb-10 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+          <div className="w-full min-w-fit md:w-1/4 ">
+            <CategoryList categories={categories} />
+          </div>
+          <div className=" w-full md:w-3/4">
+            <div className="grid gap-5 lg:grid-cols-2 ">
+              {posts.map((post, index) => (
+                <Post key={index} post={post} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </Layout>
   );
 }
