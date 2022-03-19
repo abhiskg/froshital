@@ -2,10 +2,14 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 import { IconFb, IconInsta, IconMission } from "../icons";
 import { leaders, values } from "@/utils/aboutData";
+import Head from "next/head";
 
 export default function About() {
   return (
     <Layout>
+      <Head>
+        <title>About Us | Froshital</title>
+      </Head>
       <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <section className="mt-5 flex items-center justify-between">
           <div>

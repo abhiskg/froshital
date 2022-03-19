@@ -1,3 +1,4 @@
+import { specialitiesData } from "@/utils/specialitiesData";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowDown } from "../icons";
@@ -7,7 +8,7 @@ export default function Navbar() {
   const [serviceState, setServiceState] = useState(false);
   return (
     <header className="sticky top-0 z-40 h-16 bg-gray-800 ">
-      <div className="mx-auto flex h-full w-11/12 items-center justify-between lg:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+      <div className="relative mx-auto flex h-full w-11/12 items-center justify-between lg:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         {/* Main Nav */}
         <Link href="/">
           <a>
@@ -15,7 +16,7 @@ export default function Navbar() {
           </a>
         </Link>
         <nav>
-          <ul className="relative hidden items-center gap-4 md:flex">
+          <ul className=" hidden items-center gap-4 md:flex">
             <Link href="/">
               <a>
                 <li className=" cursor-pointer text-gray-400 hover:text-white">
@@ -29,12 +30,12 @@ export default function Navbar() {
               </Link>
             </li>
             <li className=" group">
-              <div className="flex cursor-pointer items-center text-gray-400 hover:text-white">
+              <div className="flex cursor-pointer items-center py-4 text-gray-400 hover:text-white">
                 Services
                 <ArrowDown />
               </div>
               {/* Service Dropdown */}
-              <ul className="absolute top-10 z-10 hidden rounded bg-[#141d2b] pt-1 text-gray-400 group-hover:block">
+              <ul className="absolute top-14 z-10 hidden rounded bg-[#141d2b]  text-gray-400 group-hover:block">
                 <li className="">
                   <Link href="/services/hospital-referrals">
                     <a className="whitespace-no-wrap block rounded-t py-2 px-4 hover:text-white">
@@ -60,34 +61,22 @@ export default function Navbar() {
               {/* Service Dropdown Ends */}
             </li>
             <li className=" group">
-              <div className="flex cursor-pointer items-center text-gray-400 hover:text-white">
+              <div className="flex cursor-pointer items-center py-4 text-gray-400 hover:text-white">
                 Specialities
                 <ArrowDown />
               </div>
               {/* Specialities Dropdown */}
-              <ul className="absolute left-0 right-0 z-10 hidden  rounded bg-[#141d2b] pt-1 text-gray-400 group-hover:block">
-                <div className="grid-cols-3">
-                  <li className="">
-                    <Link href="/specialities/id">
-                      <a className="whitespace-no-wrap block rounded-t py-2 px-4 hover:text-white">
-                        Hospital Referrals
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="">
-                    <Link href="/services/medical-tourism">
-                      <a className="whitespace-no-wrap block py-2 px-4 hover:text-white">
-                        Medical Tourism
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="">
-                    <Link href="/services/lab-booking">
-                      <a className="whitespace-no-wrap   block rounded-b py-2 px-4 hover:text-white">
-                        Lab Booking
-                      </a>
-                    </Link>
-                  </li>
+              <ul className="absolute top-14 left-0 right-0 z-10 hidden  rounded bg-[#141d2b] px-4 pb-4 pt-2 text-gray-400 group-hover:block">
+                <div className="grid grid-cols-4 gap-x-8 ">
+                  {specialitiesData.map((data) => (
+                    <li key={data.id} className="">
+                      <Link href={`/specialities/${data.slug}`}>
+                        <a className="whitespace-no-wrap block rounded-t border-b border-gray-400 py-2 hover:text-white">
+                          {data.title}
+                        </a>
+                      </Link>
+                    </li>
+                  ))}
                 </div>
               </ul>
               {/* Specialities Dropdown Ends */}
@@ -104,9 +93,11 @@ export default function Navbar() {
                 <a>Blog</a>
               </Link>
             </li>
-            <li className=" ml-5 rounded bg-gradient-to-br from-green-500 to-blue-500 py-2 px-3 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+            <li>
               <Link href="/contact">
-                <a>Book an Service</a>
+                <a className=" ml-5 rounded bg-gradient-to-br from-green-500 to-blue-500 py-2 px-3 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+                  Book an Service
+                </a>
               </Link>
             </li>
           </ul>

@@ -7,11 +7,15 @@ import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/post";
 import CategoryList from "@/components/CategoryList";
 import Search from "@/components/Search";
+import Head from "next/head";
 
 export default function BlogPage({ posts, numPages, currentPage, categories }) {
   return (
     <Layout>
-      <section className=" mx-auto mt-10 w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+      <Head>
+        <title>Blog | Froshital</title>
+      </Head>
+      <section className=" mx-auto mt-7 w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <div className="flex items-center justify-between">
           <h1 className=" bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold text-transparent">
             Froshital Blog
@@ -20,10 +24,6 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
         </div>
 
         <div className="mt-7 mb-5 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
-          <div className="w-full min-w-fit md:w-1/4 ">
-            <CategoryList categories={categories} />
-          </div>
-
           <div className="w-full md:w-3/4">
             <div className="grid gap-5 lg:grid-cols-2 ">
               {posts.map((post, index) => (
@@ -31,6 +31,9 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
               ))}
             </div>
             <Pagination currentPage={currentPage} numPages={numPages} />
+          </div>
+          <div className="w-full min-w-fit md:w-1/4 ">
+            <CategoryList categories={categories} />
           </div>
         </div>
       </section>

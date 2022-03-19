@@ -7,6 +7,8 @@ import Image from "next/image";
 import CategoryLabel from "@/components/CategoryLabel";
 import Layout from "@/components/Layout";
 import { ArrowLeft } from "icons";
+import Search from "@/components/Search";
+import Head from "next/head";
 
 export default function BlogPost({
   frontmatter: { title, category, date, cover_image },
@@ -16,12 +18,16 @@ export default function BlogPost({
   // console.log(content);
   return (
     <Layout>
+      <Head>
+        <title>{title} | Froshital</title>
+      </Head>
       <div className="mx-auto w-11/12  md:w-10/12 xl:w-auto xl:max-w-6xl">
         <article>
-          <header className="mt-3 mb-5 border-b-2 pb-2">
-            <h1 className="md:leading-14 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-5xl">
+          <header className="mt-7 mb-5 flex items-center justify-between">
+            <h1 className="md:leading-14  bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold leading-9 tracking-tight text-transparent   sm:leading-10 ">
               {title}
             </h1>
+            <Search />
           </header>
 
           <div className="mb-5 flex items-center justify-between">
@@ -51,7 +57,7 @@ export default function BlogPost({
               {date}
             </div>
             <div
-              className="prose my-5 max-w-none"
+              className="prose prose-lg my-5"
               dangerouslySetInnerHTML={{ __html: marked(content) }}
             ></div>
           </div>

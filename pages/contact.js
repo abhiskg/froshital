@@ -29,11 +29,10 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Froshital | Contact Us</title>
+      </Head>
       <div className="relative ">
-        <Head>
-          <title>Froshital | Contact</title>
-        </Head>
-
         {/* :DOTS BACKGROUND */}
         <div>
           {/* ::Dots 1 */}

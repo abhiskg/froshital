@@ -14,15 +14,39 @@ import {
   PhoneCall,
   Whatsapp,
 } from "../icons";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <Layout>
+      <Head>
+        <title>Froshital - Medical Services In India</title>
+        <meta
+          name="description"
+          content="Froshital is a Medical Service in India"
+        />
+        <meta property="og:url" content="https://froshital.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Froshital - Medical Services In India"
+        />
+        <meta
+          property="og:description"
+          content="Froshital is a Medical Service in India"
+        />
+      </Head>
       <div className="">
         <div className="bg-gray-800 ">
           <div className="mx-auto flex w-11/12 flex-wrap items-center justify-between py-28 md:w-10/12 lg:flex-nowrap 2xl:w-auto  2xl:max-w-7xl ">
             <div className="">
-              <div className="flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
+              <div className="flex w-64 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500">
+                <span className=" rounded-full bg-gradient-to-br from-pink-500 to-amber-500 py-1 px-2 text-sm text-white">
+                  Save 10%
+                </span>
+                <span className=" p-1 text-sm ">For first booking only</span>
+              </div>
+              <div className="mt-5 flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
                 <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                   <IconMedical />
                 </span>

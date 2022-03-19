@@ -1,9 +1,13 @@
 import Image from "next/image";
 import Layout from "@/components/Layout";
+import Head from "next/head";
 
 export default function MedicalTourism() {
   return (
     <Layout>
+      <Head>
+        <title>Medical Tourism | Froshital</title>
+      </Head>
       <section>
         <div className="relative h-96 w-full">
           <Image

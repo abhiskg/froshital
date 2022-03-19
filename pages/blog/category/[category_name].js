@@ -5,24 +5,32 @@ import Post from "@/components/Post";
 import CategoryList from "@/components/CategoryList";
 import matter from "gray-matter";
 import { getPosts } from "@/lib/post";
+import Search from "@/components/Search";
+import Head from "next/head";
 
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
     <Layout>
+      <Head>
+        <title>{categoryName} | Froshital</title>
+      </Head>
       <section className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-        <h1 className="mt-10 border-b-2 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold text-transparent">
-          Posts in {categoryName}
-        </h1>
+        <div className="mt-7 flex items-center justify-between">
+          <h1 className=" bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold text-transparent">
+            Posts in {categoryName}
+          </h1>
+          <Search />
+        </div>
         <div className="mt-7 mb-10 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
-          <div className="w-full min-w-fit md:w-1/4 ">
-            <CategoryList categories={categories} />
-          </div>
           <div className=" w-full md:w-3/4">
             <div className="grid gap-5 lg:grid-cols-2 ">
               {posts.map((post, index) => (
                 <Post key={index} post={post} />
               ))}
             </div>
+          </div>
+          <div className="w-full min-w-fit md:w-1/4 ">
+            <CategoryList categories={categories} />
           </div>
         </div>
       </section>

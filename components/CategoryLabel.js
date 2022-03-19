@@ -9,11 +9,13 @@ export default function CategoryLabel({ children }) {
   };
 
   return (
-    <div
-      className={`px-2 py-1 ${colorKey[children]} rounded text-sm font-semibold text-gray-100`}
-    >
+    <div>
       <Link href={`/blog/category/${children.toLowerCase()}`}>
-        <a>{children}</a>
+        <a
+          className={`px-2 py-1 ${colorKey[children]} rounded text-sm font-semibold text-gray-100 hover:bg-opacity-90`}
+        >
+          {children}
+        </a>
       </Link>
     </div>
   );
