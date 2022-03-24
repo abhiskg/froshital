@@ -4,11 +4,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        body: ["Poppins"],
-      },
+    fontFamily: {
+      sans: ["Poppins", "system-ui", "Helvetica", "sans-serif"],
     },
+    extend: {},
   },
   plugins: [require("@tailwindcss/typography")],
 };

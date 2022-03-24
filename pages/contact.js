@@ -10,7 +10,7 @@ import Layout from "@/components/Layout";
 //   IconSend,
 // } from "../components/icons";
 import ButtonLoader from "../components/ButtonLoader";
-import { IconMail, IconPhone, IconSend, PhoneCall } from "../icons";
+import { IconMail, IconPhone, IconSend } from "../icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -34,8 +34,8 @@ const Contact = () => {
       </Head>
       <div className="relative ">
         {/* :DOTS BACKGROUND */}
-        <div>
-          {/* ::Dots 1 */}
+        {/* <div>
+         
           <span className="absolute -top-24 left-0 hidden opacity-10 md:block">
             <svg
               width={250}
@@ -64,7 +64,7 @@ const Contact = () => {
               <rect width={250} height={600} fill="url(#pattern-rectangles)" />
             </svg>
           </span>
-          {/* ::Dots 2 */}
+         
           <span className="absolute bottom-0 right-0 opacity-20">
             <svg
               width={300}
@@ -100,11 +100,11 @@ const Contact = () => {
               />
             </svg>
           </span>
-        </div>
+        </div> */}
 
-        <section className="mx-auto mt-5 mb-5 w-[89%] max-w-screen-xl md:mt-16 lg:mt-28 lg:w-9/12 ">
-          <div className=" flex flex-col gap-4 p-2 md:flex-row ">
-            <div className="md:w-2/3 ">
+        <section className="mx-auto mt-5  mb-5 w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl ">
+          <div className=" flex flex-col justify-between p-2 lg:flex-row lg:gap-x-5 xl:gap-x-20 ">
+            <div className="lg:w-2/4">
               <h1 className="text-primary-200 mb-6  mt-2 text-lg font-medium">
                 Contact Information
               </h1>
@@ -148,7 +148,8 @@ const Contact = () => {
                 />
               </div>
             </div>
-            <div className="w-full">
+
+            <div className="lg:w-2/4">
               <div className="flex items-center justify-between">
                 <h2 className="text-primary-200 mb-6  mt-2 text-lg font-medium">
                   Send me a message
@@ -165,8 +166,8 @@ const Contact = () => {
                     <input
                       className={`border ${
                         error &&
-                        "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } focus:ring-primary-300 w-full rounded border-slate-300 px-3 py-2 text-sm  placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
+                        "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      } w-full rounded border-slate-300 px-3 py-2 text-sm placeholder-slate-400  shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500   `}
                       placeholder="Enter your name"
                       type="text"
                       required
@@ -185,8 +186,8 @@ const Contact = () => {
                     <input
                       className={`border ${
                         error &&
-                        "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } focus:ring-primary-300 w-full rounded border-slate-300 px-3 py-2 text-sm placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
+                        "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      } w-full rounded border-slate-300 px-3 py-2 text-sm placeholder-slate-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500   `}
                       placeholder="Enter your email"
                       type="email"
                       required
@@ -205,8 +206,8 @@ const Contact = () => {
                     <input
                       className={`border ${
                         error &&
-                        "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } focus:ring-primary-300 w-full rounded border-slate-300 px-3 py-2 text-sm  placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
+                        "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      } w-full rounded border-slate-300 px-3 py-2 text-sm placeholder-slate-400  shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500   `}
                       placeholder="Enter your name"
                       type="number"
                       required
@@ -225,8 +226,8 @@ const Contact = () => {
                     <select
                       className={`${
                         error &&
-                        "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
-                      } focus:ring-primary-300 mb-3 w-full rounded border border-slate-300 px-3 py-2 text-sm placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1`}
+                        "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+                      } mb-3 w-full rounded border border-slate-300 px-3 py-2 text-sm placeholder-slate-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500`}
                       required
                       placeholder="Enter your subject"
                       type="text"
@@ -234,6 +235,9 @@ const Contact = () => {
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                     >
+                      <option value="" hidden disabled>
+                        Select a service
+                      </option>
                       <option value="Medical Tourism">Medical Tourism</option>
                       <option value="Hospital Referrals">
                         Hospital Referrals
@@ -247,7 +251,7 @@ const Contact = () => {
                   <label>
                     <span className="block  ">Additional Message</span>
                     <textarea
-                      className={`focus:ring-primary-300 mb-4 w-full  rounded border border-slate-300 px-3 pt-2 pb-16 text-sm placeholder-slate-400 shadow-sm focus:border-gray-800 focus:outline-none focus:ring-1  disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-500 disabled:shadow-none `}
+                      className={`mb-4 w-full rounded  border border-slate-300 px-3 pt-2 pb-16 text-sm placeholder-slate-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500   `}
                       placeholder="Enter your message"
                       name="message"
                       value={message}
@@ -259,7 +263,7 @@ const Contact = () => {
                 <button
                   onClick={() => setError(true)}
                   type="submit"
-                  className="text-primary-200 w-20 rounded border border-gray-800 py-2 text-sm  font-medium transition-colors duration-200 hover:bg-gray-800 hover:text-white"
+                  className="text-primary-200 w-20 rounded border border-blue-500 py-2 text-sm  font-medium transition-colors duration-200 hover:bg-gray-800 hover:text-white"
                 >
                   {loading ? (
                     <ButtonLoader />
@@ -281,7 +285,7 @@ const Contact = () => {
             emailSend ? "opacity-100" : "opacity-0"
           } absolute top-16 left-0 right-0 flex justify-center transition-opacity duration-1000 ease-linear`}
         >
-          <p className="rounded bg-gray-800 p-3 font-body text-sm text-white">
+          <p className="font-body rounded bg-gray-800 p-3 text-sm text-white">
             Thankyou! Your message has been delivered.
           </p>
         </div>

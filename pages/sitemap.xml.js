@@ -7,7 +7,7 @@ export default function Sitemap() {
       <Head>
         <title>Sitemap | Froshital</title>
       </Head>
-      <div>Sitemap</div>
+      <section>Sitemap</section>
     </Layout>
   );
 }

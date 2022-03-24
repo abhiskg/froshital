@@ -28,7 +28,7 @@ const medicalTourism = [
 const hospitalReferrals = [
   {
     id: 1,
-    facility: "Train/Air/Hotel booking",
+    facility: "Hospital booking",
   },
   {
     id: 2,

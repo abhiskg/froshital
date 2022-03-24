@@ -21,7 +21,7 @@ export default function BlogPost({
       <Head>
         <title>{title} | Froshital</title>
       </Head>
-      <div className="mx-auto w-11/12  md:w-10/12 xl:w-auto xl:max-w-6xl">
+      <section className="mx-auto w-11/12  md:w-10/12 xl:w-auto xl:max-w-6xl">
         <article>
           <header className="mt-7 mb-5 flex items-center justify-between">
             <h1 className="md:leading-14  bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold leading-9 tracking-tight text-transparent   sm:leading-10 ">
@@ -51,6 +51,7 @@ export default function BlogPost({
                 layout="fill"
                 objectFit="cover"
                 className="rounded"
+                priority
               />
             </div>
             <div className="mt-1 text-sm font-medium leading-6 text-gray-500">
@@ -62,7 +63,7 @@ export default function BlogPost({
             ></div>
           </div>
         </article>
-      </div>
+      </section>
     </Layout>
   );
 }
