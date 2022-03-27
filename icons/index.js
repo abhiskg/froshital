@@ -21,3 +21,6 @@ export { default as IconMission } from "./IconMission";
 export { default as ArrowLeft } from "./ArrowLeft";
 export { default as IconSearch } from "./IconSearch";
 export { default as IconChevronRight } from "./IconChevronRight";
+export { default as IconCheck } from "./IconCheck";
+export { default as IconX } from "./IconX";
+export { default as IconTrash } from "./IconTrash";

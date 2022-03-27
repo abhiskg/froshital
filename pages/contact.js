@@ -1,30 +1,49 @@
 import { useState } from "react";
+import axios from "axios";
 import Head from "next/head";
 import Layout from "@/components/Layout";
-// import {
-//   IconEmail,
-//   IconLogo,
-//   IconMail,
-//   IconMap,
-//   IconPhone,
-//   IconSend,
-// } from "../components/icons";
-import ButtonLoader from "../components/ButtonLoader";
+import ButtonLoader from "@/components/ButtonLoader";
 import { IconMail, IconPhone, IconSend } from "../icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
   const [emailSend, setEmailSend] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
+    setError(false);
+    try {
+      const response = await axios.post("/api/contact", {
+        name,
+        email,
+        phone,
+        service,
+        message,
+      });
+
+      setName("");
+      setEmail("");
+      setPhone("");
+      setService("");
+      setMessage("");
+      setLoading(false);
+      setEmailSend(true);
+
+      setTimeout(() => {
+        setEmailSend(false);
+      }, 2500);
+    } catch (error) {
+      console.log(error.message);
+      setLoading(false);
+    }
   };
 
   return (
@@ -208,12 +227,12 @@ const Contact = () => {
                         error &&
                         "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                       } w-full rounded border-slate-300 px-3 py-2 text-sm placeholder-slate-400  shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500   `}
-                      placeholder="Enter your name"
+                      placeholder="Enter your phone"
                       type="number"
                       required
-                      name="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
+                      name="phone"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                     />
                   </label>
                 </div>
@@ -229,11 +248,10 @@ const Contact = () => {
                         "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                       } mb-3 w-full rounded border border-slate-300 px-3 py-2 text-sm placeholder-slate-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500`}
                       required
-                      placeholder="Enter your subject"
                       type="text"
-                      name="subject"
-                      value={subject}
-                      onChange={(e) => setSubject(e.target.value)}
+                      name="service"
+                      value={service}
+                      onChange={(e) => setService(e.target.value)}
                     >
                       <option value="" hidden disabled>
                         Select a service
@@ -286,7 +304,7 @@ const Contact = () => {
           } absolute top-16 left-0 right-0 flex justify-center transition-opacity duration-1000 ease-linear`}
         >
           <p className="font-body rounded bg-gray-800 p-3 text-sm text-white">
-            Thankyou! Your message has been delivered.
+            We will contact you soon
           </p>
         </div>
       </div>
