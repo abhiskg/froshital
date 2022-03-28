@@ -1,8 +1,17 @@
 import { useState } from "react";
 import ButtonLoader from "@/components/ButtonLoader";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const { data: session } = useSession();
+  const router = useRouter();
+
+  if (session) {
+    router.replace("/admin/dashboard");
+  }
+
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -11,8 +20,21 @@ export default function Login() {
     e.preventDefault();
 
     setLoading(true);
+    setError(false);
+
+    const result = await signIn("credentials", {
+      redirect: false,
+      username,
+      password,
+    });
 
     setLoading(false);
+
+    if (result.error) {
+      console.log(result.error);
+    } else {
+      window.location.href = "/admin/dashboard";
+    }
   };
 
   return (
@@ -24,19 +46,19 @@ export default function Login() {
         <form onSubmit={submitHandler}>
           <div className="">
             <label>
-              <span className=" font-medium text-gray-600">Email</span>
+              <span className=" font-medium text-gray-600">Username</span>
               <input
                 onChange={(e) => {
-                  setEmail(e.target.value);
+                  setUsername(e.target.value);
                 }}
-                type="email"
-                value={email}
+                type="text"
+                value={username}
                 required
                 className={` mt-1 w-full rounded-md border border-slate-300 px-3 py-2 text-sm text-gray-900 placeholder-slate-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1  focus:ring-indigo-500 ${
                   error &&
                   "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                 }`}
-                placeholder="Email"
+                placeholder="Username"
               />
             </label>
           </div>

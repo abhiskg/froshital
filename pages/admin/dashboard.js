@@ -1,9 +1,14 @@
 import axios from "axios";
 import { useRouter } from "next/router";
-import { IconCheck, IconTrash, IconX } from "icons";
+import { signOut, getSession } from "next-auth/react";
+import dbConnect from "@/lib/dbConnect";
+import Client from "@/models/Client";
 import StatusLabel from "@/components/StatusLabel";
+import { IconCheck, IconTrash, IconX } from "icons";
 
 export default function Dashboard({ clients }) {
+  // const { data: session, status } = useSession();
+
   const router = useRouter();
   const refreshPage = () => {
     router.replace(router.asPath);
@@ -36,9 +41,13 @@ export default function Dashboard({ clients }) {
     }
   };
 
+  // if (!session) {
+  //   return <p>Access Denied</p>;
+  // }
+
   return (
     <section className="mx-auto flex max-w-screen-2xl flex-col justify-between gap-5 bg-gray-50 p-3 md:flex-row xl:gap-10">
-      <div className=" md:h-screen md:rounded-md md:shadow-md xl:w-52">
+      <div className=" relative md:h-screen md:rounded-md md:shadow-md xl:w-52">
         <h1 className="rounded-t bg-orange-200 p-2 text-center text-lg font-bold xl:p-5 ">
           Dashboard
         </h1>
@@ -48,6 +57,12 @@ export default function Dashboard({ clients }) {
           </li>
           <li className=" cursor-pointer p-3 text-center font-semibold hover:bg-slate-200 md:border-b">
             Services{" "}
+          </li>
+          <li
+            onClick={() => signOut()}
+            className=" absolute bottom-10 left-0 right-0 cursor-pointer p-3 text-center font-semibold hover:bg-slate-200 md:border-y"
+          >
+            Logout
           </li>
         </ul>
       </div>
@@ -83,7 +98,7 @@ export default function Dashboard({ clients }) {
                 Date
               </th>
               <th className="w-36 border border-slate-300 p-2">Name</th>
-              <th className="hidden max-w-fit border border-slate-300 p-2 md:table-cell">
+              <th className="hidden border border-slate-300 p-2 md:table-cell">
                 Email
               </th>
               <th className="w-28 border border-slate-300 p-2">Phone</th>
@@ -103,7 +118,7 @@ export default function Dashboard({ clients }) {
             {clients.map((client) => (
               <tr key={client._id}>
                 <td className=" hidden border border-slate-300 p-1.5  text-sm sm:table-cell">
-                  12july 2020
+                  {client.date}
                 </td>
                 <td className="border border-slate-300 p-1.5 text-sm">
                   {client.name}
@@ -129,18 +144,18 @@ export default function Dashboard({ clients }) {
                 <td className=" border border-slate-300 p-1.5 text-center">
                   <span
                     onClick={() => confirmHandler(client._id)}
-                    className="inline-block cursor-pointer text-green-500"
+                    className="inline-block cursor-pointer text-green-500 transition-transform duration-200 ease-in-out hover:scale-110"
                   >
                     <IconCheck />
                   </span>
                   <span
                     onClick={() => rejectHandler(client._id)}
-                    className="mx-2 inline-block cursor-pointer text-red-300"
+                    className="mx-2 inline-block cursor-pointer text-red-300 transition-transform duration-200 ease-in-out hover:scale-110"
                   >
                     <IconX />
                   </span>
                   <span
-                    className="inline-block cursor-pointer text-red-600"
+                    className="inline-block cursor-pointer text-red-600 transition-transform duration-200 ease-in-out hover:scale-110"
                     onClick={() => deleteHandler(client._id)}
                   >
                     <IconTrash />
@@ -155,12 +170,32 @@ export default function Dashboard({ clients }) {
   );
 }
 
-export async function getServerSideProps(context) {
-  const { data } = await axios.get("http://localhost:3000/api/client");
+export async function getServerSideProps({ req, res }) {
+  const session = await getSession({ req });
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/admin/login",
+        permanent: false,
+      },
+    };
+  }
+
+  await dbConnect();
+  const result = await Client.find({}).sort({ date: -1 });
+  const clients = result.map((doc) => {
+    const client = doc.toObject();
+    client._id = client._id.toString();
+    client.date = client.date.toDateString();
+    client.createdAt = client.createdAt.toString();
+    client.updatedAt = client.updatedAt.toString();
+    return client;
+  });
 
   return {
     props: {
-      clients: data.clients,
+      clients,
     },
   };
 }
