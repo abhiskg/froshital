@@ -15,15 +15,18 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
       <Head>
         <title>Blog | Froshital</title>
       </Head>
-      <section className=" mx-auto mt-7 w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-        <div className="flex items-center justify-between">
-          <h1 className=" bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold text-transparent">
+      <section className=" mx-auto  w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+        <div className="mt-3 flex flex-col items-center justify-between sm:flex-row">
+          <h1 className=" bg-gradient-to-tr from-gray-800 to-gray-600 bg-clip-text pb-2 text-2xl font-bold text-transparent sm:text-3xl">
             Froshital Blog
           </h1>
           <Search />
         </div>
 
-        <div className="mt-7 mb-5 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+        <div className="mt-7 mb-5 flex flex-col items-center justify-between gap-5 md:flex-row md:items-start md:gap-8">
+          <div className="order-1 w-full min-w-fit md:order-none md:w-1/4 ">
+            <CategoryList categories={categories} />
+          </div>
           <div className="w-full md:w-3/4">
             <div className="grid gap-5 lg:grid-cols-2 ">
               {posts.map((post, index) => (
@@ -31,9 +34,6 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
               ))}
             </div>
             <Pagination currentPage={currentPage} numPages={numPages} />
-          </div>
-          <div className="w-full min-w-fit md:w-1/4 ">
-            <CategoryList categories={categories} />
           </div>
         </div>
       </section>

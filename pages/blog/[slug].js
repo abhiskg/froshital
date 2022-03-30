@@ -22,13 +22,13 @@ export default function BlogPost({
       </Head>
       <section className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <article>
-          <h1 className="md:leading-14 mb-4 mt-3 bg-gradient-to-tr from-gray-700 to-gray-800 bg-clip-text pb-2 text-center text-3xl font-bold leading-9 tracking-tight text-transparent sm:leading-10 ">
+          <h1 className="md:leading-14 mb-4 mt-3 bg-gradient-to-tr from-gray-700 to-gray-800 bg-clip-text pb-2 text-center text-2xl font-bold leading-9 tracking-tight text-transparent sm:text-3xl sm:leading-10 ">
             {title}
           </h1>
 
           <div className="flex flex-col justify-between gap-5 lg:flex-row xl:gap-10">
             <div className="flex-1">
-              <div className="relative h-96 w-full">
+              <div className="relative h-72 w-full  sm:h-96">
                 <Image
                   src={cover_image}
                   alt=""
@@ -49,7 +49,7 @@ export default function BlogPost({
                 </div>
               </div>
               <div
-                className="prose my-5 prose-a:text-blue-600"
+                className=" prose my-5 prose-a:text-blue-600"
                 dangerouslySetInnerHTML={{ __html: marked(content) }}
               ></div>
             </div>
@@ -63,7 +63,7 @@ export default function BlogPost({
               {similarPosts.length > 0 &&
                 similarPosts.map((post, index) => (
                   <Link href={`/blog/${post.slug}`} key={index}>
-                    <a className="flex items-start gap-2 rounded p-2 hover:bg-white hover:shadow ">
+                    <a className="flex max-w-fit  items-start gap-2 rounded p-2 hover:bg-white hover:shadow lg:max-w-none">
                       <Image
                         src={post.frontmatter.cover_image}
                         alt=""

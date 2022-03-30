@@ -4,25 +4,25 @@ import CategoryLabel from "./CategoryLabel";
 
 export default function Post({ post }) {
   return (
-    <div className="w-full overflow-hidden rounded-md shadow-md hover:shadow-xl">
+    <div className="group w-full overflow-hidden rounded-md bg-white shadow-md hover:shadow-xl">
       <Image
         src={post.frontmatter.cover_image}
         alt=""
         height={380}
         width={700}
-        className=""
+        className="transition-transform duration-[4000ms] group-hover:scale-110"
       />
 
-      <div className="-mt-2  bg-white  p-4">
+      <div className="px-4 pb-2">
         <div className="flex items-center justify-between ">
-          <span className="font-light text-gray-500">
+          <span className="text-sm font-light text-gray-600">
             {post.frontmatter.date}
           </span>
           <CategoryLabel>{post.frontmatter.category}</CategoryLabel>
         </div>
         <h2 className="mt-px">
           <Link href={`/blog/${post.slug}`}>
-            <a className="relative text-lg font-semibold text-gray-700  before:absolute  before:bottom-0 before:left-0 before:h-px before:w-full before:origin-left before:scale-x-0  before:bg-black before:transition-transform before:duration-200 before:ease-linear before:content-[''] before:hover:scale-x-100  ">
+            <a className="relative py-px text-lg font-semibold text-gray-700  before:absolute  before:bottom-0 before:left-0 before:h-px before:w-full before:origin-left before:scale-x-0  before:bg-gray-800 before:transition-transform before:duration-200 before:ease-linear before:content-[''] before:hover:scale-x-100  ">
               {post.frontmatter.title}
             </a>
           </Link>
@@ -32,7 +32,7 @@ export default function Post({ post }) {
         </p>
         <div className="">
           <Link href={`/blog/${post.slug}`}>
-            <a className="text-sm text-indigo-600 hover:text-indigo-500">
+            <a className="text-sm text-blue-600 hover:text-blue-700">
               Read More
             </a>
           </Link>

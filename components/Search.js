@@ -11,7 +11,7 @@ export default function Search() {
       if (searchTerm === "") {
         setSearchResults([]);
       } else {
-        const res = await fetch(`/api/search?q=${searchTerm}`);
+        const res = await fetch(`/api/search?q=${searchTerm.toLowerCase()}`);
         const { results } = await res.json();
 
         setSearchResults(results);
@@ -22,7 +22,7 @@ export default function Search() {
   }, [searchTerm]);
 
   return (
-    <div className="relative w-72 text-gray-600">
+    <div className="relative w-full text-gray-600 sm:w-72">
       <form>
         <input
           type="search"
@@ -31,7 +31,7 @@ export default function Search() {
           placeholder="Search Posts..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="h-10 w-72 rounded-full bg-white px-5 pr-10 text-sm focus:outline-none"
+          className="h-10 w-full rounded-full bg-white px-5 pr-10 text-sm focus:outline-none sm:w-72"
         />
         <span className="absolute top-0 right-0 mt-3 mr-4 text-black">
           <IconSearch />

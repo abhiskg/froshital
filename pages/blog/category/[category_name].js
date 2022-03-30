@@ -15,22 +15,22 @@ export default function CategoryBlogPage({ posts, categoryName, categories }) {
         <title>{categoryName} | Froshital</title>
       </Head>
       <section className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-        <div className="mt-7 flex items-center justify-between">
-          <h1 className=" bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text pb-2 text-4xl font-bold text-transparent">
-            Posts in {categoryName}
+        <div className="mt-3 flex flex-col items-center justify-between sm:flex-row">
+          <h1 className=" bg-gradient-to-tr from-gray-800 to-gray-600 bg-clip-text pb-2 text-2xl font-bold text-transparent md:text-3xl">
+            Post in {categoryName}
           </h1>
           <Search />
         </div>
-        <div className="mt-7 mb-10 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+        <div className="mt-7 mb-5 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
+          <div className="order-1 w-full min-w-fit md:order-none md:w-1/4 ">
+            <CategoryList categories={categories} />
+          </div>
           <div className=" w-full md:w-3/4">
             <div className="grid gap-5 lg:grid-cols-2 ">
               {posts.map((post, index) => (
                 <Post key={index} post={post} />
               ))}
             </div>
-          </div>
-          <div className="w-full min-w-fit md:w-1/4 ">
-            <CategoryList categories={categories} />
           </div>
         </div>
       </section>
@@ -79,7 +79,8 @@ export async function getStaticProps({ params: { category_name } }) {
   return {
     props: {
       posts: categoryPosts,
-      categoryName: category_name,
+      categoryName:
+        category_name.charAt(0).toUpperCase() + category_name.slice(1),
       categories: uniqueCategories,
     },
   };
