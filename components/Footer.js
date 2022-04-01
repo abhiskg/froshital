@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { IconFb, IconInsta, IconMail, IconPhone, IconTwitter } from "../icons";
+import {
+  IconFb,
+  IconInsta,
+  IconLinkdin,
+  IconMail,
+  IconPhone,
+  IconTwitter,
+} from "../icons";
 
 export default function Footer() {
   return (
@@ -23,21 +30,27 @@ export default function Footer() {
               <IconInsta />
             </span>
             <span className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+              <IconLinkdin />
+            </span>
+            <span className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
               <IconTwitter />
             </span>
           </div>
         </div>
         <div className="w-full sm:w-auto">
+          <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
+            Company
+          </h2>
           <Link href="/about">
             <a>
-              <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
+              <p className="mb-1.5 text-sm text-gray-300 hover:text-white">
                 About Us
-              </h2>
+              </p>
             </a>
           </Link>
-          <Link href="/about">
+          <Link href="/career">
             <a>
-              <p className="text-sm text-gray-300 hover:text-white">Our Team</p>
+              <p className="text-sm text-gray-300 hover:text-white">Career</p>
             </a>
           </Link>
         </div>
@@ -68,20 +81,33 @@ export default function Footer() {
           </ul>
         </div>
         <div className="w-full sm:w-auto">
-          <Link href="/about">
-            <a>
-              <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
-                Blog
-              </h2>
-            </a>
-          </Link>
-          <Link href="/about">
-            <a>
-              <p className="text-sm text-gray-300 hover:text-white">
-                Recent Blog
-              </p>
-            </a>
-          </Link>
+          <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
+            Legal
+          </h2>
+
+          <ul>
+            <Link href="/terms-and-conditions">
+              <a>
+                <li className="text-sm text-gray-300 hover:text-white">
+                  Terms and Conditions
+                </li>
+              </a>
+            </Link>
+            <Link href="/privacy-policy">
+              <a>
+                <li className="my-1.5 text-sm text-gray-300 hover:text-white">
+                  Privacy Policy
+                </li>
+              </a>
+            </Link>
+            <Link href="/customer-support-policy">
+              <a>
+                <li className="text-sm text-gray-300 hover:text-white">
+                  Customer Support Policy
+                </li>
+              </a>
+            </Link>
+          </ul>
         </div>
         <div className="w-full sm:w-auto">
           <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
@@ -107,23 +133,11 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div className="text-center text-sm text-gray-300 ">
-        <Link href="/sitemap">
-          <a className="text-gray-300 hover:text-white">Sitemap</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/terms-and-conditions">
-          <a className="text-gray-300 hover:text-white">Terms and Conditions</a>
-        </Link>{" "}
-        |{" "}
-        <Link href="/privacy-policy">
-          <a className="text-gray-300 hover:text-white">Privacy Policy</a>
-        </Link>
-      </div>
-      <div className="mx-auto mb-2 mt-1 w-5/6 bg-gray-300 p-[0.5px] sm:w-3/5 lg:w-1/2"></div>
+
       <div className="text-center text-sm text-gray-300 hover:text-white">
         &copy;2022 Froshital - All Rights Reserved
       </div>
+      {/* <div className="mx-auto mb-2 mt-1 w-5/6 bg-gray-300 p-[0.5px] sm:w-3/5 lg:w-1/2"></div> */}
       <div className="pb-1 text-center text-xs font-light text-gray-300 hover:text-white">
         <a
           href="https://portfolio-abhiskg.vercel.app/"

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import { IconFb, IconInsta, IconMission } from "../icons";
+
 import { leaders, values } from "@/utils/aboutData";
 import Head from "next/head";
+import TeamCard from "@/components/TeamCard";
+import ValueCard from "@/components/ValueCard";
 
 export default function About() {
   return (
@@ -11,12 +13,10 @@ export default function About() {
         <title>About Us | Froshital</title>
       </Head>
       <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-        <section className="mt-5 flex items-center justify-between">
+        <section className="mt-3 flex flex-col items-center justify-center gap-7 md:flex-row lg:mt-0 lg:gap-14 xl:gap-40">
           <div>
-            <h2 className="mb-4 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
-              Our Mission
-            </h2>
-            <p className="w-2/3">
+            <h2 className="heading  text-center md:text-left">Our Mission</h2>
+            <p className="text-center md:text-left">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eos
               eligendi dolorum suscipit voluptas ipsa iusto incidunt provident
               doloribus optio perspiciatis accusantium quam tempore error
@@ -25,16 +25,20 @@ export default function About() {
             </p>
           </div>
           <div>
-            <IconMission />
+            <Image
+              src="/team.png"
+              alt="Team Mission"
+              width={1200}
+              height={900}
+              priority
+            />
           </div>
         </section>
 
-        <section className="mt-12">
-          <h2 className="mb-4 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
-            Meet Our Team
-          </h2>
+        <section className="mt-20">
+          <h2 className="heading  mb-5 text-center">Meet Our Team</h2>
           <div className="flex flex-wrap justify-center gap-8">
-            {leaders.map((leader) => (
+            {/* {leaders.map((leader) => (
               <div
                 key={leader.id}
                 className="group flex flex-col items-center justify-center rounded bg-slate-800 p-10 shadow-lg"
@@ -62,44 +66,49 @@ export default function About() {
                   </span>
                 </div>
               </div>
-            ))}
+            ))} */}
+
+            <TeamCard
+              img={"/rock.jpg"}
+              name="Danish Mirza"
+              position="Founder"
+            />
+            <TeamCard
+              img={"/rock.jpg"}
+              name="Tamanna Yeasmin"
+              position="Co-Founder"
+            />
+            <TeamCard
+              img={"/rock.jpg"}
+              name="Deepanshu Singh"
+              position="Manager"
+            />
           </div>
         </section>
 
-        <section className="my-7">
-          <h2 className="mb-5 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent">
-            Things We Value
-          </h2>
-          <div className="flex  flex-wrap items-center justify-center gap-5 ">
-            {values.map((value) => (
-              <div
-                key={value.id}
-                className="flex h-56 w-56 flex-col items-center justify-center rounded bg-slate-800 p-2 shadow"
-              >
-                <h3 className="text-center font-medium text-gray-100">
-                  {value.title}
-                </h3>
-                <p className="mt-2 text-center text-sm text-gray-100">
-                  {value.description}
-                </p>
-              </div>
-            ))}
+        <section className="mt-20 mb-5">
+          <h2 className="heading mb-5 text-center">Things We Value</h2>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 ">
+            <ValueCard
+              title="We are Transparent"
+              description="We trust each other. As a team, we foster trasparency, quality, and meaningful autonomy."
+            />
+            <ValueCard
+              title="We love what we do"
+              description="We love what we do. We are committed to provide the best medical services to our clients."
+            />
+            <ValueCard
+              title="We are Learners"
+              description="we are relentless problem solvers with a hunger to learn, inspire, and drive values."
+            />
+            <ValueCard
+              title="We deliver results"
+              description="We work together to ensure that our clients are getting the best services without any hassle."
+            />
           </div>
         </section>
 
-        <section className="my-7">
-          <h2 className="mb-5 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent">
-            Things We Value
-          </h2>
-          <div className="flex flex-col justify-center gap-3 ">
-            {values.map((value) => (
-              <div key={value.id} className="flex w-96 flex-col justify-center">
-                <h3 className="font-medium ">{value.title}</h3>
-                <p className="mt-1  text-sm ">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <section className="mt-10"></section>
       </div>
     </Layout>
   );

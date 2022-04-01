@@ -22,7 +22,7 @@ export default function BlogPost({
       </Head>
       <section className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <article>
-          <h1 className="md:leading-14 mb-4 mt-3 bg-gradient-to-tr from-gray-700 to-gray-800 bg-clip-text pb-2 text-center text-2xl font-bold leading-9 tracking-tight text-transparent sm:text-3xl sm:leading-10 ">
+          <h1 className="heading mb-4 mt-3 text-center leading-9 tracking-tight sm:leading-10 ">
             {title}
           </h1>
 

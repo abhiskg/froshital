@@ -17,9 +17,10 @@ export { default as IconPhone } from "./IconPhone";
 export { default as IconLab } from "./IconLab";
 export { default as IconHospital } from "./IconHospital";
 export { default as IconMedical } from "./IconMedical";
-export { default as IconMission } from "./IconMission";
+
 export { default as IconSearch } from "./IconSearch";
 export { default as IconChevronRight } from "./IconChevronRight";
 export { default as IconCheck } from "./IconCheck";
 export { default as IconX } from "./IconX";
 export { default as IconTrash } from "./IconTrash";
+export { default as IconLinkdin } from "./IconLinkdin";

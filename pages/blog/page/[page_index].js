@@ -17,9 +17,7 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
       </Head>
       <section className=" mx-auto  w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <div className="mt-3 flex flex-col items-center justify-between sm:flex-row">
-          <h1 className=" bg-gradient-to-tr from-gray-800 to-gray-600 bg-clip-text pb-2 text-2xl font-bold text-transparent sm:text-3xl">
-            Froshital Blog
-          </h1>
+          <h1 className="heading">Froshital Blog</h1>
           <Search />
         </div>
 

@@ -36,7 +36,7 @@ export default NextAuth({
           throw new Error("Invalid username or password");
         }
 
-        const user = { id: 2, username: "abhi", role: admin.role };
+        const user = { id: 456, username: admin.username, role: admin.role };
 
         return user;
       },

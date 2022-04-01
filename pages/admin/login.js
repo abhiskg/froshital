@@ -38,8 +38,8 @@ export default function Login() {
   };
 
   return (
-    <section>
-      <div className="mt-36 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text p-2 text-center text-4xl font-bold text-transparent ">
+    <section className="">
+      <div className="mt-36  bg-gradient-to-b from-gray-800 to-sky-900 bg-clip-text p-2 text-center text-4xl font-bold text-transparent ">
         Login Page
       </div>
       <div className="mx-auto mt-5 max-w-lg p-5 sm:rounded-md sm:bg-white sm:shadow-md">
@@ -88,7 +88,7 @@ export default function Login() {
               onClick={() => setError(true)}
               type="submit"
               disabled={loading ? true : false}
-              className=" group relative flex w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none"
+              className=" group relative flex w-full justify-center rounded-md border border-transparent bg-gradient-to-b from-gray-800 to-sky-900 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none"
             >
               {loading ? <ButtonLoader /> : "Login"}
             </button>
