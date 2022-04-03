@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import {
   hospitalReferrals,
   labBooking,
@@ -19,6 +20,8 @@ import {
   PhoneCall,
   Whatsapp,
 } from "../icons";
+
+// const DynamicTestimonial = dynamic(() => import("@/components/Testimonial"));
 
 export default function Home() {
   return (
@@ -42,8 +45,8 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <section className=" bg-gray-800 ">
-        <div className="mx-auto flex w-11/12 flex-wrap items-center justify-between py-28 md:w-10/12 lg:flex-nowrap 2xl:w-auto  2xl:max-w-7xl ">
+      <section className="bg-gray-800 ">
+        <div className="mx-auto flex w-11/12 flex-wrap items-center justify-between py-16 sm:py-28 md:w-10/12 lg:flex-nowrap 2xl:w-auto  2xl:max-w-7xl ">
           <div className="">
             <div className="flex w-64 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500">
               <span className=" rounded-full bg-gradient-to-br from-pink-500 to-amber-500 py-1 px-2 text-sm text-white">
@@ -51,48 +54,56 @@ export default function Home() {
               </span>
               <span className=" p-1 text-sm ">For first booking only</span>
             </div>
-            <div className="mt-5 flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
+            <div className="mt-5 flex items-center ">
               <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                 <IconMedical />
               </span>
-              <h3>Medical Tourism</h3>
+              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent lg:text-left lg:text-4xl ">
+                Medical Tourism
+              </h2>
             </div>
-            <div className="mt-5 flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
+            <div className="mt-5 flex items-center ">
               <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                 <IconHospital />
               </span>
-              <h3>Hospital Referrals</h3>
+              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent lg:text-left lg:text-4xl ">
+                Hospital Referrals
+              </h2>
             </div>
-            <div className="mt-5 flex items-center bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-4xl font-bold text-transparent lg:text-left ">
-              <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
+            <div className="mt-5 flex items-center ">
+              <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1 ">
                 <IconLab />
               </span>
-              <h3>Lab Booking</h3>
+              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent lg:text-left lg:text-4xl ">
+                Lab Booking
+              </h2>
             </div>
-            <h1 className=" mt-5 bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-center text-2xl font-bold text-transparent sm:text-3xl lg:text-left">
+            <h1 className=" mt-5 max-w-2xl bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-2xl font-bold text-transparent sm:text-3xl">
               We Are The One Stop Solution For All Medical Services In India
             </h1>
-            <div className="mt-10 flex items-center justify-center gap-3 lg:justify-start">
+            <div className="mt-10 flex items-center gap-3 ">
               <div>
                 <Link href="/contact">
-                  <a className="flex transform items-center gap-2 rounded bg-gradient-to-br from-green-500 to-blue-500 py-2.5 px-5 font-semibold tracking-wider text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white sm:text-lg">
-                    <span className="rotate-12">
+                  <a className="flex items-center gap-1 rounded bg-gradient-to-br from-green-500 to-blue-500 py-2.5 px-4  hover:from-green-600 hover:to-blue-600 ">
+                    <span className="rotate-[20deg] text-gray-100">
                       <IconPhone />
                     </span>
-                    <span>CALL US</span>
+                    <span className="font-semibold tracking-wide text-gray-100 hover:text-white lg:text-lg">
+                      CALL US
+                    </span>
                   </a>
                 </Link>
               </div>
               <div className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-2xl font-bold text-transparent">
                 OR
               </div>
-              <div>
-                <Link href="/contact">
-                  <a className="transform rounded  bg-gradient-to-br from-green-500 to-blue-500 py-3 px-5 font-semibold tracking-wider text-gray-100 transition-all duration-150 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white sm:text-lg">
+              <Link href="/contact">
+                <a>
+                  <div className="rounded bg-gradient-to-br from-green-500 to-blue-500 py-2.5 px-4 font-semibold tracking-wide text-gray-100  hover:from-green-600 hover:to-blue-600 hover:text-white lg:text-lg">
                     BOOK A SERVICE
-                  </a>
-                </Link>
-              </div>
+                  </div>
+                </a>
+              </Link>
             </div>
           </div>
 
@@ -184,7 +195,7 @@ export default function Home() {
         </h2>
         <dl className="mt-10 text-center sm:mx-auto sm:flex sm:justify-center sm:gap-8 ">
           <div className="flex flex-col">
-            <dd className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-5xl font-bold text-transparent ">
+            <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-5xl font-bold text-transparent ">
               100+
             </dd>
             <dt className="text-lg font-medium leading-6 text-white">
@@ -192,15 +203,15 @@ export default function Home() {
             </dt>
           </div>
           <div className="my-5 flex flex-col sm:my-0">
-            <dd className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-5xl font-bold text-transparent ">
+            <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-5xl font-bold text-transparent ">
               1K+
             </dd>
             <dt className="text-lg font-medium leading-6 text-white">
-              Lab Booking
+              Medical Tourism
             </dt>
           </div>
           <div className="flex flex-col">
-            <dd className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-5xl font-bold text-transparent ">
+            <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-5xl font-bold text-transparent ">
               100+
             </dd>
             <dt className="text-lg font-medium leading-6 text-white">
@@ -214,6 +225,8 @@ export default function Home() {
           </a>
         </Link>
       </section>
+
+      {/* <DynamicTestimonial /> */}
 
       <aside className="fixed bottom-0 left-0 right-0 z-20  flex sm:top-1/2 sm:bottom-auto sm:left-auto sm:-translate-y-1/2 sm:flex-col  ">
         <span className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-tl sm:border-0 sm:py-5 sm:px-1 ">

@@ -11,11 +11,11 @@ export default function Specialities({ speciality }) {
         <title>{`${speciality.title} | Froshital`}</title>
       </Head>
       <section className="">
-        <div className="w-full bg-gradient-to-br from-pink-300 to-amber-300 py-20">
-          <h1 className="text-center text-2xl font-bold text-black sm:text-3xl">
+        <div className="w-full bg-gradient-to-tr from-gray-700 to-sky-800 py-20">
+          <h1 className="text-center text-3xl font-bold text-gray-200 lg:text-4xl">
             {speciality.title}
           </h1>
-          <p className="mt-1 text-center">
+          <p className="mt-1 text-center text-gray-400">
             We have patnered with top hospitals to give you the best service in{" "}
             {speciality.title}{" "}
           </p>
@@ -42,7 +42,7 @@ export default function Specialities({ speciality }) {
             amet eius esse dolores tenetur necessitatibus vitae! Provident,
             reiciendis excepturi. Fuga, cupiditate?
           </h2>
-          <div className="mt-10 mb-2 bg-gradient-to-tr from-emerald-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent">
+          <div className="heading mt-10 mb-2">
             Section in {speciality.title}
           </div>
           <ul className="ml-5 mb-2 space-y-2">

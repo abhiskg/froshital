@@ -1,13 +1,15 @@
 import fs from "fs";
 import path from "path";
+import dynamic from "next/dynamic";
 import Layout from "@/components/Layout";
 import Post from "@/components/Post";
 import { POST_PER_PAGE } from "@/config/index";
-import Pagination from "@/components/Pagination";
 import { getPosts } from "@/lib/post";
 import CategoryList from "@/components/CategoryList";
 import Search from "@/components/Search";
 import Head from "next/head";
+
+const DynamicPagination = dynamic(() => import("@/components/Pagination"));
 
 export default function BlogPage({ posts, numPages, currentPage, categories }) {
   return (
@@ -31,7 +33,7 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
                 <Post key={index} post={post} />
               ))}
             </div>
-            <Pagination currentPage={currentPage} numPages={numPages} />
+            <DynamicPagination currentPage={currentPage} numPages={numPages} />
           </div>
         </div>
       </section>

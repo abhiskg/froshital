@@ -41,18 +41,29 @@ export default function Footer() {
           <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
             Company
           </h2>
-          <Link href="/about">
-            <a>
-              <p className="mb-1.5 text-sm text-gray-300 hover:text-white">
-                About Us
-              </p>
-            </a>
-          </Link>
-          <Link href="/career">
-            <a>
-              <p className="text-sm text-gray-300 hover:text-white">Career</p>
-            </a>
-          </Link>
+          <ul>
+            <Link href="/about">
+              <a>
+                <li className="mb-1.5 text-sm text-gray-300 hover:text-white">
+                  About Us
+                </li>
+              </a>
+            </Link>
+            <Link href="/blog">
+              <a>
+                <li className="mb-1.5 text-sm text-gray-300 hover:text-white">
+                  Blog
+                </li>
+              </a>
+            </Link>
+            <Link href="/career">
+              <a>
+                <li className="text-sm text-gray-300 hover:text-white">
+                  Career
+                </li>
+              </a>
+            </Link>
+          </ul>
         </div>
         <div className="w-full sm:w-auto">
           <h2 className="mb-2 font-medium text-gray-300 hover:text-white">

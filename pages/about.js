@@ -1,8 +1,6 @@
 import Image from "next/image";
-import Layout from "@/components/Layout";
-
-import { leaders, values } from "@/utils/aboutData";
 import Head from "next/head";
+import Layout from "@/components/Layout";
 import TeamCard from "@/components/TeamCard";
 import ValueCard from "@/components/ValueCard";
 
