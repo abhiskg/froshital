@@ -18,18 +18,18 @@ export default function Navbar() {
         </Link>
         <nav>
           <ul className="hidden items-center gap-4 md:flex">
-            <li className="cursor-pointer text-gray-400 hover:text-white">
+            <li className="navigation cursor-pointer">
               <Link href="/">
                 <a>Home</a>
               </Link>
             </li>
-            <li className="cursor-pointer text-gray-400 hover:text-white ">
+            <li className="navigation cursor-pointer ">
               <Link href="/about">
                 <a>About Us</a>
               </Link>
             </li>
             <li className="group">
-              <div className="flex cursor-pointer items-center py-4 text-gray-400 hover:text-white">
+              <div className="navigation flex cursor-pointer items-center py-4">
                 Services
                 <ArrowDown />
               </div>
@@ -51,7 +51,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link href="/services/lab-booking">
-                    <a className="block   whitespace-nowrap rounded-b py-2 px-4 hover:text-white">
+                    <a className="block whitespace-nowrap rounded-b py-2 px-4 hover:text-white">
                       Lab Booking
                     </a>
                   </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
               </ul>
             </li>
             <li className="group">
-              <div className="flex cursor-pointer items-center py-4 text-gray-400 hover:text-white">
+              <div className="navigation flex cursor-pointer items-center py-4">
                 Specialities
                 <ArrowDown />
               </div>

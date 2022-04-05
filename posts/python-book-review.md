@@ -2,7 +2,8 @@
 title: "What is Dermatology"
 date: "May 7, 2021"
 excerpt: "In this review, we will be looking at the new Python book from Oriley"
-cover_image: "/images/posts/img6.jpg"
+cover_image: "https://res.cloudinary.com/froshital/image/upload/v1649076298/Froshital/blog/img6_vzkhj9.jpg"
+alt: "Hello pic"
 category: "Dermatology"
 ---
 

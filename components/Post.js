@@ -7,7 +7,7 @@ export default function Post({ post }) {
     <div className="group w-full overflow-hidden rounded-md bg-white shadow-md hover:shadow-xl">
       <Image
         src={post.frontmatter.cover_image}
-        alt=""
+        alt={post.frontmatter.alt}
         height={380}
         width={700}
         className="transition-transform duration-[4000ms] group-hover:scale-110"
@@ -28,7 +28,9 @@ export default function Post({ post }) {
           </Link>
         </h2>
         <p className=" mt-px text-sm text-gray-600">
-          {post.frontmatter.excerpt}
+          {post.frontmatter.excerpt.length > 90
+            ? post.frontmatter.excerpt.slice(0, 90) + "..."
+            : post.frontmatter.excerpt}
         </p>
         <div className="">
           <Link href={`/blog/${post.slug}`}>

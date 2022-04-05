@@ -2,7 +2,8 @@
 title: "Gynaecology Hospitals"
 date: "May 8, 2021"
 excerpt: "Crash course to learn the React JavaScript library. We will look at components, hooks and more"
-cover_image: "/images/posts/img5.jpg"
+cover_image: "https://res.cloudinary.com/froshital/image/upload/v1649076289/Froshital/blog/img4_tj3wsf.jpg"
+alt: "Hello"
 category: "Gynaecology"
 ---
 

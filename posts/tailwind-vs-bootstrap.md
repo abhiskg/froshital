@@ -2,7 +2,8 @@
 title: "Best Dr for Obsterics"
 date: "May 5, 2021"
 excerpt: "Both Tailwind and Bootstrap are very popular CSS frameworks. In this article, we will compare them"
-cover_image: "/images/posts/img2.jpg"
+cover_image: "https://res.cloudinary.com/froshital/image/upload/v1649076271/Froshital/blog/img2_zxi5od.jpg"
+alt: "Hello"
 category: "Obsterics"
 ---
 

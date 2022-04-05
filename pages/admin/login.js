@@ -15,6 +15,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -31,7 +32,7 @@ export default function Login() {
     setLoading(false);
 
     if (result.error) {
-      console.log(result.error);
+      setErrorMessage(result.error);
     } else {
       window.location.href = "/admin/dashboard";
     }
@@ -92,6 +93,9 @@ export default function Login() {
             >
               {loading ? <ButtonLoader /> : "Login"}
             </button>
+          </div>
+          <div className="mt-2 text-center text-sm text-red-500">
+            {errorMessage}
           </div>
         </form>
       </div>

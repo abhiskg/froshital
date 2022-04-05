@@ -16,25 +16,45 @@ export default function Footer() {
           <div className="mb-2 font-medium text-gray-300 hover:text-white">
             Froshital Logo
           </div>
-          <p className="text-sm text-gray-300 hover:text-white">
+          <p className="navigation text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing
           </p>
           <h3 className="my-2 font-medium text-gray-300 hover:text-white">
             Follow Us On
           </h3>
           <div className="flex gap-3">
-            <span className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+            <a
+              href="https://www.facebook.com/Froshital-100154242462604"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
+            >
               <IconFb />
-            </span>
-            <span className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+            </a>
+            <a
+              href="https://www.instagram.com/froshital/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
+            >
               <IconInsta />
-            </span>
-            <span className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+            </a>
+            <a
+              href="https://www.linkedin.com/company/froshital/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
+            >
               <IconLinkdin />
-            </span>
-            <span className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+            </a>
+            <a
+              href="https://twitter.com/froshital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
+            >
               <IconTwitter />
-            </span>
+            </a>
           </div>
         </div>
         <div className="w-full sm:w-auto">
@@ -44,23 +64,22 @@ export default function Footer() {
           <ul>
             <Link href="/about">
               <a>
-                <li className="mb-1.5 text-sm text-gray-300 hover:text-white">
-                  About Us
-                </li>
+                <li className="navigation mb-1.5 text-sm">About Us</li>
               </a>
             </Link>
             <Link href="/blog">
               <a>
-                <li className="mb-1.5 text-sm text-gray-300 hover:text-white">
-                  Blog
-                </li>
+                <li className="navigation mb-1.5 text-sm">Blog</li>
               </a>
             </Link>
             <Link href="/career">
               <a>
-                <li className="text-sm text-gray-300 hover:text-white">
-                  Career
-                </li>
+                <li className="navigation mb-1.5 text-sm">Career</li>
+              </a>
+            </Link>
+            <Link href="/career">
+              <a>
+                <li className="navigation text-sm">Patner with us</li>
               </a>
             </Link>
           </ul>
@@ -72,21 +91,17 @@ export default function Footer() {
           <ul className="text-sm ">
             <Link href="/services/hospital-referrals">
               <a>
-                <li className="text-gray-300 hover:text-white">
-                  Hospital Referrals
-                </li>
+                <li className="navigation">Hospital Referrals</li>
               </a>
             </Link>
             <Link href="/services/medical-tourism">
               <a>
-                <li className="my-1.5 text-gray-300 hover:text-white">
-                  Medical Tourism
-                </li>
+                <li className="navigation my-1.5">Medical Tourism</li>
               </a>
             </Link>
             <Link href="/services/lab-booking">
               <a>
-                <li className="text-gray-300 hover:text-white">Lab Booking</li>
+                <li className="navigation">Lab Booking</li>
               </a>
             </Link>
           </ul>
@@ -99,23 +114,17 @@ export default function Footer() {
           <ul>
             <Link href="/terms-and-conditions">
               <a>
-                <li className="text-sm text-gray-300 hover:text-white">
-                  Terms and Conditions
-                </li>
+                <li className="navigation text-sm">Terms and Conditions</li>
               </a>
             </Link>
             <Link href="/privacy-policy">
               <a>
-                <li className="my-1.5 text-sm text-gray-300 hover:text-white">
-                  Privacy Policy
-                </li>
+                <li className="navigation my-1.5 text-sm">Privacy Policy</li>
               </a>
             </Link>
             <Link href="/customer-support-policy">
               <a>
-                <li className="text-sm text-gray-300 hover:text-white">
-                  Customer Support Policy
-                </li>
+                <li className="navigation text-sm">Customer Support Policy</li>
               </a>
             </Link>
           </ul>
@@ -126,7 +135,7 @@ export default function Footer() {
           </h2>
           <a
             href="tel:+918433437690"
-            className="flex items-center gap-2 text-sm text-gray-300 hover:text-white"
+            className="navigation flex items-center gap-2 text-sm"
           >
             <span>
               <IconPhone />
@@ -135,7 +144,7 @@ export default function Footer() {
           </a>
           <a
             href="mailto:froshital@gmail.com"
-            className="mt-2 flex items-center gap-2 text-sm  text-gray-300 hover:text-white"
+            className="navigation mt-2 flex items-center gap-2  text-sm"
           >
             <span>
               <IconMail />

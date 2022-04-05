@@ -2,7 +2,8 @@
 title: "Dermatology Hospitals"
 date: "May 12, 2021"
 excerpt: "We will look at 10 simple tips and tricks on writing unit tests in JavaScript"
-cover_image: "/images/posts/img7.jpg"
+cover_image: "https://res.cloudinary.com/froshital/image/upload/v1649076308/Froshital/blog/img7_gu0lae.jpg"
+alt: "Hospital"
 category: "Dermatology"
 ---
 

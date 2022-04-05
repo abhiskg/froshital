@@ -8,6 +8,10 @@ module.exports = {
       sans: ["Poppins", "system-ui", "Helvetica", "sans-serif"],
     },
     extend: {
+      transitionProperty: {
+        primary: "opacity, transform",
+        height: "height",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -19,7 +23,6 @@ module.exports = {
                 textDecoration: "underline",
               },
             },
-            
           },
         },
       }),

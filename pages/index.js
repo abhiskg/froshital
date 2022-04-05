@@ -20,6 +20,7 @@ import {
   PhoneCall,
   Whatsapp,
 } from "../icons";
+import Image from "next/image";
 
 // const DynamicTestimonial = dynamic(() => import("@/components/Testimonial"));
 
@@ -46,7 +47,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="bg-gray-800 ">
-        <div className="mx-auto flex w-11/12 flex-wrap items-center justify-between py-16 sm:py-28 md:w-10/12 lg:flex-nowrap 2xl:w-auto  2xl:max-w-7xl ">
+        <div className="mx-auto flex w-11/12 flex-wrap items-center justify-between gap-5  pb-16 pt-10 sm:pb-28 md:w-10/12 lg:flex-nowrap lg:pt-20 xl:pt-10 2xl:w-auto  2xl:max-w-7xl ">
           <div className="">
             <div className="flex w-64 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500">
               <span className=" rounded-full bg-gradient-to-br from-pink-500 to-amber-500 py-1 px-2 text-sm text-white">
@@ -58,7 +59,7 @@ export default function Home() {
               <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                 <IconMedical />
               </span>
-              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent lg:text-left lg:text-4xl ">
+              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent md:text-4xl lg:text-left ">
                 Medical Tourism
               </h2>
             </div>
@@ -66,7 +67,7 @@ export default function Home() {
               <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                 <IconHospital />
               </span>
-              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent lg:text-left lg:text-4xl ">
+              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent md:text-4xl lg:text-left ">
                 Hospital Referrals
               </h2>
             </div>
@@ -74,7 +75,7 @@ export default function Home() {
               <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1 ">
                 <IconLab />
               </span>
-              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent lg:text-left lg:text-4xl ">
+              <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-3xl font-bold text-transparent md:text-4xl lg:text-left ">
                 Lab Booking
               </h2>
             </div>
@@ -106,8 +107,15 @@ export default function Home() {
               </Link>
             </div>
           </div>
-
-          <MainSvg />
+          <div>
+            <Image
+              src="https://res.cloudinary.com/froshital/image/upload/v1649085956/Froshital/Hero_pic_cxs7m9.png"
+              alt="main pic"
+              height={600}
+              width={700}
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -190,11 +198,11 @@ export default function Home() {
 
       {/* Why Choose Us Section */}
       <section className="flex flex-col items-center bg-[#1F2937] pb-20 text-[#F3F4F6] lg:-mt-20">
-        <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl ">
+        <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
           Why Choose Us
         </h2>
-        <dl className="mt-10 text-center sm:mx-auto sm:flex sm:justify-center sm:gap-8 ">
-          <div className="flex flex-col">
+        <dl className="mt-10 text-center sm:mx-auto sm:flex sm:justify-center sm:gap-3 ">
+          <div className="flex flex-col ">
             <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-5xl font-bold text-transparent ">
               100+
             </dd>
@@ -202,7 +210,7 @@ export default function Home() {
               Client Satisfaction
             </dt>
           </div>
-          <div className="my-5 flex flex-col sm:my-0">
+          <div className="my-5 mx-4 flex flex-col px-7 sm:my-0 sm:border-x">
             <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-5xl font-bold text-transparent ">
               1K+
             </dd>
@@ -220,7 +228,7 @@ export default function Home() {
           </div>
         </dl>
         <Link href="/contact">
-          <a className="mt-10 transform rounded bg-gradient-to-br from-green-500 to-blue-500 py-3 px-5 text-xl font-semibold tracking-wider text-gray-100 transition-all duration-150 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white">
+          <a className="mt-10 transform rounded bg-gradient-to-br from-green-500 to-blue-500 py-3 px-5 text-xl font-semibold tracking-wider text-gray-100 transition-primary duration-150 ease-out hover:scale-105 hover:from-green-600 hover:to-blue-600 hover:text-white">
             CONTACT US
           </a>
         </Link>
@@ -229,15 +237,26 @@ export default function Home() {
       {/* <DynamicTestimonial /> */}
 
       <aside className="fixed bottom-0 left-0 right-0 z-20  flex sm:top-1/2 sm:bottom-auto sm:left-auto sm:-translate-y-1/2 sm:flex-col  ">
-        <span className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-tl sm:border-0 sm:py-5 sm:px-1 ">
+        <a
+          href="tel:+918433437690"
+          className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-tl sm:border-0 sm:py-5 sm:px-1 "
+        >
           <PhoneCall />
-        </span>
-        <span className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:border-0 sm:py-5 sm:px-1 ">
+        </a>
+        <a
+          href="mailto:froshital@gmail.com"
+          className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:border-0 sm:py-5 sm:px-1 "
+        >
           <Mail />
-        </span>
-        <span className="flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none  sm:rounded-bl sm:py-5 sm:px-1 ">
+        </a>
+        <a
+          href="https://wa.me/918433437690?text=Hello%20Froshital"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none  sm:rounded-bl sm:py-5 sm:px-1 "
+        >
           <Whatsapp />
-        </span>
+        </a>
       </aside>
     </Layout>
   );

@@ -1,8 +1,9 @@
 ---
 title: "Best Cardiology Hospital"
 date: "May 5, 2021"
-excerpt: "Django is a very powerful, high level Python framework for building web applications"
-cover_image: "/images/posts/img3.jpg"
+excerpt: "Django is a very powerful, high level Python framework for building web applications, Django is a very powerful, high level Python framework for building web applications, Django is a very powerful, high level Python framework for building web applications"
+cover_image: "https://res.cloudinary.com/froshital/image/upload/v1649076278/Froshital/blog/img3_moa7yo.jpg"
+alt: "Cardiology Hospital"
 category: "Cardiology"
 ---
 

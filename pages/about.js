@@ -24,8 +24,8 @@ export default function About() {
           </div>
           <div>
             <Image
-              src="/team.png"
-              alt="Team Mission"
+              src="https://res.cloudinary.com/froshital/image/upload/v1649075651/Froshital/Our_mission_laacyj.png"
+              alt="Team' mission pic"
               width={1200}
               height={900}
               priority
@@ -67,17 +67,23 @@ export default function About() {
             ))} */}
 
             <TeamCard
-              img={"/rock.jpg"}
+              img={
+                "https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
+              }
               name="Danish Mirza"
               position="Founder"
             />
             <TeamCard
-              img={"/rock.jpg"}
+              img={
+                "https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
+              }
               name="Tamanna Yeasmin"
               position="Co-Founder"
             />
             <TeamCard
-              img={"/rock.jpg"}
+              img={
+                "https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
+              }
               name="Deepanshu Singh"
               position="Manager"
             />

@@ -11,7 +11,7 @@ import Search from "@/components/Search";
 import { getPosts } from "@/lib/post";
 
 export default function BlogPost({
-  frontmatter: { title, category, date, cover_image },
+  frontmatter: { title, category, date, cover_image, alt },
   content,
   similarPosts,
 }) {
@@ -31,7 +31,7 @@ export default function BlogPost({
               <div className="relative h-72 w-full  sm:h-96">
                 <Image
                   src={cover_image}
-                  alt=""
+                  alt={alt}
                   layout="fill"
                   className="rounded"
                   priority
@@ -66,7 +66,7 @@ export default function BlogPost({
                     <a className="flex max-w-fit  items-start gap-2 rounded p-2 hover:bg-white hover:shadow lg:max-w-none">
                       <Image
                         src={post.frontmatter.cover_image}
-                        alt=""
+                        alt={post.frontmatter.alt}
                         width={60}
                         height={60}
                         className="rounded"
