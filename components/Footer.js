@@ -11,13 +11,13 @@ import {
 export default function Footer() {
   return (
     <footer className="bg-gray-800">
-      <div className="mx-auto flex w-11/12 flex-wrap gap-5 py-10 sm:gap-8 md:w-10/12 lg:justify-between 2xl:w-auto 2xl:max-w-7xl">
+      <div className="mx-auto flex w-11/12 flex-wrap gap-5 py-10 sm:gap-10 md:w-10/12 lg:justify-between 2xl:w-auto 2xl:max-w-7xl">
         <div>
           <div className="mb-2 font-medium text-gray-300 hover:text-white">
             Froshital Logo
           </div>
           <p className="navigation text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing
+            Top Medical Service Provider in India
           </p>
           <h3 className="my-2 font-medium text-gray-300 hover:text-white">
             Follow Us On
@@ -57,7 +57,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="w-full sm:w-auto">
+        <div className="w-full md:w-auto">
           <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
             Company
           </h2>
@@ -84,7 +84,7 @@ export default function Footer() {
             </Link>
           </ul>
         </div>
-        <div className="w-full sm:w-auto">
+        <div className="w-full md:w-auto">
           <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
             Our Services
           </h2>
@@ -106,7 +106,7 @@ export default function Footer() {
             </Link>
           </ul>
         </div>
-        <div className="w-full sm:w-auto">
+        <div className="w-full md:w-auto">
           <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
             Legal
           </h2>
@@ -129,7 +129,7 @@ export default function Footer() {
             </Link>
           </ul>
         </div>
-        <div className="w-full sm:w-auto">
+        <div className="w-full md:w-auto">
           <h2 className="mb-2 font-medium text-gray-300 hover:text-white">
             Quick Contact
           </h2>

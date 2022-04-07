@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 export default function CategoryList({ categories }) {
   return (
@@ -18,3 +19,7 @@ export default function CategoryList({ categories }) {
     </div>
   );
 }
+
+CategoryList.propTypes = {
+  categories: PropTypes.array.isRequired,
+};

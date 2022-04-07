@@ -1,5 +1,6 @@
 import { IconFb, IconInsta } from "icons";
 import Image from "next/image";
+import PropTypes from "prop-types";
 
 export default function TeamCard({ img, name, position }) {
   return (
@@ -25,8 +26,8 @@ export default function TeamCard({ img, name, position }) {
   );
 }
 
-{
-  /* <div className="relative h-96 w-80 before:absolute  before:-bottom-3 before:left-0 before:right-0 before:h-px before:w-full before:origin-left before:scale-y-0  before:bg-gray-800 before:transition-transform before:duration-200 before:ease-linear before:content-[''] before:hover:scale-y-100 ">
-        <Image src="/rock.jpg" alt="hsd" layout="fill" />
-      </div> */
-}
+TeamCard.propTypes = {
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+};

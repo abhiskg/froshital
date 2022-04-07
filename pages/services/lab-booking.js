@@ -5,9 +5,9 @@ import Head from "next/head";
 export default function LabBooking() {
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Lab Booking | Froshital</title>
-      </Head>
+      </Head> */}
       <section className="flex h-screen items-center justify-center">
         {/* <div className="relative h-52 w-full sm:h-96">
           <Image

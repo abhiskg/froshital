@@ -7,9 +7,9 @@ import Layout from "../../components/Layout";
 export default function Specialities({ speciality }) {
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>{`${speciality.title} | Froshital`}</title>
-      </Head>
+      </Head> */}
       <section className="">
         <div className="w-full bg-gradient-to-tr from-gray-700 to-sky-800 py-20">
           <h1 className="text-center text-3xl font-bold text-gray-200 lg:text-4xl">

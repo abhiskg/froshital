@@ -18,7 +18,7 @@ export default function Accordion({ faq }) {
             onClick={() => handleToggle(i)}
             className="flex cursor-pointer items-center justify-between gap-2 "
           >
-            <h3 className="font-semibold text-gray-600 md:text-lg ">
+            <h3 className="select-none font-semibold text-gray-600 md:text-lg ">
               {item.question}
             </h3>
             <span>{selected === i ? "-" : "+"}</span>

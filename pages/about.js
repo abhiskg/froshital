@@ -7,9 +7,9 @@ import ValueCard from "@/components/ValueCard";
 export default function About() {
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>About Us | Froshital</title>
-      </Head>
+      </Head> */}
       <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <section className="mt-3 flex flex-col items-center justify-center gap-7 md:flex-row lg:mt-0 lg:gap-14 xl:gap-40">
           <div>

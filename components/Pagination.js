@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PropTypes from "prop-types";
 
 export default function Pagination({ currentPage, numPages }) {
   const isFirst = currentPage === 1;
@@ -42,3 +43,8 @@ export default function Pagination({ currentPage, numPages }) {
     </div>
   );
 }
+
+Pagination.propTypes = {
+  currentPage: PropTypes.number.isRequired,
+  numPages: PropTypes.number.isRequired,
+};

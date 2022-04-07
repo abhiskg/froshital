@@ -11,9 +11,9 @@ import ProcessCard from "@/components/ProcessCard";
 export default function HospitalReferrals() {
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Hospital Referrals | Froshital</title>
-      </Head>
+      </Head> */}
       <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <section className="mt-5 flex flex-wrap  justify-center gap-5 lg:flex-nowrap lg:justify-between lg:gap-10">
           <div>
@@ -23,7 +23,7 @@ export default function HospitalReferrals() {
             <p className="max-w-3xl text-center text-gray-600 lg:text-left">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               placeat quo minima. Cupiditate, officia? Iste modi fugit minus
-              enim excepturi!
+              enim
             </p>
             <div className="mb-5 mt-8 text-center lg:text-left ">
               <Link href="/contact">
@@ -43,7 +43,7 @@ export default function HospitalReferrals() {
           />
         </section>
         <section>
-          <h2 className="heading mt-10 text-center">We Offer Best Services</h2>
+          <h2 className="heading mt-16 text-center">We Offer Best Services</h2>
           <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 ">
             <ServiceCard
               title="Spend Less Money"
@@ -64,38 +64,38 @@ export default function HospitalReferrals() {
           </div>
         </section>
         <section>
-          <h2 className="heading mt-10 text-center">The Process We Follow</h2>
-          <div>
+          <h2 className="heading mt-16 ">The Process We Follow</h2>
+          <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             <ProcessCard
-              number="1"
+              number={1}
               title="Discovery"
               description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
             />
             <ProcessCard
-              number="2"
+              number={2}
               title="Discovery"
               description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
             />
             <ProcessCard
-              number="3"
+              number={3}
               title="Discovery"
               description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
             />
             <ProcessCard
-              number="4"
+              number={4}
               title="Discovery"
               description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
             />
             <ProcessCard
-              number="5"
+              number={5}
               title="Discovery"
               description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
             />
           </div>
         </section>
-        <section>
-          <h2 className="heading mb-2 mt-10">FAQ</h2>
-          <div className="lg:max-w-3xl">
+        <section className="mt-16">
+          <h2 className="heading">FAQ</h2>
+          <div className="mt-5 lg:max-w-3xl">
             <Accordion faq={hospitalReferralsFaq} />
           </div>
         </section>

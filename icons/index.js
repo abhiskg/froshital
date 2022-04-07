@@ -10,7 +10,6 @@ export { default as DotCircle } from "./DotCircle";
 export { default as Check } from "./Check";
 export { default as Layer } from "./Layer";
 export { default as FooterLayer } from "./FooterLayer";
-export { default as MainSvg } from "./MainSvg";
 export { default as IconSend } from "./IconSend";
 export { default as IconMail } from "./IconMail";
 export { default as IconPhone } from "./IconPhone";

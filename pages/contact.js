@@ -48,9 +48,9 @@ const Contact = () => {
 
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Froshital | Contact Us</title>
-      </Head>
+      </Head> */}
 
       <section className="mx-auto mt-5  mb-5 w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl ">
         <div className=" mt-2 flex flex-col  justify-between lg:flex-row lg:gap-x-5 xl:gap-x-20 ">
@@ -86,7 +86,7 @@ const Contact = () => {
 
             <div className="relative mt-10 mr-3 rounded border-2 border-gray-200">
               {/* Embed Google map */}
-              <iframe
+              {/* <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8827.330741966553!2d2.308756110118289!3d48.87000842543867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47407434935db!2s18%20Av.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1635492407441!5m2!1sfr!2sfr"
                 title="map"
                 scrolling="no"
@@ -95,7 +95,7 @@ const Contact = () => {
                 height="300"
                 className=""
                 loading="lazy"
-              />
+              /> */}
             </div>
           </div>
 
