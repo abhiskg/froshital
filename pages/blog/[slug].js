@@ -7,8 +7,10 @@ import Head from "next/head";
 import Image from "next/image";
 import CategoryLabel from "@/components/CategoryLabel";
 import Layout from "@/components/Layout";
-import Search from "@/components/Search";
 import { getPosts } from "@/lib/post";
+import dynamic from "next/dynamic";
+
+const DynamicSearch = dynamic(() => import("@/components/Search"));
 
 export default function BlogPost({
   frontmatter: { title, category, date, cover_image, alt },
@@ -55,7 +57,7 @@ export default function BlogPost({
             </div>
             <div>
               <span className="hidden lg:block">
-                <Search />
+                <DynamicSearch />
               </span>
               <h2 className="mt-7 mb-1 text-xl font-semibold text-gray-900">
                 Related Blogs

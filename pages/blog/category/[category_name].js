@@ -5,8 +5,10 @@ import Post from "@/components/Post";
 import CategoryList from "@/components/CategoryList";
 import matter from "gray-matter";
 import { getPosts } from "@/lib/post";
-import Search from "@/components/Search";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+const DynamicSearch = dynamic(() => import("@/components/Search"));
 
 export default function CategoryBlogPage({ posts, categoryName, categories }) {
   return (
@@ -17,7 +19,7 @@ export default function CategoryBlogPage({ posts, categoryName, categories }) {
       <section className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <div className="mt-3 flex flex-col items-center justify-between sm:flex-row">
           <h1 className="heading">Post in {categoryName}</h1>
-          <Search />
+          <DynamicSearch />
         </div>
         <div className="mt-7 mb-5 flex flex-col items-center justify-between gap-8 md:flex-row md:items-start">
           <div className="order-1 w-full min-w-fit md:order-none md:w-1/4 ">

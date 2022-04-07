@@ -6,10 +6,11 @@ import Post from "@/components/Post";
 import { POST_PER_PAGE } from "@/config/index";
 import { getPosts } from "@/lib/post";
 import CategoryList from "@/components/CategoryList";
-import Search from "@/components/Search";
+
 import Head from "next/head";
 
 const DynamicPagination = dynamic(() => import("@/components/Pagination"));
+const DynamicSearch = dynamic(() => import("@/components/Search"));
 
 export default function BlogPage({ posts, numPages, currentPage, categories }) {
   return (
@@ -20,7 +21,7 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
       <section className=" mx-auto  w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <div className="mt-3 flex flex-col items-center justify-between sm:flex-row">
           <h1 className="heading">Froshital Blog</h1>
-          <Search />
+          <DynamicSearch />
         </div>
 
         <div className="mt-7 mb-5 flex flex-col items-center justify-between gap-5 md:flex-row md:items-start md:gap-8">
