@@ -20,8 +20,10 @@ import {
   Whatsapp,
 } from "../icons";
 import Image from "next/image";
+import { medicalTourismFaq } from "@/utils/faqData";
 
 const DynamicTestimonial = dynamic(() => import("@/components/Testimonial"));
+const DynamicAccordion = dynamic(() => import("@/components/Accordion"));
 
 export default function Home() {
   return (
@@ -45,7 +47,7 @@ export default function Home() {
       </Head> */}
 
       {/* Hero Section */}
-      <section className="bg-gray-800">
+      <section className="bg-gray-900">
         <div className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl ">
           <div className="flex flex-wrap items-center justify-between gap-7 pb-6 pt-8 sm:pb-16 lg:flex-nowrap lg:pt-20 xl:pt-8">
             <div>
@@ -193,10 +195,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us Section */}
+
       <FooterLayer />
 
-      {/* Why Choose Us Section */}
-      <div className="bg-gray-800">
+      <div className="bg-gray-900">
         <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
           <section className="flex flex-col items-center text-[#F3F4F6] lg:-mt-20">
             <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
@@ -235,6 +238,14 @@ export default function Home() {
             </Link>
           </section>
           <DynamicTestimonial />
+          <section className="mt-16 pb-4">
+            <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-4xl font-bold text-transparent md:text-5xl ">
+              FAQ
+            </h2>
+            <div className="mt-5 lg:max-w-3xl">
+              <DynamicAccordion faq={medicalTourismFaq} page="main" />
+            </div>
+          </section>
         </div>
       </div>
 

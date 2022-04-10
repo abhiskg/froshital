@@ -96,7 +96,7 @@ export default function HospitalReferrals() {
         <section className="mt-16">
           <h2 className="heading">FAQ</h2>
           <div className="mt-5 lg:max-w-3xl">
-            <Accordion faq={hospitalReferralsFaq} />
+            <Accordion faq={hospitalReferralsFaq} page="service" />
           </div>
         </section>
       </div>

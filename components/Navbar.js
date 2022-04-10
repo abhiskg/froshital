@@ -9,7 +9,7 @@ export default function Navbar() {
   const [specialitiesState, setSpecialitiesState] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 h-16 bg-gray-800 ">
+    <header className="sticky top-0 z-40 h-16 bg-gray-900 ">
       <div className="relative mx-auto flex h-full w-11/12 items-center justify-between lg:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <Link href="/">
           <a>

@@ -5,10 +5,10 @@ import { marked } from "marked";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import CategoryLabel from "@/components/CategoryLabel";
 import Layout from "@/components/Layout";
 import { getPosts } from "@/lib/post";
-import dynamic from "next/dynamic";
 
 const DynamicSearch = dynamic(() => import("@/components/Search"));
 

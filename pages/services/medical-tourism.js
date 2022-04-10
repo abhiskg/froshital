@@ -95,7 +95,7 @@ export default function MedicalTourism() {
         <section className="mt-16">
           <h2 className="heading ">FAQ</h2>
           <div className="mt-5 lg:max-w-3xl">
-            <Accordion faq={medicalTourismFaq} />
+            <Accordion faq={medicalTourismFaq} page="service" />
           </div>
         </section>
       </div>
