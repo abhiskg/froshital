@@ -25,3 +25,4 @@ export { default as IconLinkdin } from "./IconLinkdin";
 export { default as IconStar } from "./IconStar";
 export { default as IconLeftQuote } from "./IconLeftQuote";
 export { default as IconRightQuote } from "./IconRightQuote";
+export { default as IconArrowUp } from "./IconArrowUp";

@@ -54,7 +54,7 @@ export default function Testimonial() {
   return (
     <>
       <section className="mt-20">
-        <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl ">
+        <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-center text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
           What Our Clients Say
         </h2>
         <p className="mt-2 text-center text-lg font-medium text-gray-300">
@@ -85,7 +85,7 @@ export default function Testimonial() {
         </Slider>
       </section>
       <section className="mt-20">
-        <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-4xl font-bold text-transparent md:text-5xl ">
+        <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
           Our Patners
         </h2>
         <div className="relative mt-1 py-4  before:absolute before:inset-0 before:z-10 before:bg-gray-900 before:opacity-30 before:content-['']">

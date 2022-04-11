@@ -1,15 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import {
-  hospitalReferrals,
-  labBooking,
-  medicalTourism,
-} from "@/utils/servicesData";
+// import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 import Layout from "@/components/Layout";
 import {
   Check,
   FooterLayer,
+  IconArrowUp,
   IconHospital,
   IconLab,
   IconMedical,
@@ -19,13 +18,48 @@ import {
   PhoneCall,
   Whatsapp,
 } from "../icons";
-import Image from "next/image";
 import { medicalTourismFaq } from "@/utils/faqData";
 
 const DynamicTestimonial = dynamic(() => import("@/components/Testimonial"));
 const DynamicAccordion = dynamic(() => import("@/components/Accordion"));
+const DynamicCountUp = dynamic(() => import("react-countup"));
 
 export default function Home() {
+  const [refH, inViewH] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const [refS, inViewS] = useInView({
+    rootMargin: "0px 0px -60px 0px",
+    triggerOnce: true,
+  });
+
+  const [refR, inViewR] = useInView({
+    rootMargin: "0px 0px -100px 0px",
+    triggerOnce: true,
+  });
+
+  const [refM, inViewM] = useInView({
+    rootMargin: "0px 0px -100px 0px",
+    triggerOnce: true,
+  });
+
+  const [refL, inViewL] = useInView({
+    rootMargin: "0px 0px -100px 0px",
+    triggerOnce: true,
+  });
+
+  const [refC, inViewC] = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+
+  const [refA, inViewA] = useInView({
+    rootMargin: "0px 0px -180px 0px",
+    initialInView: true,
+  });
+
   return (
     <Layout>
       {/* <Head>
@@ -48,16 +82,34 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="bg-gray-900">
-        <div className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl ">
-          <div className="flex flex-wrap items-center justify-between gap-7 pb-6 pt-8 sm:pb-16 lg:flex-nowrap lg:pt-20 xl:pt-8">
+        <div
+          ref={refH}
+          className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl "
+        >
+          <div
+            ref={refA}
+            className="flex flex-wrap items-center justify-between gap-7 pb-6 pt-8 sm:pb-16 lg:flex-nowrap lg:pt-20 xl:pt-8"
+          >
             <div>
-              <div className="flex w-64 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500">
+              <div
+                className={`${
+                  inViewH
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-3 opacity-0"
+                } flex w-64 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 transition-primary delay-700 duration-700`}
+              >
                 <span className=" rounded-full bg-gradient-to-br from-pink-500 to-amber-500 py-1 px-2 text-sm text-white">
                   Save 10%
                 </span>
                 <span className=" p-1 text-sm ">For first booking only</span>
               </div>
-              <div className="mt-5 flex items-center ">
+              <div
+                className={`${
+                  inViewH
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-3 opacity-0"
+                } mt-5 flex items-center transition-primary delay-100 duration-700`}
+              >
                 <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                   <IconMedical />
                 </span>
@@ -65,7 +117,13 @@ export default function Home() {
                   Medical Tourism
                 </h2>
               </div>
-              <div className="mt-1 flex items-center ">
+              <div
+                className={`${
+                  inViewH
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-3 opacity-0"
+                } mt-1 flex items-center transition-primary delay-200 duration-700`}
+              >
                 <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1">
                   <IconHospital />
                 </span>
@@ -73,7 +131,13 @@ export default function Home() {
                   Hospital Referrals
                 </h2>
               </div>
-              <div className="mt-1 flex items-center ">
+              <div
+                className={`${
+                  inViewH
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-3 opacity-0"
+                } mt-1 flex items-center transition-primary delay-300 duration-700`}
+              >
                 <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1 ">
                   <IconLab />
                 </span>
@@ -81,14 +145,26 @@ export default function Home() {
                   Lab Booking
                 </h2>
               </div>
-              <h1 className=" mt-5 max-w-2xl bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-2xl font-bold text-transparent md:text-3xl">
+              <h1
+                className={`${
+                  inViewH
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-3 opacity-0"
+                } mt-5 max-w-2xl bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-2xl font-bold text-transparent transition-primary delay-400 duration-700 md:text-3xl`}
+              >
                 We Are The One Stop Solution For All Medical Services In India
               </h1>
-              <div className="mt-10 flex items-center gap-3 ">
+              <div
+                className={`${
+                  inViewH
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-3 opacity-0"
+                } mt-10 flex items-center gap-3 transition-primary delay-500 duration-700 `}
+              >
                 <div>
                   <a
                     href="tel:+918433437690"
-                    className="group flex items-center gap-1 rounded border border-green-300 py-2.5 px-4 hover:border-green-900 hover:bg-gradient-to-br hover:from-green-600 hover:to-blue-600"
+                    className="group flex items-center gap-1 rounded bg-gradient-to-br from-green-500  to-blue-500 py-2.5 px-4 hover:from-green-600 hover:to-blue-600"
                   >
                     <span className="rotate-[20deg] text-gray-100 group-hover:text-white">
                       <IconPhone />
@@ -103,7 +179,7 @@ export default function Home() {
                 </div>
                 <Link href="/contact">
                   <a>
-                    <div className="rounded border border-green-300 py-2.5 px-4 font-semibold tracking-wide text-gray-100 hover:border-green-900 hover:bg-gradient-to-br  hover:from-green-600 hover:to-blue-600 hover:text-white lg:text-lg">
+                    <div className="rounded bg-gradient-to-br from-green-500 to-blue-500 py-2.5 px-4 font-semibold tracking-wide text-gray-100 hover:from-green-600 hover:to-blue-600 hover:text-white lg:text-lg">
                       BOOK A SERVICE
                     </div>
                   </a>
@@ -111,13 +187,21 @@ export default function Home() {
               </div>
             </div>
 
-            <Image
-              src="https://res.cloudinary.com/froshital/image/upload/v1649085956/Froshital/Hero_pic_cxs7m9.png"
-              alt="main pic"
-              height={700}
-              width={700}
-              priority
-            />
+            <div
+              className={`${
+                inViewH
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-3 opacity-0"
+              } transition-primary delay-500 duration-700 `}
+            >
+              <Image
+                src="https://res.cloudinary.com/froshital/image/upload/v1649085956/Froshital/Hero_pic_cxs7m9.png"
+                alt="main pic"
+                height={700}
+                width={700}
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -126,108 +210,240 @@ export default function Home() {
       </div>
 
       {/* Service Section */}
+      <section className="mx-auto mb-5 mt-10 w-11/12 md:mt-0 md:w-10/12  2xl:w-auto 2xl:max-w-7xl">
+        <div
+          ref={refS}
+          className=" flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap"
+        >
+          <div>
+            <div
+              className={`${
+                inViewR
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-2 opacity-0"
+              } transition-primary duration-700`}
+            >
+              <h3
+                ref={refR}
+                className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
+              >
+                Hospital Referrals
+              </h3>
+              <p className="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+              <p className="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <p className="mt-2">Lorem ipsum dolor sit amet consectetur.</p>
+              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <button
+              className={`${
+                inViewR
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              } mt-5  transition-primary delay-500 duration-700 `}
+            >
+              <Link href="/services/hospital-referrals">
+                <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
+                  See More
+                </a>
+              </Link>
+            </button>
+          </div>
+          <div
+            className={`${
+              inViewR ? "translate-x-0 opacity-100" : "translate-x-2 opacity-0"
+            } mx-auto transition-primary duration-700 lg:mx-0`}
+          >
+            <Image
+              src="/assets/images/hospital_referrals.png"
+              alt="hospital Referrals"
+              width={500}
+              height={600}
+            />
+          </div>
+        </div>
 
-      <section className="relative mx-auto mb-10 mt-24 w-11/12 sm:mt-16 md:w-10/12  lg:mt-10 2xl:w-auto 2xl:max-w-7xl">
-        <h2 className="absolute left-1/2 -top-20 -translate-x-1/2 select-none bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text text-center text-5xl font-bold uppercase text-transparent opacity-60 sm:text-6xl md:-top-24 md:text-7xl md:tracking-wider lg:-top-20 lg:text-9xl lg:tracking-widest lg:opacity-40 ">
-          Services
-        </h2>
-        <div className="mt-8 flex flex-wrap justify-center gap-10 ">
-          <div className=" z-10 flex w-72 flex-col items-center rounded-md bg-gradient-to-br from-pink-400 to-yellow-400 px-5 py-10 shadow hover:from-green-600 hover:to-green-200 hover:shadow-xl ">
-            <h3 className="mb-5 select-none text-center text-lg font-semibold text-white">
-              Hospital Referrals
-            </h3>
-            <ul className="select-none text-sm text-white">
-              {hospitalReferrals.map((data) => (
-                <li key={data.id} className=" relative mb-3">
-                  <span className="absolute top-1 -left-5">
-                    <Check />
-                  </span>
-                  <span className="">{data.facility}</span>
-                </li>
-              ))}
-            </ul>
-            <Link href="/services/hospital-referrals">
-              <a className="mt-3 rounded border border-white px-3 py-2 font-medium text-white hover:bg-white hover:text-green-600">
-                Book Now
-              </a>
-            </Link>
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap">
+          <div
+            className={`${
+              inViewM ? "translate-x-0 opacity-100" : "translate-x-2 opacity-0"
+            } order-1 mx-auto transition-primary duration-700 lg:order-none lg:mx-0`}
+          >
+            <Image
+              src="/assets/images/medical_tourism.png"
+              alt="hospital Referrals"
+              width={500}
+              height={600}
+            />
           </div>
-          <div className="z-10 flex w-72 flex-col items-center rounded-md bg-gradient-to-br from-pink-400 to-yellow-400 px-5 py-10 shadow hover:from-blue-500 hover:to-blue-200 hover:shadow-xl ">
-            <h3 className="mb-5 select-none text-center text-lg font-semibold text-white">
-              Medical Tourism
-            </h3>
-            <ul className="select-none text-sm text-white">
-              {medicalTourism.map((data) => (
-                <li key={data.id} className=" relative mb-3">
-                  <span className="absolute top-1 -left-5">
-                    <Check />
-                  </span>
-                  <span className="">{data.facility}</span>
-                </li>
-              ))}
-            </ul>
-            <Link href="/services/medical-tourism">
-              <a className="mt-3 rounded border border-white px-3 py-2 font-medium text-white hover:bg-white hover:text-blue-500">
-                Book Now
-              </a>
-            </Link>
+          <div>
+            <div
+              className={`${
+                inViewM
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-2 opacity-0"
+              } transition-primary duration-700`}
+            >
+              <h3
+                ref={refM}
+                className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
+              >
+                Medical Tourism
+              </h3>
+              <p className="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+              <p className="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <p className="mt-2">Lorem ipsum dolor sit amet consectetur.</p>
+              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <button
+              className={`${
+                inViewM
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              } mt-5 transition-primary delay-500 duration-700`}
+            >
+              <Link href="/services/medical-tourism">
+                <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
+                  See More
+                </a>
+              </Link>
+            </button>
           </div>
-          <div className="z-10 flex w-72 flex-col items-center rounded-md bg-gradient-to-br from-pink-400 to-yellow-400 px-5 py-10 shadow hover:from-pink-500 hover:to-pink-200 hover:shadow-xl ">
-            <h3 className="mb-5 select-none text-center text-lg font-semibold text-white">
-              Lab Booking
-            </h3>
-            <ul className="select-none text-sm text-white">
-              {labBooking.map((data) => (
-                <li key={data.id} className=" relative mb-3">
-                  <span className="absolute top-1 -left-5">
-                    <Check />
-                  </span>
-                  <span className="">{data.facility}</span>
-                </li>
-              ))}
-            </ul>
-            <Link href="/services/lab-booking">
-              <a className="mt-3 rounded border border-white px-3 py-2 font-medium text-white hover:bg-white hover:text-pink-500">
-                Book Now
-              </a>
-            </Link>
+        </div>
+
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap">
+          <div>
+            <div
+              className={`${
+                inViewL
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-2 opacity-0"
+              } transition-primary duration-700`}
+            >
+              <h3
+                ref={refL}
+                className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl"
+              >
+                Lab Booking
+              </h3>
+              <p className="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+              <p className="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </p>
+              <p className="mt-2">Lorem ipsum dolor sit amet consectetur.</p>
+              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+            </div>
+            <button
+              className={`${
+                inViewL
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              } mt-5 transition-primary delay-500 duration-700`}
+            >
+              <Link href="/services/lab-booking">
+                <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
+                  See More
+                </a>
+              </Link>
+            </button>
+          </div>
+          <div
+            className={`${
+              inViewL ? "translate-x-0 opacity-100" : "translate-x-2 opacity-0"
+            } mx-auto transition-primary duration-700 lg:mx-0`}
+          >
+            <Image
+              src="/assets/images/lab_booking.png"
+              alt="hospital Referrals"
+              width={500}
+              height={600}
+            />
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-
       <FooterLayer />
-
       <div className="bg-gray-900">
         <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+          {/* Why Choose Us Section */}
           <section className="flex flex-col items-center text-[#F3F4F6] lg:-mt-20">
-            <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
+            <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent  sm:text-4xl lg:text-5xl ">
               Why Choose Us
             </h2>
-            <dl className="mt-7  text-center sm:mx-auto sm:flex sm:justify-center sm:gap-3 ">
+            <dl
+              ref={refC}
+              className="mt-7 text-center lg:mx-auto lg:flex lg:justify-center lg:gap-3 "
+            >
               <div className="flex flex-col ">
                 <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
-                  100+
+                  {inViewC ? (
+                    <DynamicCountUp start={50} end={100} suffix="+" />
+                  ) : (
+                    "0"
+                  )}
                 </dd>
                 <dt className="text-lg font-medium leading-6 text-white">
-                  Client Satisfaction
+                  Clinics
                 </dt>
               </div>
-              <div className="my-5 mx-4 flex flex-col px-7 sm:my-0 sm:border-x">
+              <div className="my-5 mx-4 flex flex-col px-7 lg:my-0 lg:border-x">
                 <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
-                  150+
+                  {inViewC ? (
+                    <DynamicCountUp start={50} end={100} suffix="+" />
+                  ) : (
+                    "0"
+                  )}
                 </dd>
                 <dt className="text-lg font-medium leading-6 text-white">
-                  Medical Tourism
+                  Doctors
                 </dt>
               </div>
               <div className="flex flex-col">
                 <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
-                  200+
+                  {inViewC ? (
+                    <DynamicCountUp start={50} end={100} suffix="+" />
+                  ) : (
+                    "0"
+                  )}
                 </dd>
                 <dt className="text-lg font-medium leading-6 text-white">
-                  Hospital Referrals
+                  Happy Patients
+                </dt>
+              </div>
+              <div className="my-5 mx-4 flex flex-col px-7 lg:my-0 lg:border-x">
+                <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
+                  {inViewC ? (
+                    <DynamicCountUp start={50} end={100} suffix="+" />
+                  ) : (
+                    "0"
+                  )}
+                </dd>
+                <dt className="text-lg font-medium leading-6 text-white">
+                  Hospitals
+                </dt>
+              </div>
+              <div className="flex flex-col">
+                <dd className="bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl ">
+                  {inViewC ? (
+                    <DynamicCountUp start={50} end={100} suffix="+" />
+                  ) : (
+                    "0"
+                  )}
+                </dd>
+                <dt className="text-lg font-medium leading-6 text-white">
+                  Cities
                 </dt>
               </div>
             </dl>
@@ -239,7 +455,7 @@ export default function Home() {
           </section>
           <DynamicTestimonial />
           <section className="mt-16 pb-4">
-            <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-4xl font-bold text-transparent md:text-5xl ">
+            <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
               FAQ
             </h2>
             <div className="mt-5 lg:max-w-3xl">
@@ -249,7 +465,13 @@ export default function Home() {
         </div>
       </div>
 
-      <aside className="fixed bottom-0 left-0 right-0 z-20  flex sm:top-1/2 sm:bottom-auto sm:left-auto sm:-translate-y-1/2 sm:flex-col  ">
+      <aside
+        className={`${
+          inViewS
+            ? "translate-y-0 opacity-100 sm:translate-x-0"
+            : "translate-y-10 opacity-0 sm:translate-x-10 "
+        } fixed bottom-0 left-0 right-0 z-20 flex transition-primary  duration-500 sm:top-1/2 sm:bottom-auto sm:left-auto sm:-translate-y-1/2 sm:flex-col `}
+      >
         <a
           href="tel:+918433437690"
           className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-tl sm:border-0 sm:py-5 sm:px-1 "
@@ -271,6 +493,15 @@ export default function Home() {
           <Whatsapp />
         </a>
       </aside>
+
+      <div
+        onClick={() => scrollTo({ top: 0 })}
+        className={`fixed bottom-6 right-6 hidden cursor-pointer rounded-full bg-gradient-to-br from-gray-700 to-sky-700 p-2 text-gray-100 shadow-md  transition-opacity duration-500 ease-in hover:bg-gradient-to-tr sm:block  ${
+          inViewA ? "opacity-0 " : "opacity-100"
+        }`}
+      >
+        <IconArrowUp />
+      </div>
     </Layout>
   );
 }

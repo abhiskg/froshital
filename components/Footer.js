@@ -154,11 +154,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center text-sm text-gray-300 hover:text-white">
+      {/* <div className="mx-auto mb-2 mt-1 w-5/6 bg-gray-300 p-[0.5px] sm:w-3/5 lg:w-3/4"></div> */}
+      <div className=" pb-3 text-center text-gray-300 hover:text-white">
         &copy;2022 Froshital - All Rights Reserved
       </div>
-      {/* <div className="mx-auto mb-2 mt-1 w-5/6 bg-gray-300 p-[0.5px] sm:w-3/5 lg:w-1/2"></div> */}
-      <div className="pb-1 text-center text-xs font-light text-gray-300 hover:text-white">
+      {/* <div className="pb-1 text-center text-xs font-light text-gray-300 hover:text-white">
         <a
           href="https://portfolio-abhiskg.vercel.app/"
           target="_blank"
@@ -166,7 +166,7 @@ export default function Footer() {
         >
           Design &amp; Developed By Abhishek
         </a>
-      </div>
+      </div> */}
     </footer>
   );
 }
