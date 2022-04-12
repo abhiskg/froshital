@@ -72,7 +72,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Froshital - Medical Services In India"
+          content="Froshital - Medical Service Provider In India"
         />
         <meta
           property="og:description"

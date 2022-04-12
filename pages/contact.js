@@ -151,14 +151,14 @@ const Contact = () => {
               <div>
                 <label className="w-full">
                   <span className="block after:ml-0.5 after:text-red-500 after:content-['*']">
-                    Telephone No
+                    Phone Number
                   </span>
                   <input
                     className={`contact-form py-2 ${
                       error &&
                       "invalid:border-pink-500 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
                     }`}
-                    placeholder="Enter your phone"
+                    placeholder="Enter your phone number"
                     type="number"
                     required
                     name="phone"

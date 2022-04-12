@@ -43,29 +43,15 @@ export default function Specialities({ speciality }) {
             reiciendis excepturi. Fuga, cupiditate?
           </h2>
           <div className="heading mt-10 mb-2">
-            Section in {speciality.title}
+            Services in {speciality.title}
           </div>
           <ul className="ml-5 mb-2 space-y-2">
-            <li className="flex items-center">
-              <IconChevronRight />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li className="flex items-center">
-              <IconChevronRight />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li className="flex items-center">
-              <IconChevronRight />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li className="flex items-center">
-              <IconChevronRight />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
-            <li className="flex items-center">
-              <IconChevronRight />
-              <span>Lorem ipsum dolor sit amet.</span>
-            </li>
+            {speciality.services.map((service) => (
+              <li key={service.id} className="flex items-center">
+                <IconChevronRight />
+                <span>{service.title}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </section>

@@ -77,7 +77,7 @@ export default function Footer() {
                 <li className="navigation mb-1.5 text-sm">Career</li>
               </a>
             </Link>
-            <Link href="/career">
+            <Link href="/patner-with-us">
               <a>
                 <li className="navigation text-sm">Patner with us</li>
               </a>
@@ -143,13 +143,13 @@ export default function Footer() {
             <span>+918433437690</span>
           </a>
           <a
-            href="mailto:froshital@gmail.com"
+            href="mailto:contact@froshital.com"
             className="navigation mt-2 flex items-center gap-2  text-sm"
           >
             <span>
               <IconMail />
             </span>
-            <span>froshital@gmail.com</span>
+            <span>contact@froshital.com</span>
           </a>
         </div>
       </div>
