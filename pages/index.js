@@ -11,8 +11,10 @@ import {
   IconArrowUp,
   IconHospital,
   IconLab,
+  IconLeftQuote,
   IconMedical,
   IconPhone,
+  IconRightQuote,
   Layer,
   Mail,
   PhoneCall,
@@ -46,6 +48,11 @@ export default function Home() {
   });
 
   const [refL, inViewL] = useInView({
+    rootMargin: "0px 0px -100px 0px",
+    triggerOnce: true,
+  });
+
+  const [refW, inViewW] = useInView({
     rootMargin: "0px 0px -100px 0px",
     triggerOnce: true,
   });
@@ -372,6 +379,60 @@ export default function Home() {
             />
           </div>
         </div>
+
+        <div
+          ref={refW}
+          className="mt-10 flex flex-col items-center justify-center"
+        >
+          <div
+            className={`${
+              inViewW ? "scale-100 opacity-100" : "scale-105 opacity-0"
+            } relative mb-10 transition-primary duration-700`}
+          >
+            <span className=" text-gray-600">
+              <IconLeftQuote />
+            </span>
+            <blockquote className="max-w-4xl text-center text-lg text-gray-800 ">
+              Global Medical Tourism Market was valued at{" "}
+              <span className="text-blue-500">$61,172</span> million in 2016,
+              and is estimated to reach at{" "}
+              <span className="text-blue-500">$165,345</span> million by 2023,
+              registering a CAGR of 15.0% from 2017 to 2023.
+            </blockquote>
+            <span className="absolute right-0 -bottom-2 text-gray-600">
+              <IconRightQuote />
+            </span>
+          </div>
+          <figure
+            className={`${
+              inViewW ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }  transition-primary delay-200 duration-700`}
+          >
+            <Image
+              src="/assets/images/world_map.png"
+              alt="World Map"
+              width={900}
+              height={400}
+            />
+          </figure>
+
+          <figcaption
+            className={`${
+              inViewW ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }  mt-2 text-sm font-medium text-gray-600 transition-primary delay-600 duration-700`}
+          >
+            Fig: World Map
+          </figcaption>
+          <div
+            className={`${
+              inViewW ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }  mt-4 text-center font-semibold transition-primary delay-700 duration-700`}
+          >
+            <span className="text-blue-500">Asia pacific region</span> would
+            exhibit an highest <span className="text-blue-500">CAGR</span> 15.6
+            % during 2017-2023
+          </div>
+        </div>
       </section>
 
       <FooterLayer />
@@ -453,6 +514,7 @@ export default function Home() {
               </a>
             </Link>
           </section>
+
           <DynamicTestimonial />
           <section className="mt-16 pb-4">
             <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
@@ -488,7 +550,7 @@ export default function Home() {
           href="https://wa.me/918433437690?text=Hello%20Froshital"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none  sm:rounded-bl sm:py-5 sm:px-1 "
+          className="h-10 w-10 flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none  sm:rounded-bl sm:py-5 sm:px-1 "
         >
           <Whatsapp />
         </a>

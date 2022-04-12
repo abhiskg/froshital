@@ -3,7 +3,7 @@ import axios from "axios";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import ButtonLoader from "@/components/ButtonLoader";
-import { ArrowDown, IconMail, IconPhone, IconSend } from "../icons";
+import { ArrowDown, IconMail, IconPhone, IconSend, Whatsapp } from "../icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -58,7 +58,7 @@ const Contact = () => {
             <h1 className="text-primary-200 mb-6  text-xl font-medium">
               Contact Information
             </h1>
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
               <div className="rounded-full bg-gray-800 p-2 text-white">
                 <IconMail />
               </div>
@@ -66,19 +66,34 @@ const Contact = () => {
                 <h3 className=" font-medium">Email</h3>
                 <a
                   className="font-body text-sm"
-                  href="mailto:froshital@gmail.com"
+                  href="mailto:contact@froshital.com"
                 >
-                  forshital@gmail.com
+                  contact@froshital.com
                 </a>
               </div>
             </div>
-            <div className="my-3 flex items-start gap-3">
+            <div className="my-3 flex items-center gap-3">
               <div className="rounded-full border bg-gray-800 p-2 text-white">
                 <IconPhone />
               </div>
               <div>
                 <h3 className=" font-medium">Phone</h3>
                 <a className="font-body text-sm" href="tel:+918433437690">
+                  +91-8433437690
+                </a>
+              </div>
+            </div>
+
+            <div className="my-3 flex items-center gap-3">
+              <div className="h-10 w-10 rounded-full border bg-gray-800 p-2 text-white">
+                <Whatsapp />
+              </div>
+              <div>
+                <h3 className=" font-medium">WhatsApp</h3>
+                <a
+                  className="font-body text-sm"
+                  href="https://wa.me/918433437690?text=Hello%20Froshital"
+                >
                   +91-8433437690
                 </a>
               </div>

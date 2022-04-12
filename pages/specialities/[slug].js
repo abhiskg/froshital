@@ -28,20 +28,7 @@ export default function Specialities({ speciality }) {
           </div>
         </div>
         <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-          <h2 className="mt-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-            odit est eveniet qui, nemo enim. Laudantium, sed ea? Sit, esse quae
-            provident unde voluptatem culpa deleniti, debitis iure ab, optio
-            impedit modi dolores autem amet repellendus qui numquam pariatur
-            deserunt a vitae reiciendis necessitatibus ex quos corrupti. Quod
-            provident, doloremque similique minus molestiae dolorem corrupti
-            suscipit aperiam tempore quasi expedita enim harum voluptate culpa
-            id omnis sapiente cupiditate, consectetur modi. In necessitatibus
-            ipsam explicabo sapiente voluptatem quasi iure exercitationem
-            excepturi esse. Veniam architecto, fuga doloremque quaerat iusto ex
-            amet eius esse dolores tenetur necessitatibus vitae! Provident,
-            reiciendis excepturi. Fuga, cupiditate?
-          </h2>
+          <h2 className="mt-5">{speciality?.description}</h2>
           <div className="heading mt-10 mb-2">
             Services in {speciality.title}
           </div>
