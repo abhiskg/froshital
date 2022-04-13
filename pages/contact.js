@@ -84,9 +84,9 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="my-3 flex items-center gap-3">
-              <div className="h-10 w-10 rounded-full border bg-gray-800 p-2 text-white">
-                <Whatsapp />
+            <div className="flex items-center gap-3">
+              <div className="rounded-full border bg-gray-800 p-2 text-white">
+                <Whatsapp scale="21" />
               </div>
               <div>
                 <h3 className=" font-medium">WhatsApp</h3>

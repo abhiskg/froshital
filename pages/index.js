@@ -145,7 +145,7 @@ export default function Home() {
                     : "translate-y-3 opacity-0"
                 } mt-1 flex items-center transition-primary delay-300 duration-700`}
               >
-                <span className="mr-2 rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1 ">
+                <span className="mr-2  rounded bg-gradient-to-tr from-pink-500 to-amber-500 p-1 ">
                   <IconLab />
                 </span>
                 <h2 className="bg-gradient-to-tr from-pink-500 to-amber-500 bg-clip-text py-2 text-center text-3xl font-bold text-transparent md:text-4xl lg:text-left ">
@@ -173,7 +173,7 @@ export default function Home() {
                     href="tel:+918433437690"
                     className="group flex items-center gap-1 rounded bg-gradient-to-br from-green-500  to-blue-500 py-2.5 px-4 hover:from-green-600 hover:to-blue-600"
                   >
-                    <span className="rotate-[20deg] text-gray-100 group-hover:text-white">
+                    <span className="rotate-[20deg] animate-wiggle text-gray-100 group-hover:text-white">
                       <IconPhone />
                     </span>
                     <span className="font-semibold tracking-wide text-gray-100 group-hover:text-white lg:text-lg">
@@ -550,9 +550,9 @@ export default function Home() {
           href="https://wa.me/918433437690?text=Hello%20Froshital"
           target="_blank"
           rel="noopener noreferrer"
-          className="h-10 w-10 flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none  sm:rounded-bl sm:py-5 sm:px-1 "
+          className=" flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none  sm:rounded-bl sm:py-5 sm:px-1 "
         >
-          <Whatsapp />
+          <Whatsapp scale="28" />
         </a>
       </aside>
 

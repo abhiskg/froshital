@@ -53,6 +53,20 @@ module.exports = {
           },
         },
       }),
+      animation: {
+        wiggle: "wiggle 1.5s ease-in-out infinite",
+        move: "move 4s ease-in-out infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-5deg)" },
+          "50%": { transform: "rotate(5deg)" },
+        },
+        move: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-3px)" },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

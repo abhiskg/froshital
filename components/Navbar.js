@@ -130,12 +130,12 @@ export default function Navbar() {
         } no-scrollbar fixed top-0 right-0 bottom-0 z-40 w-full overflow-y-auto bg-gray-800 transition-transform duration-200 ease-in-out md:hidden `}
       >
         <ul className="mx-20 mt-36 mb-10 flex flex-col gap-7 ">
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link href="/">
               <a className="text-gray-400 hover:text-white">Home</a>
             </Link>
           </li>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link href="/about">
               <a className="text-gray-400 hover:text-white">About Us</a>
             </Link>
@@ -158,21 +158,30 @@ export default function Navbar() {
           <ul className={` ${serviceState ? "block" : "hidden"}`}>
             <li>
               <Link href="/services/hospital-referrals">
-                <a className="whitespace-no-wrap block rounded-t py-2 px-4 text-gray-400 hover:text-white">
+                <a
+                  onClick={() => setMenu(false)}
+                  className="whitespace-no-wrap block rounded-t py-2 px-4 text-gray-400 hover:text-white"
+                >
                   Hospital Referrals
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/services/medical-tourism">
-                <a className=" block py-2 px-4 text-gray-400 hover:text-white">
+                <a
+                  onClick={() => setMenu(false)}
+                  className=" block py-2 px-4 text-gray-400 hover:text-white"
+                >
                   Medical Tourism
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/services/lab-booking">
-                <a className="block rounded-b py-2 px-4 text-gray-400 hover:text-white">
+                <a
+                  onClick={() => setMenu(false)}
+                  className="block rounded-b py-2 px-4 text-gray-400 hover:text-white"
+                >
                   Lab Booking
                 </a>
               </Link>
@@ -199,19 +208,22 @@ export default function Navbar() {
             {specialitiesData.map((data) => (
               <li key={data.id} className="">
                 <Link href={`/specialities/${data.slug}`}>
-                  <a className="block py-2 px-4 text-gray-400 hover:text-white">
+                  <a
+                    onClick={() => setMenu(false)}
+                    className="block py-2 px-4 text-gray-400 hover:text-white"
+                  >
                     {data.title}
                   </a>
                 </Link>
               </li>
             ))}
           </ul>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link href="/blog">
               <a className="text-gray-400 hover:text-white">Blog</a>
             </Link>
           </li>
-          <li>
+          <li onClick={() => setMenu(false)}>
             <Link href="/contact">
               <a className="text-gray-400 hover:text-white">Book a Service</a>
             </Link>

@@ -2,8 +2,8 @@ const Mail = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="mx-auto"
-    width="30"
-    height="30"
+    width="28"
+    height="28"
     viewBox="0 0 24 24"
     strokeWidth="1.5"
     stroke="currentColor"
