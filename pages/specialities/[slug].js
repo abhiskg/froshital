@@ -4,11 +4,30 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 
-export default function Specialities({ speciality }) {
+export default function Specialities({ speciality, slug }) {
   return (
     <Layout>
       {/* <Head>
         <title>{`${speciality.title} | Froshital`}</title>
+        <meta
+          name="description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:url" content={`https://froshital.com/specialities/${slug}`} />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content={`${speciality.title} | Froshital`}
+        />
+        <meta
+          property="og:description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:image" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+        <meta property="og:image:alt" content="Froshital Brand Image" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="twitter:image:src" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
       </Head> */}
       <section className="">
         <div className="w-full bg-gradient-to-tr from-gray-700 to-sky-800 py-20">
@@ -67,6 +86,7 @@ export async function getStaticProps({ params: { slug } }) {
   return {
     props: {
       speciality,
+      slug,
     },
   };
 }

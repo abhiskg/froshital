@@ -30,6 +30,7 @@ export default function Footer() {
               className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
             >
               <IconFb />
+              <span className="sr-only">Facebook</span>
             </a>
             <a
               href="https://www.instagram.com/froshital/"
@@ -38,6 +39,7 @@ export default function Footer() {
               className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
             >
               <IconInsta />
+              <span className="sr-only">Instagram</span>
             </a>
             <a
               href="https://www.linkedin.com/company/froshital/"
@@ -46,6 +48,7 @@ export default function Footer() {
               className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
             >
               <IconLinkdin />
+              <span className="sr-only">Linkdin</span>
             </a>
             <a
               href="https://twitter.com/froshital"
@@ -54,6 +57,7 @@ export default function Footer() {
               className="rounded-lg bg-gradient-to-br from-green-500 to-blue-500 p-2 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white"
             >
               <IconTwitter />
+              <span className="sr-only">Twitter</span>
             </a>
           </div>
         </div>
@@ -62,26 +66,26 @@ export default function Footer() {
             Company
           </h2>
           <ul>
-            <Link href="/about">
-              <a>
-                <li className="navigation mb-1.5 text-sm">About Us</li>
-              </a>
-            </Link>
-            <Link href="/blog">
-              <a>
-                <li className="navigation mb-1.5 text-sm">Blog</li>
-              </a>
-            </Link>
-            <Link href="/career">
-              <a>
-                <li className="navigation mb-1.5 text-sm">Career</li>
-              </a>
-            </Link>
-            <Link href="/patner-with-us">
-              <a>
-                <li className="navigation text-sm">Patner with us</li>
-              </a>
-            </Link>
+            <li className="mb-px">
+              <Link href="/about">
+                <a className="navigation  text-sm">About Us</a>
+              </Link>
+            </li>
+            <li className="mb-px">
+              <Link href="/blog">
+                <a className="navigation  text-sm">Blog</a>
+              </Link>
+            </li>
+            <li className="mb-px">
+              <Link href="/career">
+                <a className="navigation  text-sm">Career</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/partner-with-us">
+                <a className="navigation  text-sm">Partner with us</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="w-full md:w-auto">
@@ -89,21 +93,21 @@ export default function Footer() {
             Our Services
           </h2>
           <ul className="text-sm ">
-            <Link href="/services/hospital-referrals">
-              <a>
-                <li className="navigation">Hospital Referrals</li>
-              </a>
-            </Link>
-            <Link href="/services/medical-tourism">
-              <a>
-                <li className="navigation my-1.5">Medical Tourism</li>
-              </a>
-            </Link>
-            <Link href="/services/lab-booking">
-              <a>
-                <li className="navigation">Lab Booking</li>
-              </a>
-            </Link>
+            <li>
+              <Link href="/services/hospital-referrals">
+                <a className="navigation">Hospital Referrals</a>
+              </Link>
+            </li>
+            <li className=" my-1.5">
+              <Link href="/services/medical-tourism">
+                <a className="navigation">Medical Tourism</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/services/lab-booking">
+                <a className="navigation">Lab Booking</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="w-full md:w-auto">
@@ -112,21 +116,21 @@ export default function Footer() {
           </h2>
 
           <ul>
-            <Link href="/terms-and-conditions">
-              <a>
-                <li className="navigation text-sm">Terms and Conditions</li>
-              </a>
-            </Link>
-            <Link href="/privacy-policy">
-              <a>
-                <li className="navigation my-1.5 text-sm">Privacy Policy</li>
-              </a>
-            </Link>
-            <Link href="/customer-support-policy">
-              <a>
-                <li className="navigation text-sm">Customer Support Policy</li>
-              </a>
-            </Link>
+            <li>
+              <Link href="/terms-and-conditions">
+                <a className="navigation text-sm">Terms and Conditions</a>
+              </Link>
+            </li>
+            <li className=" my-px">
+              <Link href="/privacy-policy">
+                <a className="navigation text-sm">Privacy Policy</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/customer-support-policy">
+                <a className="navigation text-sm">Customer Support Policy</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="w-full md:w-auto">

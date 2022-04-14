@@ -5,10 +5,28 @@ import Image from "next/image";
 export default function Career() {
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Career | Froshital</title>
-        <meta name="description" content="Join Froshital " />
-      </Head>
+        <meta
+          name="description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:url" content="https://froshital.com/career" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Career | Froshital"
+        />
+        <meta
+          property="og:description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:image" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+        <meta property="og:image:alt" content="Froshital Brand Image" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="twitter:image:src" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+      </Head> */}
       <section className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <div className="relative h-60 w-full md:h-96 lg:h-[30rem]">
           <Image

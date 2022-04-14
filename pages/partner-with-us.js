@@ -1,10 +1,11 @@
+import Image from "next/image";
+import Head from "next/head";
+import { useState } from "react";
 import ButtonLoader from "@/components/ButtonLoader";
 import Layout from "@/components/Layout";
 import { ArrowDown } from "icons";
-import Image from "next/image";
-import { useState } from "react";
 
-export default function PatnerWithUs() {
+export default function PartnerWithUs() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -59,6 +60,29 @@ export default function PatnerWithUs() {
 
   return (
     <Layout>
+      {/* <Head>
+        <title>Partner with us | Froshital</title>
+        <meta
+          name="description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:url" content="https://froshital.com/partner-with-us" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Partner with us | Froshital"
+        />
+        <meta
+          property="og:description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:image" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+        <meta property="og:image:alt" content="Froshital Brand Image" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="twitter:image:src" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+      </Head> */}
+
       <section className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <div className="mt-2 flex flex-wrap items-center justify-center gap-5 md:flex-nowrap md:justify-between">
           <h1 className=" bg-gradient-to-tr from-gray-700 to-sky-800 bg-clip-text pb-2 text-center text-3xl tracking-wide text-transparent sm:font-semibold md:max-w-md md:text-left md:text-4xl lg:max-w-lg lg:text-5xl xl:max-w-2xl xl:text-6xl xl:leading-[4.3rem]">

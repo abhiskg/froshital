@@ -13,15 +13,31 @@ import { getPosts } from "@/lib/post";
 const DynamicSearch = dynamic(() => import("@/components/Search"));
 
 export default function BlogPost({
-  frontmatter: { title, category, date, cover_image, alt },
+  frontmatter: { title, category, date, cover_image, alt, excerpt },
   content,
   similarPosts,
+  slug,
 }) {
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>{title} | Froshital</title>
-      </Head>
+        <meta name="description" content={excerpt} />
+        <meta
+          property="og:url"
+          content={`https://froshital.com/blog/${slug}`}
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content={cover_image} />
+        <meta property="og:image:alt" content={alt} />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={excerpt} />
+        <meta property="twitter:image:src" content={cover_image} />
+      </Head> */}
       <section className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <article>
           <h1 className="heading mb-4 mt-3 text-center leading-9 tracking-tight sm:leading-10 ">
@@ -133,6 +149,7 @@ export async function getStaticProps({ params: { slug } }) {
       frontmatter,
       content,
       similarPosts,
+      slug,
     },
   };
 }

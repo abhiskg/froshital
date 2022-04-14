@@ -1,8 +1,31 @@
+import Head from "next/head";
 import Layout from "@/components/Layout";
 
 export default function CustomerSupportPolicy() {
   return (
     <Layout>
+      {/* <Head>
+        <title>Customer Support Policy | Froshital</title>
+        <meta
+          name="description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:url" content="https://froshital.com/customer-support-policy" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Customer Support Policy | Froshital"
+        />
+        <meta
+          property="og:description"
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold. We offer best medical services in India in cheap price."
+        />
+        <meta property="og:image" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+        <meta property="og:image:alt" content="Froshital Brand Image" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="twitter:image:src" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+      </Head> */}
       <section className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <h1 className="mt-2 mb-3 bg-gradient-to-tr from-gray-800 to-gray-700 bg-clip-text pb-2 text-center text-2xl font-bold text-transparent sm:text-3xl">
           Customer Support Policy

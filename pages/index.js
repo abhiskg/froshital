@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-// import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Layout from "@/components/Layout";
 import {
@@ -73,18 +72,25 @@ export default function Home() {
         <title>Medical Service Provider In India - Froshital</title>
         <meta
           name="description"
-          content="Froshital is a Medical Service in India. We provide Hospital Referrals, Lab Booking, Medical Tourism, and more. "
+          content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold."
         />
         <meta property="og:url" content="https://froshital.com" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Froshital - Medical Service Provider In India"
+          content="Medical Service Provider In India - Froshital"
         />
         <meta
           property="og:description"
           content="Froshital is a Medical Service in India"
         />
+        <meta property="og:image" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
+        <meta property="og:image:alt" content="Froshital Brand Image" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="720" />
+        <meta property="twitter:title" content='Medical Service Provider In India - Froshital' />
+        <meta property="twitter:description" content="Froshital is a Medical Service provider in India. We provide Hospital Referrals, Medical Tourism and lab booking services to people around the wrold." />
+        <meta property="twitter:image:src" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
       </Head> */}
 
       {/* Hero Section */}
@@ -204,7 +210,7 @@ export default function Home() {
               <Image
                 src="https://res.cloudinary.com/froshital/image/upload/v1649085956/Froshital/Hero_pic_cxs7m9.png"
                 alt="main pic"
-                height={700}
+                height={690}
                 width={700}
                 priority
               />
@@ -230,12 +236,12 @@ export default function Home() {
                   : "-translate-x-2 opacity-0"
               } transition-primary duration-700`}
             >
-              <h3
+              <h2
                 ref={refR}
                 className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
               >
                 Hospital Referrals
-              </h3>
+              </h2>
               <p className="mt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
@@ -295,12 +301,12 @@ export default function Home() {
                   : "-translate-x-2 opacity-0"
               } transition-primary duration-700`}
             >
-              <h3
+              <h2
                 ref={refM}
                 className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
               >
                 Medical Tourism
-              </h3>
+              </h2>
               <p className="mt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
@@ -336,12 +342,12 @@ export default function Home() {
                   : "-translate-x-2 opacity-0"
               } transition-primary duration-700`}
             >
-              <h3
+              <h2
                 ref={refL}
                 className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl"
               >
                 Lab Booking
-              </h3>
+              </h2>
               <p className="mt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
@@ -539,12 +545,14 @@ export default function Home() {
           className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-tl sm:border-0 sm:py-5 sm:px-1 "
         >
           <PhoneCall />
+          <span className="sr-only">Phone Call</span>
         </a>
         <a
           href="mailto:froshital@gmail.com"
           className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:border-0 sm:py-5 sm:px-1 "
         >
           <Mail />
+          <span className="sr-only">Email</span>
         </a>
         <a
           href="https://wa.me/918433437690?text=Hello%20Froshital"
@@ -553,6 +561,7 @@ export default function Home() {
           className=" flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none  sm:rounded-bl sm:py-5 sm:px-1 "
         >
           <Whatsapp scale="28" />
+          <span className="sr-only">WhatsApp</span>
         </a>
       </aside>
 
