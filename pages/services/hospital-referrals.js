@@ -40,9 +40,11 @@ export default function HospitalReferrals() {
               Hospital Referrals
             </h1>
             <p className="max-w-3xl text-center text-gray-600 lg:text-left">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-              placeat quo minima. Cupiditate, officia? Iste modi fugit minus
-              enim
+              With tons of hospitals present all across the country, the
+              patients are always confused about how to choose the best hospital
+              for them. This is where we come in. Our team notes down your
+              problems, budget, and health issues, and filters out the best
+              hospitals and doctors for you.
             </p>
             <div className="mb-5 mt-8 text-center lg:text-left ">
               <Link href="/contact">
@@ -66,19 +68,19 @@ export default function HospitalReferrals() {
           <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 ">
             <ServiceCard
               title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              description="We have the best team, who will ensure your money is used properly"
             />
             <ServiceCard
-              title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              title="Get Instant Services"
+              description="With our referrals, get instant treatment from the desired hospital"
             />
             <ServiceCard
-              title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              title="Seamless Process"
+              description="We offer the best services to our clients through which they don&amp;t have to waste any time for the medical facilities."
             />
             <ServiceCard
-              title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              title="Vast Network"
+              description="We have been a part of this industry for a long time resulting in many networks across the medical field which eventually benefits the client."
             />
           </div>
         </section>
@@ -88,27 +90,22 @@ export default function HospitalReferrals() {
             <ProcessCard
               number={1}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="The client contacts us with any of the modes available and talks with the call officer from our team."
             />
             <ProcessCard
               number={2}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="The team immediately notes down all the requisites of the client and contacts the most suitable hospitals regarding the concern."
             />
             <ProcessCard
               number={3}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="Our professionals then help the patient reach the premises of the hospital with utmost care."
             />
             <ProcessCard
               number={4}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
-            />
-            <ProcessCard
-              number={5}
-              title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="The team also takes care of all the paperwork in the hospital leaving the patient with no problems or complications."
             />
           </div>
         </section>

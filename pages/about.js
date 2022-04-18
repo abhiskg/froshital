@@ -34,11 +34,11 @@ export default function About() {
           <div>
             <h2 className="heading  text-center md:text-left">Our Mission</h2>
             <p className="text-center md:text-left">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, eos
-              eligendi dolorum suscipit voluptas ipsa iusto incidunt provident
-              doloribus optio perspiciatis accusantium quam tempore error
-              excepturi eum! Ullam, consequatur ducimus! Nihil similique dolore
-              eum fuga eius quam
+              Our mission is to provide a one-stop solution for all the patients
+              by assisting them with the best services and information. We also
+              want To help our clients utilize every penny of their hard-earned
+              money in healthcare by providing all the facilities ranging from
+              the hospital to the banks in case of loans and insurance.
             </p>
           </div>
           <div>
@@ -87,14 +87,14 @@ export default function About() {
 
             <TeamCard
               img={
-                "https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
+                "https://res.cloudinary.com/froshital/image/upload/v1650114250/Froshital/founder_b9fkg3.jpg"
               }
               name="Danish Mirza"
               position="Founder"
             />
             <TeamCard
               img={
-                "https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
+                "https://res.cloudinary.com/froshital/image/upload/v1650114273/Froshital/co-founder_widfzs.jpg"
               }
               name="Tamanna Yeasmin"
               position="Co-Founder"

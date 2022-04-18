@@ -16,7 +16,7 @@ export default function Accordion({ faq, page }) {
         <div
           className={` mb-2 rounded ${
             page === "main"
-              ? "bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900"
+              ? "bg-gradient-to-br from-sky-900 via-gray-800 to-sky-900"
               : "bg-white"
           }  p-3 shadow-md`}
           key={item.id}

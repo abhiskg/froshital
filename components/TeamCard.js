@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export default function TeamCard({ img, name, position }) {
   return (
     <div>
-      <div className="group relative h-80 w-72 overflow-hidden rounded before:absolute before:bottom-0 before:left-0 before:right-0 before:z-10 before:h-full before:w-full before:origin-bottom before:scale-y-0 before:bg-gradient-to-tr before:from-gray-800 before:to-sky-800 before:opacity-60 before:transition-transform  before:duration-150 before:ease-linear before:content-[''] before:hover:scale-y-100 ">
+      <div className="group relative h-80 w-72 overflow-hidden before:absolute before:bottom-0 before:left-0 before:right-0 before:z-10 before:h-full before:w-full before:origin-bottom before:scale-y-0 before:bg-sky-600 before:bg-opacity-30 before:transition-transform  before:duration-150 before:ease-linear before:content-[''] before:hover:scale-y-100 ">
         <Image src={img} alt={name} layout="fill" />
         <a
           href="#"

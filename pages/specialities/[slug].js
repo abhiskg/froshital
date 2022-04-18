@@ -30,11 +30,11 @@ export default function Specialities({ speciality, slug }) {
         <meta property="twitter:image:src" content="https://res.cloudinary.com/froshital/image/upload/v1649684992/Froshital/Career_cover_pic_tnld8q.jpg" />
       </Head> */}
       <section className="">
-        <div className="w-full bg-gradient-to-tr from-gray-700 to-sky-800 py-20">
-          <h1 className="text-center text-3xl font-bold text-gray-200 lg:text-4xl">
+        <div className="relative w-full bg-gradient-to-tr from-gray-900 via-sky-800 to-gray-900 pb-28 pt-16 md:pt-32 md:pb-44">
+          <h1 className="text-center text-3xl font-bold text-gray-200 lg:text-5xl">
             {speciality.title}
           </h1>
-          <p className="mt-1 text-center text-gray-400">
+          <p className="mt-2 text-center  text-gray-300">
             We have patnered with top hospitals to give you the best service in{" "}
             {speciality.title}{" "}
           </p>
@@ -45,6 +45,7 @@ export default function Specialities({ speciality, slug }) {
               </a>
             </Link>
           </div>
+          <div className="absolute left-1/2 mt-7 h-10 w-10 translate-x-1/2 animate-nudge rounded-full bg-gradient-to-br from-green-400 to-blue-400 shadow-lg"></div>
         </div>
         <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
           <h2 className="mt-5">{speciality?.description}</h2>

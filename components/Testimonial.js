@@ -62,24 +62,18 @@ export default function Testimonial() {
         </p>
         <Slider {...testimonialSettings}>
           <TestimonialCard
-            name="David Miller"
-            review="You will get the best of what you put in. The team is working at their
-            best to provide diffrent kind of services. Had a great experience
-            working with them."
+            name="Shalini Singh(Gurgaon)"
+            review="I'm writing on behalf of my brother, who was in need of a hospital bed right away. I'd want to thank you on behalf of my entire family for your assistance and consideration at this terrible time. I'd want to thank you once more for the services you provide to patients and their families."
             image="https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
           />
           <TestimonialCard
-            name="David Miller"
-            review="You will get the best of what you put in. The team is working at their
-            best to provide diffrent kind of services. Had a great experience
-            working with them."
+            name="Chayya Kapoor(Pune)"
+            review="When I was having trouble conceiving, froshital assisted me in selecting the best IVF center, and I wanted to express how impressed I was with the amount of care I received from everyone I met. The Froshital Care Center was there for me every step of the way! I thought it was fantastic, and I'm pleased that it serves my neighborhood."
             image="https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
           />
           <TestimonialCard
-            name="David Miller"
-            review="You will get the best of what you put in. The team is working at their
-            best to provide diffrent kind of services. Had a great experience
-            working with them."
+            name="Isha Rawat(Kanpur)"
+            review="It has a very well-mannered staff that works well along with the patients. Mr. Prakash Yadav provided excellent assistance and patient care. Overall, the experience has been positive."
             image="https://res.cloudinary.com/froshital/image/upload/v1649076101/Froshital/rock_whm9v5.jpg"
           />
         </Slider>

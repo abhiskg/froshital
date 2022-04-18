@@ -94,7 +94,7 @@ export default function Home() {
       </Head> */}
 
       {/* Hero Section */}
-      <section className="bg-gray-900">
+      <section className="bg-primary">
         <div
           ref={refH}
           className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl "
@@ -442,7 +442,7 @@ export default function Home() {
       </section>
 
       <FooterLayer />
-      <div className="bg-gray-900">
+      <div className="bg-primary">
         <div className="mx-auto w-11/12  md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
           {/* Why Choose Us Section */}
           <section className="flex flex-col items-center text-[#F3F4F6] lg:-mt-20">

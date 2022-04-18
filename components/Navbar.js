@@ -9,7 +9,7 @@ export default function Navbar() {
   const [specialitiesState, setSpecialitiesState] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 h-16 bg-gray-900 ">
+    <header className="sticky top-0 z-40 h-16 bg-primary ">
       <div className="relative mx-auto flex h-full w-11/12 items-center justify-between lg:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <Link href="/">
           <a>
@@ -34,7 +34,7 @@ export default function Navbar() {
                 <ArrowDown />
               </div>
               {/* Service Dropdown */}
-              <ul className="absolute top-14 z-10 hidden rounded bg-[#141d2b] text-gray-400 group-hover:block">
+              <ul className="absolute top-14 z-10 hidden rounded bg-secondary text-gray-400 group-hover:block">
                 <li>
                   <Link href="/services/hospital-referrals">
                     <a className="block rounded-t py-2 px-4 hover:text-white">
@@ -64,7 +64,7 @@ export default function Navbar() {
                 <ArrowDown />
               </div>
               {/* Specialities Dropdown */}
-              <ul className="absolute top-14 left-0 right-0 z-10 hidden rounded  bg-[#141d2b] px-4 pb-4 pt-2 text-gray-400 group-hover:block">
+              <ul className="absolute top-14 left-0 right-0 z-10 hidden rounded bg-secondary px-4 pb-4 pt-2 text-gray-400 shadow group-hover:block">
                 <div className="grid grid-cols-4 gap-x-8 ">
                   {specialitiesData.map((data) => (
                     <li key={data.id} className="">
@@ -127,7 +127,7 @@ export default function Navbar() {
       <nav
         className={`${
           menu ? "translate-x-0" : "translate-x-full"
-        } no-scrollbar fixed top-0 right-0 bottom-0 z-40 w-full overflow-y-auto bg-gray-800 transition-transform duration-200 ease-in-out md:hidden `}
+        } no-scrollbar fixed top-0 right-0 bottom-0 z-40 w-full overflow-y-auto bg-gray-900 transition-transform duration-200 ease-in-out md:hidden `}
       >
         <ul className="mx-20 mt-36 mb-10 flex flex-col gap-7 ">
           <li onClick={() => setMenu(false)}>

@@ -39,9 +39,11 @@ export default function MedicalTourism() {
               Medical Tourism
             </h1>
             <p className="max-w-3xl text-center text-gray-600 lg:text-left">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
-              placeat quo minima. Cupiditate, officia? Iste modi fugit minus
-              enim excepturi!
+              People are not always around the best facilities regarding
+              healthcare and medicine. This barrier can be removed by our
+              top-notch medical tourism service. We offer travel, booking, and
+              accommodation services for our clients moving to a new place for
+              medical treatment.
             </p>
             <div className="mb-5 mt-8 text-center lg:text-left ">
               <Link href="/contact">
@@ -65,19 +67,19 @@ export default function MedicalTourism() {
           <div className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3 ">
             <ServiceCard
               title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              description="We have the best team, who will ensure your money is used properly"
             />
             <ServiceCard
-              title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              title="Get Instant Services"
+              description="With our referrals, get instant treatment from the desired hospital"
             />
             <ServiceCard
-              title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              title="Seamless Process"
+              description="We offer the best services to our clients through which they don&amp;t have to waste any time for the medical facilities."
             />
             <ServiceCard
-              title="Spend Less Money"
-              description=" We have the best team, who will ensure your money is used properly"
+              title="Vast Network"
+              description="We have been a part of this industry for a long time resulting in many networks across the medical field which eventually benefits the client."
             />
           </div>
         </section>
@@ -87,27 +89,27 @@ export default function MedicalTourism() {
             <ProcessCard
               number={1}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="Client contacts us through any of the available methods and speaks with a call representative from our team."
             />
             <ProcessCard
               number={2}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="The team notifies the appropriate hospitals of all the requisites of the client immediately."
             />
             <ProcessCard
               number={3}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description=" Our services also include arranging the stay for the patient as well as their family members."
             />
             <ProcessCard
               number={4}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="After preparing all the necessary arrangements, the team helps the patient shift in the hospital with utmost care."
             />
             <ProcessCard
               number={5}
               title="Discovery"
-              description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, cum?"
+              description="The team also follows up with the patient and their acquaintence providing a safe and healthy enviornment."
             />
           </div>
         </section>

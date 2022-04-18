@@ -35,6 +35,10 @@ module.exports = {
       1000: "1000ms",
     },
     extend: {
+      colors: {
+        primary: "hsl(221, 45%, 11%)",
+        secondary: "hsl(222, 70%, 9%)",
+      },
       transitionProperty: {
         primary: "opacity, transform",
         height: "height",
@@ -56,6 +60,7 @@ module.exports = {
       animation: {
         wiggle: "wiggle 1.5s ease-in-out infinite",
         move: "move 4s ease-in-out infinite",
+        nudge: "nudge 14s linear infinite alternate",
       },
       keyframes: {
         wiggle: {
@@ -65,6 +70,19 @@ module.exports = {
         move: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-3px)" },
+        },
+        nudge: {
+          "0%, 100%": {
+            transform: "translateX(0)",
+          },
+
+          "50%": {
+            transform: "translateX(150px)",
+          },
+
+          "80%": {
+            transform: "translateX(-150px)",
+          },
         },
       },
     },
