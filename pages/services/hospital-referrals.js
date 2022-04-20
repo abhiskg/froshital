@@ -86,25 +86,25 @@ export default function HospitalReferrals() {
         </section>
         <section>
           <h2 className="heading mt-16 ">The Process We Follow</h2>
-          <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-10">
             <ProcessCard
               number={1}
-              title="Discovery"
+              title="Contact"
               description="The client contacts us with any of the modes available and talks with the call officer from our team."
             />
             <ProcessCard
               number={2}
-              title="Discovery"
+              title="Connecting Hospital"
               description="The team immediately notes down all the requisites of the client and contacts the most suitable hospitals regarding the concern."
             />
             <ProcessCard
               number={3}
-              title="Discovery"
+              title="Booking Appointment"
               description="Our professionals then help the patient reach the premises of the hospital with utmost care."
             />
             <ProcessCard
               number={4}
-              title="Discovery"
+              title="Paperwork"
               description="The team also takes care of all the paperwork in the hospital leaving the patient with no problems or complications."
             />
           </div>

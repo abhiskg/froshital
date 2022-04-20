@@ -88,27 +88,27 @@ export default function MedicalTourism() {
           <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             <ProcessCard
               number={1}
-              title="Discovery"
+              title="Contact"
               description="Client contacts us through any of the available methods and speaks with a call representative from our team."
             />
             <ProcessCard
               number={2}
-              title="Discovery"
+              title="Connecting Hospitals"
               description="The team notifies the appropriate hospitals of all the requisites of the client immediately."
             />
             <ProcessCard
               number={3}
-              title="Discovery"
+              title="Accommodation"
               description=" Our services also include arranging the stay for the patient as well as their family members."
             />
             <ProcessCard
               number={4}
-              title="Discovery"
+              title="Shifting"
               description="After preparing all the necessary arrangements, the team helps the patient shift in the hospital with utmost care."
             />
             <ProcessCard
               number={5}
-              title="Discovery"
+              title="Folow Up"
               description="The team also follows up with the patient and their acquaintence providing a safe and healthy enviornment."
             />
           </div>

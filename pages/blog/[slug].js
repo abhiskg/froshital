@@ -9,6 +9,7 @@ import dynamic from "next/dynamic";
 import CategoryLabel from "@/components/CategoryLabel";
 import Layout from "@/components/Layout";
 import { getPosts } from "@/lib/post";
+import { IconFb, IconLinkdin } from "icons";
 
 const DynamicSearch = dynamic(() => import("@/components/Search"));
 
@@ -44,7 +45,24 @@ export default function BlogPost({
             {title}
           </h1>
 
-          <div className="flex flex-col justify-between gap-5 lg:flex-row xl:gap-10">
+          <div className=" flex flex-col justify-between gap-5 lg:flex-row xl:gap-10">
+            {/* <div className="hidden w-10 flex-col items-center xl:flex">
+              <a
+                href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Ffroshital.com%2Fblog%2F${slug}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconFb />
+              </a>
+              <a
+                target="_blank"
+                className=""
+                rel="noopener noreferrer"
+                href={`https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Ffroshital.com%2Fblog%2F${slug}&amp;title=${title}&amp;summary=${excerpt}&amp;source=Froshital`}
+              >
+                <IconLinkdin />
+              </a>
+            </div> */}
             <div className="flex-1">
               <div className="relative h-72 w-full  sm:h-96">
                 <Image
@@ -66,6 +84,9 @@ export default function BlogPost({
                   <CategoryLabel>{category}</CategoryLabel>
                 </div>
               </div>
+              {/* <div className="flex xl:hidden">
+                <div>Share on</div>
+              </div> */}
               <div
                 className=" prose my-5 prose-a:text-blue-600"
                 dangerouslySetInnerHTML={{ __html: marked(content) }}

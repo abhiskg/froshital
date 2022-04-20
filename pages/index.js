@@ -19,7 +19,7 @@ import {
   PhoneCall,
   Whatsapp,
 } from "../icons";
-import { medicalTourismFaq } from "@/utils/faqData";
+import { homepageFaq } from "@/utils/faqData";
 
 const DynamicTestimonial = dynamic(() => import("@/components/Testimonial"));
 const DynamicAccordion = dynamic(() => import("@/components/Accordion"));
@@ -527,7 +527,7 @@ export default function Home() {
               FAQ
             </h2>
             <div className="mt-5 lg:max-w-3xl">
-              <DynamicAccordion faq={medicalTourismFaq} page="main" />
+              <DynamicAccordion faq={homepageFaq} page="main" />
             </div>
           </section>
         </div>
