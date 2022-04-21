@@ -7,7 +7,6 @@ export { default as IconFb } from "./IconFb";
 export { default as IconInsta } from "./IconInsta";
 export { default as IconTwitter } from "./IconTwitter";
 export { default as DotCircle } from "./DotCircle";
-export { default as Check } from "./Check";
 export { default as Layer } from "./Layer";
 export { default as FooterLayer } from "./FooterLayer";
 export { default as IconSend } from "./IconSend";

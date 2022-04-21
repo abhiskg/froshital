@@ -20,6 +20,7 @@ import {
   Whatsapp,
 } from "../icons";
 import { homepageFaq } from "@/utils/faqData";
+import ServicePoints from "@/components/ServicePoints";
 
 const DynamicTestimonial = dynamic(() => import("@/components/Testimonial"));
 const DynamicAccordion = dynamic(() => import("@/components/Accordion"));
@@ -242,22 +243,17 @@ export default function Home() {
               >
                 Hospital Referrals
               </h2>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </p>
-              <p className="mt-2">Lorem ipsum dolor sit amet consectetur.</p>
-              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+              <ServicePoints points="Get the top doctors recommendation over call" />
+              <ServicePoints points="Arrange a consultation within minutes" />
+              <ServicePoints points="Compare various hospitals with our top-notch team" />
+              <ServicePoints points="Packages available at massive discounts" />
             </div>
             <button
               className={`${
                 inViewR
                   ? "translate-y-0 opacity-100"
                   : "translate-y-6 opacity-0"
-              } mt-5  transition-primary delay-500 duration-700 `}
+              } mt-7  transition-primary delay-500 duration-700 `}
             >
               <Link href="/services/hospital-referrals">
                 <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
@@ -307,22 +303,17 @@ export default function Home() {
               >
                 Medical Tourism
               </h2>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </p>
-              <p className="mt-2">Lorem ipsum dolor sit amet consectetur.</p>
-              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+              <ServicePoints points="Get rapid arrangements of travel in case of emergency" />
+              <ServicePoints points="Communicate with the top global healthcare professionals" />
+              <ServicePoints points="Get instant hotel and flight bookings" />
+              <ServicePoints points="Attractive packages for medical tourism" />
             </div>
             <button
               className={`${
                 inViewM
                   ? "translate-y-0 opacity-100"
                   : "translate-y-6 opacity-0"
-              } mt-5 transition-primary delay-500 duration-700`}
+              } mt-7 transition-primary delay-500 duration-700`}
             >
               <Link href="/services/medical-tourism">
                 <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
@@ -344,26 +335,21 @@ export default function Home() {
             >
               <h2
                 ref={refL}
-                className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl"
+                className="inline bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text  text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl"
               >
                 Lab Booking
               </h2>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
-              <p className="mt-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </p>
-              <p className="mt-2">Lorem ipsum dolor sit amet consectetur.</p>
-              <p className="mt-2">Lorem ipsum dolor sit amet.</p>
+              <ServicePoints points="Book the best labs from the comfort of your house" />
+              <ServicePoints points="Compare the labs and choose the best one" />
+              <ServicePoints points="Get Quick Lab results" />
+              <ServicePoints points="Get instant assistance from our team" />
             </div>
             <button
               className={`${
                 inViewL
                   ? "translate-y-0 opacity-100"
                   : "translate-y-6 opacity-0"
-              } mt-5 transition-primary delay-500 duration-700`}
+              } mt-7 transition-primary delay-500 duration-700`}
             >
               <Link href="/services/lab-booking">
                 <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
