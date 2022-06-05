@@ -1,9 +1,14 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: "396px",
+      ...defaultTheme.screens,
+    },
     fontFamily: {
       sans: ["Poppins", "system-ui", "Helvetica", "sans-serif"],
     },
@@ -37,7 +42,8 @@ module.exports = {
     extend: {
       colors: {
         primary: "hsl(221, 45%, 11%)",
-        secondary: "hsl(222, 70%, 9%)",
+        secondary: "#00e073",
+        secondary2: "hsl(222, 70%, 9%)",
       },
       transitionProperty: {
         primary: "opacity, transform",

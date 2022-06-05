@@ -10,11 +10,11 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-primary">
+    <footer className="bg-[#00AA54] ">
       <div className="mx-auto flex w-11/12 flex-wrap gap-5 py-10 sm:gap-10 md:w-10/12 lg:justify-between 2xl:w-auto 2xl:max-w-7xl">
         <div>
           <div className="mb-2 font-medium text-gray-300 hover:text-white">
-            Froshital Logo
+            Froshital
           </div>
           <p className="navigation text-sm">
             Top Medical Service Provider in India

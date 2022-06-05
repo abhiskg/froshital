@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { specialitiesData } from "@/utils/specialitiesData";
-import { ArrowDown } from "../icons";
+import { ArrowDown, IconLogo } from "../icons";
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -9,11 +9,11 @@ export default function Navbar() {
   const [specialitiesState, setSpecialitiesState] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 h-16 bg-primary ">
+    <header className="sticky top-0 z-40 h-16 bg-[#00AA54] ">
       <div className="relative mx-auto flex h-full w-11/12 items-center justify-between lg:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <Link href="/">
           <a>
-            <span className="text-white">Froshital</span>
+            <IconLogo />
           </a>
         </Link>
         <nav>
@@ -34,24 +34,24 @@ export default function Navbar() {
                 <ArrowDown />
               </div>
               {/* Service Dropdown */}
-              <ul className="absolute top-14 z-10 hidden rounded bg-secondary text-gray-400 group-hover:block">
+              <ul className="absolute top-14 z-10 hidden rounded bg-white text-gray-800 shadow group-hover:block">
                 <li>
                   <Link href="/services/hospital-referrals">
-                    <a className="block rounded-t py-2 px-4 hover:text-white">
+                    <a className="block rounded-t py-2 px-4 hover:text-secondary">
                       Hospital Referrals
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/medical-tourism">
-                    <a className="block whitespace-nowrap py-2 px-4 hover:text-white">
+                    <a className="block whitespace-nowrap py-2 px-4 hover:text-secondary">
                       Medical Tourism
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/services/lab-booking">
-                    <a className="block whitespace-nowrap rounded-b py-2 px-4 hover:text-white">
+                    <a className="block whitespace-nowrap rounded-b py-2 px-4 hover:text-secondary">
                       Lab Booking
                     </a>
                   </Link>
@@ -64,12 +64,12 @@ export default function Navbar() {
                 <ArrowDown />
               </div>
               {/* Specialities Dropdown */}
-              <ul className="absolute top-14 left-0 right-0 z-10 hidden rounded bg-secondary px-4 pb-4 pt-2 text-gray-400 shadow group-hover:block">
+              <ul className="absolute top-14 left-0 right-0 z-10 hidden rounded bg-white px-4 pb-4 pt-2 text-gray-800 shadow group-hover:block">
                 <div className="grid grid-cols-4 gap-x-8 ">
                   {specialitiesData.map((data) => (
                     <li key={data.id} className="">
                       <Link href={`/specialities/${data.slug}`}>
-                        <a className="block rounded-t border-b border-gray-400 py-2 hover:text-white">
+                        <a className="block rounded-t border-b border-gray-400 py-2 hover:text-secondary">
                           {data.title}
                         </a>
                       </Link>
@@ -85,14 +85,14 @@ export default function Navbar() {
               <span className="absolute top-0 left-0 h-1 w-full -translate-y-3 bg-gradient-to-br from-green-500 to-blue-500 opacity-0 transition duration-200 ease-linear group-hover:translate-y-0 group-hover:opacity-100  "></span>
               <span className="absolute bottom-0 left-0 h-1 w-full translate-y-3 bg-gradient-to-br from-green-500 to-blue-500 opacity-0 transition duration-200 ease-linear group-hover:translate-y-0 group-hover:opacity-100 "></span>
             </li> */}
-            <li className="cursor-pointer text-gray-400 hover:text-white ">
+            <li className="cursor-pointer text-gray-100 hover:text-white ">
               <Link href="/blog">
                 <a>Blog</a>
               </Link>
             </li>
             <li>
               <Link href="/contact">
-                <a className="ml-5 rounded bg-gradient-to-br from-green-500 to-blue-500 py-2 px-3 text-gray-100 transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
+                <a className="ml-5 rounded bg-secondary py-2 px-3 text-white transition-colors duration-150 ease-out hover:from-green-600 hover:to-blue-600 hover:text-white">
                   Book a Service
                 </a>
               </Link>
@@ -204,7 +204,7 @@ export default function Navbar() {
           </li>
 
           {/*Mobile Specialities Dropdown */}
-          <ul className={` ${specialitiesState ? "block " : "hidden"}`}>
+          <ul className={`${specialitiesState ? "block " : "hidden"}`}>
             {specialitiesData.map((data) => (
               <li key={data.id} className="">
                 <Link href={`/specialities/${data.slug}`}>

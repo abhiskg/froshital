@@ -3,7 +3,14 @@ import axios from "axios";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import ButtonLoader from "@/components/ButtonLoader";
-import { ArrowDown, IconMail, IconPhone, IconSend, Whatsapp } from "../icons";
+import {
+  ArrowDown,
+  IconAddress,
+  IconMail,
+  IconPhone,
+  IconSend,
+  Whatsapp,
+} from "../icons";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -78,7 +85,7 @@ const Contact = () => {
               Contact Information
             </h1>
             <div className="flex items-center gap-3">
-              <div className="rounded-full bg-gray-800 p-2 text-white">
+              <div className="rounded-full bg-green-700 p-2 text-white">
                 <IconMail />
               </div>
               <div>
@@ -92,7 +99,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="my-3 flex items-center gap-3">
-              <div className="rounded-full border bg-gray-800 p-2 text-white">
+              <div className="rounded-full border bg-green-700 p-2 text-white">
                 <IconPhone />
               </div>
               <div>
@@ -104,7 +111,7 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="rounded-full border bg-gray-800 p-2 text-white">
+              <div className="rounded-full border bg-green-700 p-2 text-white">
                 <Whatsapp scale="21" />
               </div>
               <div>
@@ -118,18 +125,27 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="relative mt-10 mr-3 rounded border-2 border-gray-200">
-              {/* Embed Google map */}
-              {/* <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8827.330741966553!2d2.308756110118289!3d48.87000842543867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc4f8f3049b%3A0xcbb47407434935db!2s18%20Av.%20des%20Champs-%C3%89lys%C3%A9es%2C%2075008%20Paris!5e0!3m2!1sfr!2sfr!4v1635492407441!5m2!1sfr!2sfr"
-                title="map"
-                scrolling="no"
-                frameBorder="0"
-                width="100%"
-                height="300"
-                className=""
-                loading="lazy"
-              /> */}
+            <div className="mt-3 flex items-center gap-3">
+              <div className="rounded-full border bg-green-700 p-2 text-white">
+                <IconAddress />
+              </div>
+              <div>
+                <h3 className=" font-medium">Address</h3>
+                <a
+                  className="font-body text-sm"
+                  href="https://wa.me/918433437690?text=Hello%20Froshital"
+                >
+                  H. No. 10 Third Floor, Old Double Storey Lajpat Nager 4, New
+                  Delhi, 110024, INDIA
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-5 mb-1 text-gray-600">
+              We are open Monday to Friday from 10 am to 7pm.
+            </div>
+            <div className="text-gray-600">
+              We are closed on weekends &amp; public holidays.
             </div>
           </div>
 
@@ -257,7 +273,7 @@ const Contact = () => {
               <button
                 onClick={() => setError(true)}
                 type="submit"
-                className="w-20 rounded bg-gray-800 py-2 text-sm font-medium text-white transition-transform duration-200 hover:scale-105 hover:bg-gray-900"
+                className="w-20 rounded bg-green-700 py-2 text-sm font-medium text-white transition-transform duration-200 hover:scale-105 hover:bg-gray-900"
               >
                 {loading ? (
                   <ButtonLoader />

@@ -8,18 +8,18 @@ export default function TestimonialCard({ name, review, image }) {
       <figure className="relative h-16 w-16 overflow-hidden rounded-full shadow-lg ">
         <Image src={image} alt={`${name} Profile Pic`} layout="fill" />
       </figure>
-      <div className="mt-1 font-medium text-gray-100">{name}</div>
+      <div className="mt-1 font-medium text-gray-700">{name}</div>
       <div className="flex text-yellow-400">
         {new Array(4).fill(null).map(() => (
           <IconStar key={Math.random()} />
         ))}
       </div>
       <div className="relative">
-        <span className="text-gray-400">
+        <span className="text-gray-800">
           <IconLeftQuote />
         </span>
-        <p className=" max-w-2xl text-center text-gray-400">{review}</p>
-        <span className="absolute right-0 -bottom-2 text-gray-400">
+        <p className=" max-w-2xl text-center text-gray-800">{review}</p>
+        <span className="absolute right-0 -bottom-2 text-gray-800">
           <IconRightQuote />
         </span>
       </div>
