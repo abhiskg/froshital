@@ -105,7 +105,7 @@ const Contact = () => {
               <div>
                 <h3 className=" font-medium">Phone</h3>
                 <a className="font-body text-sm" href="tel:+918433437690">
-                  +91-8433437690
+                  +91-8433437643636
                 </a>
               </div>
             </div>
@@ -120,7 +120,7 @@ const Contact = () => {
                   className="font-body text-sm"
                   href="https://wa.me/918433437690?text=Hello%20Froshital"
                 >
-                  +91-8433437690
+                  +91-8433437643636
                 </a>
               </div>
             </div>

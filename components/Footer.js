@@ -144,7 +144,7 @@ export default function Footer() {
             <span>
               <IconPhone />
             </span>
-            <span>+918433437690</span>
+            <span>+91843355554555</span>
           </a>
           <a
             href="mailto:contact@froshital.com"

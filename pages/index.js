@@ -94,8 +94,9 @@ export default function Home() {
       </Head> */}
 
       {/* Hero Section */}
-      <div className="mx-auto  w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-        <section className="">
+
+      <div className="bg-gray-900">
+        <section className="mx-auto  w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
           <div ref={refH}>
             <div
               ref={refA}
@@ -174,8 +175,8 @@ export default function Home() {
                 >
                   <div>
                     <a
-                      href="tel:+918433437690"
-                      className="group flex items-center gap-1 rounded bg-secondary py-2.5 px-4 hover:from-green-600 hover:to-blue-600"
+                      href="tel:+9184334376557"
+                      className="group flex items-center gap-1 rounded bg-gradient-to-br from-green-500  to-blue-500 py-2.5 px-4 hover:from-green-600 hover:to-blue-600"
                     >
                       <span className="rotate-[20deg] animate-wiggle group-hover:text-white">
                         <IconPhone />
@@ -190,7 +191,7 @@ export default function Home() {
                   </div>
                   <Link href="/contact">
                     <a>
-                      <div className="rounded bg-secondary py-2.5 px-4 text-sm font-semibold tracking-wide hover:from-green-600 hover:to-blue-600 hover:text-white xs:text-base lg:text-lg">
+                      <div className="rounded bg-gradient-to-br from-green-500  to-blue-500 py-2.5 px-4 text-sm font-semibold tracking-wide hover:from-green-600 hover:to-blue-600 hover:text-white xs:text-base lg:text-lg">
                         BOOK A SERVICE
                       </div>
                     </a>
@@ -216,225 +217,217 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* Service Section */}
-        <section className="mb-5 mt-10 md:mt-0">
-          <div
-            ref={refS}
-            className=" flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap"
-          >
-            <div>
-              <div
-                className={`${
-                  inViewR
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-2 opacity-0"
-                } transition-primary duration-700`}
-              >
-                <h2
-                  ref={refR}
-                  className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
-                >
-                  Hospital Referrals
-                </h2>
-                <ServicePoints points="Get the top doctors recommendation over call" />
-                <ServicePoints points="Arrange a consultation within minutes" />
-                <ServicePoints points="Compare various hospitals with our top-notch team" />
-                <ServicePoints points="Packages available at massive discounts" />
-              </div>
-              <button
-                className={`${
-                  inViewR
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-6 opacity-0"
-                } mt-7  transition-primary delay-500 duration-700 `}
-              >
-                <Link href="/services/hospital-referrals">
-                  <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
-                    See More
-                  </a>
-                </Link>
-              </button>
-            </div>
+      </div>
+      <div className="-mt-1 rotate-180">
+        <Layer />
+      </div>
+      {/* Service Section */}
+      <section className="mx-auto mb-5 mt-10 w-11/12  md:mt-0 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+        <div
+          ref={refS}
+          className=" flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap"
+        >
+          <div>
             <div
               className={`${
                 inViewR
                   ? "translate-x-0 opacity-100"
-                  : "translate-x-2 opacity-0"
-              } mx-auto transition-primary duration-700 lg:mx-0`}
+                  : "-translate-x-2 opacity-0"
+              } transition-primary duration-700`}
             >
-              <Image
-                src="/assets/images/hospital_referrals.png"
-                alt="hospital Referrals"
-                width={500}
-                height={600}
-              />
+              <h2
+                ref={refR}
+                className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
+              >
+                Hospital Referrals
+              </h2>
+              <ServicePoints points="Get the top doctors recommendation over call" />
+              <ServicePoints points="Arrange a consultation within minutes" />
+              <ServicePoints points="Compare various hospitals with our top-notch team" />
+              <ServicePoints points="Packages available at massive discounts" />
             </div>
+            <button
+              className={`${
+                inViewR
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              } mt-7  transition-primary delay-500 duration-700 `}
+            >
+              <Link href="/services/hospital-referrals">
+                <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
+                  See More
+                </a>
+              </Link>
+            </button>
           </div>
+          <div
+            className={`${
+              inViewR ? "translate-x-0 opacity-100" : "translate-x-2 opacity-0"
+            } mx-auto transition-primary duration-700 lg:mx-0`}
+          >
+            <Image
+              src="/assets/images/hospital_referrals.png"
+              alt="hospital Referrals"
+              width={500}
+              height={600}
+            />
+          </div>
+        </div>
 
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap">
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap">
+          <div
+            className={`${
+              inViewM ? "translate-x-0 opacity-100" : "translate-x-2 opacity-0"
+            } order-1 mx-auto transition-primary duration-700 lg:order-none lg:mx-0`}
+          >
+            <Image
+              src="/assets/images/medical_tourism.png"
+              alt="hospital Referrals"
+              width={500}
+              height={600}
+            />
+          </div>
+          <div>
             <div
               className={`${
                 inViewM
                   ? "translate-x-0 opacity-100"
-                  : "translate-x-2 opacity-0"
-              } order-1 mx-auto transition-primary duration-700 lg:order-none lg:mx-0`}
+                  : "-translate-x-2 opacity-0"
+              } transition-primary duration-700`}
             >
-              <Image
-                src="/assets/images/medical_tourism.png"
-                alt="hospital Referrals"
-                width={500}
-                height={600}
-              />
-            </div>
-            <div>
-              <div
-                className={`${
-                  inViewM
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-2 opacity-0"
-                } transition-primary duration-700`}
+              <h2
+                ref={refM}
+                className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
               >
-                <h2
-                  ref={refM}
-                  className=" bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl "
-                >
-                  Medical Tourism
-                </h2>
-                <ServicePoints points="Get rapid arrangements of travel in case of emergency" />
-                <ServicePoints points="Communicate with the top global healthcare professionals" />
-                <ServicePoints points="Get instant hotel and flight bookings" />
-                <ServicePoints points="Attractive packages for medical tourism" />
-              </div>
-              <button
-                className={`${
-                  inViewM
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-6 opacity-0"
-                } mt-7 transition-primary delay-500 duration-700`}
-              >
-                <Link href="/services/medical-tourism">
-                  <a className="rounded bg-gradient-to-br from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
-                    See More
-                  </a>
-                </Link>
-              </button>
+                Medical Tourism
+              </h2>
+              <ServicePoints points="Get rapid arrangements of travel in case of emergency" />
+              <ServicePoints points="Communicate with the top global healthcare professionals" />
+              <ServicePoints points="Get instant hotel and flight bookings" />
+              <ServicePoints points="Attractive packages for medical tourism" />
             </div>
+            <button
+              className={`${
+                inViewM
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              } mt-7 transition-primary delay-500 duration-700`}
+            >
+              <Link href="/services/medical-tourism">
+                <a className="rounded bg-gradient-to-br from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
+                  See More
+                </a>
+              </Link>
+            </button>
           </div>
+        </div>
 
-          <div className="mt-12 flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap">
-            <div>
-              <div
-                className={`${
-                  inViewL
-                    ? "translate-x-0 opacity-100"
-                    : "-translate-x-2 opacity-0"
-                } transition-primary duration-700`}
-              >
-                <h2
-                  ref={refL}
-                  className="inline bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text  text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl"
-                >
-                  Lab Booking
-                </h2>
-                <ServicePoints points="Book the best labs from the comfort of your house" />
-                <ServicePoints points="Compare the labs and choose the best one" />
-                <ServicePoints points="Get Quick Lab results" />
-                <ServicePoints points="Get instant assistance from our team" />
-              </div>
-              <button
-                className={`${
-                  inViewL
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-6 opacity-0"
-                } mt-7 transition-primary delay-500 duration-700`}
-              >
-                <Link href="/services/lab-booking">
-                  <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
-                    See More
-                  </a>
-                </Link>
-              </button>
-            </div>
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-5 lg:flex-nowrap">
+          <div>
             <div
               className={`${
                 inViewL
                   ? "translate-x-0 opacity-100"
-                  : "translate-x-2 opacity-0"
-              } mx-auto transition-primary duration-700 lg:mx-0`}
+                  : "-translate-x-2 opacity-0"
+              } transition-primary duration-700`}
             >
-              <Image
-                src="/assets/images/lab_booking.png"
-                alt="hospital Referrals"
-                width={500}
-                height={600}
-              />
+              <h2
+                ref={refL}
+                className="inline bg-gradient-to-br from-pink-500 to-amber-500 bg-clip-text  text-3xl font-bold text-transparent sm:text-4xl xl:text-5xl"
+              >
+                Lab Booking
+              </h2>
+              <ServicePoints points="Book the best labs from the comfort of your house" />
+              <ServicePoints points="Compare the labs and choose the best one" />
+              <ServicePoints points="Get Quick Lab results" />
+              <ServicePoints points="Get instant assistance from our team" />
             </div>
+            <button
+              className={`${
+                inViewL
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-6 opacity-0"
+              } mt-7 transition-primary delay-500 duration-700`}
+            >
+              <Link href="/services/lab-booking">
+                <a className="rounded bg-gradient-to-br  from-pink-500 to-amber-500 px-5 py-2.5 font-medium text-white hover:from-amber-500 hover:to-pink-500 ">
+                  See More
+                </a>
+              </Link>
+            </button>
           </div>
-
           <div
-            ref={refW}
-            className="mt-10 flex flex-col items-center justify-center"
+            className={`${
+              inViewL ? "translate-x-0 opacity-100" : "translate-x-2 opacity-0"
+            } mx-auto transition-primary duration-700 lg:mx-0`}
           >
-            <div
-              className={`${
-                inViewW ? "scale-100 opacity-100" : "scale-105 opacity-0"
-              } relative mb-10 transition-primary duration-700`}
-            >
-              <span className=" text-gray-600">
-                <IconLeftQuote />
-              </span>
-              <blockquote className="max-w-4xl text-center text-lg text-gray-800 ">
-                Global Medical Tourism Market was valued at{" "}
-                <span className="text-blue-500">$61,172</span> million in 2016,
-                and is estimated to reach at{" "}
-                <span className="text-blue-500">$165,345</span> million by 2023,
-                registering a CAGR of 15.0% from 2017 to 2023.
-              </blockquote>
-              <span className="absolute right-0 -bottom-2 text-gray-600">
-                <IconRightQuote />
-              </span>
-            </div>
-            <figure
-              className={`${
-                inViewW
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-3 opacity-0"
-              }  transition-primary delay-200 duration-700`}
-            >
-              <Image
-                src="/assets/images/world_map.png"
-                alt="World Map"
-                width={900}
-                height={400}
-              />
-            </figure>
-
-            <figcaption
-              className={`${
-                inViewW
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-3 opacity-0"
-              }  mt-2 text-sm font-medium text-gray-600 transition-primary delay-600 duration-700`}
-            >
-              Fig: World Map
-            </figcaption>
-            <div
-              className={`${
-                inViewW
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-3 opacity-0"
-              }  mt-4 text-center font-semibold transition-primary delay-700 duration-700`}
-            >
-              <span className="text-blue-500">Asia pacific region</span> would
-              exhibit an highest <span className="text-blue-500">CAGR</span>{" "}
-              15.6 % during 2017-2023
-            </div>
+            <Image
+              src="/assets/images/lab_booking.png"
+              alt="hospital Referrals"
+              width={500}
+              height={600}
+            />
           </div>
-        </section>
-        {/* <FooterLayer /> */}
-        {/* Why Choose Us Section */}
-        <section className="mt-10 flex flex-col items-center bg-primary text-[#F3F4F6]">
+        </div>
+
+        <div
+          ref={refW}
+          className="mt-10 flex flex-col items-center justify-center"
+        >
+          <div
+            className={`${
+              inViewW ? "scale-100 opacity-100" : "scale-105 opacity-0"
+            } relative mb-10 transition-primary duration-700`}
+          >
+            <span className=" text-gray-600">
+              <IconLeftQuote />
+            </span>
+            <blockquote className="max-w-4xl text-center text-lg text-gray-800 ">
+              Global Medical Tourism Market was valued at{" "}
+              <span className="text-blue-500">$61,172</span> million in 2016,
+              and is estimated to reach at{" "}
+              <span className="text-blue-500">$165,345</span> million by 2023,
+              registering a CAGR of 15.0% from 2017 to 2023.
+            </blockquote>
+            <span className="absolute right-0 -bottom-2 text-gray-600">
+              <IconRightQuote />
+            </span>
+          </div>
+          <figure
+            className={`${
+              inViewW ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }  transition-primary delay-200 duration-700`}
+          >
+            <Image
+              src="/assets/images/world_map.png"
+              alt="World Map"
+              width={900}
+              height={400}
+            />
+          </figure>
+
+          <figcaption
+            className={`${
+              inViewW ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }  mt-2 text-sm font-medium text-gray-600 transition-primary delay-600 duration-700`}
+          >
+            Fig: World Map
+          </figcaption>
+          <div
+            className={`${
+              inViewW ? "translate-y-0 opacity-100" : "translate-y-3 opacity-0"
+            }  mt-4 text-center font-semibold transition-primary delay-700 duration-700`}
+          >
+            <span className="text-blue-500">Asia pacific region</span> would
+            exhibit an highest <span className="text-blue-500">CAGR</span> 15.6
+            % during 2017-2023
+          </div>
+        </div>
+      </section>
+      <FooterLayer />
+      {/* Why Choose Us Section */}
+      <div className="-mt-10 bg-gray-900">
+        <section className="mx-auto flex w-11/12 flex-col  items-center bg-primary text-[#F3F4F6] md:w-10/12 2xl:w-auto 2xl:max-w-7xl ">
           <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent  sm:text-4xl lg:text-5xl ">
             Why Choose Us
           </h2>
@@ -450,7 +443,7 @@ export default function Home() {
                   "0"
                 )}
               </dd>
-              <dt className="text-lg font-medium leading-6 text-black">
+              <dt className="text-lg font-medium leading-6 text-white">
                 Clinics
               </dt>
             </div>
@@ -462,7 +455,7 @@ export default function Home() {
                   "0"
                 )}
               </dd>
-              <dt className="text-lg font-medium leading-6 text-black">
+              <dt className="text-lg font-medium leading-6 text-white">
                 Doctors
               </dt>
             </div>
@@ -474,7 +467,7 @@ export default function Home() {
                   "0"
                 )}
               </dd>
-              <dt className="text-lg font-medium leading-6 text-black">
+              <dt className="text-lg font-medium leading-6 text-white">
                 Happy Patients
               </dt>
             </div>
@@ -486,7 +479,7 @@ export default function Home() {
                   "0"
                 )}
               </dd>
-              <dt className="text-lg font-medium leading-6 text-black">
+              <dt className="text-lg font-medium leading-6 text-white">
                 Hospitals
               </dt>
             </div>
@@ -498,7 +491,7 @@ export default function Home() {
                   "0"
                 )}
               </dd>
-              <dt className="text-lg font-medium leading-6 text-black">
+              <dt className="text-lg font-medium leading-6 text-white">
                 Cities
               </dt>
             </div>
@@ -511,7 +504,7 @@ export default function Home() {
         </section>
 
         <DynamicTestimonial />
-        <section className="mt-16 pb-4">
+        <section className="mx-auto mt-16 w-11/12  pb-4 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
           <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
             FAQ
           </h2>
@@ -529,15 +522,15 @@ export default function Home() {
         } fixed bottom-0 left-0 right-0 z-20 flex transition-primary  duration-500 sm:top-1/2 sm:bottom-auto sm:left-auto sm:-translate-y-1/2 sm:flex-col `}
       >
         <a
-          href="tel:+918433437690"
-          className="flex-1 cursor-pointer rounded-t-md border-r bg-secondary py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-tl sm:border-b-2 sm:py-5 sm:px-1 "
+          href="tel:+9184334376557"
+          className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-tl sm:border-b-2 sm:py-5 sm:px-1 "
         >
           <PhoneCall />
           <span className="sr-only">Phone Call</span>
         </a>
         <a
           href="mailto:froshital@gmail.com"
-          className="flex-1 cursor-pointer rounded-t-md border-r bg-secondary py-2 shadow-md hover:text-white sm:rounded-none sm:border-b-2 sm:py-5 sm:px-1 "
+          className="flex-1 cursor-pointer rounded-t-md border-r bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:border-b-2 sm:py-5 sm:px-1 "
         >
           <Mail />
           <span className="sr-only">Email</span>
@@ -546,7 +539,7 @@ export default function Home() {
           href="https://wa.me/918433437690?text=Hello%20Froshital"
           target="_blank"
           rel="noopener noreferrer"
-          className=" flex-1 cursor-pointer rounded-t-md bg-secondary py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-bl sm:py-5 sm:px-1 "
+          className=" flex-1 cursor-pointer rounded-t-md bg-gradient-to-br from-green-500 to-green-300 py-2 shadow-md hover:text-white sm:rounded-none sm:rounded-bl sm:py-5 sm:px-1 "
         >
           <Whatsapp scale="28" />
           <span className="sr-only">WhatsApp</span>
@@ -555,7 +548,7 @@ export default function Home() {
 
       <div
         onClick={() => scrollTo({ top: 0 })}
-        className={`fixed bottom-6 right-6 hidden cursor-pointer rounded-full bg-[#00AA54] p-2 text-gray-100 shadow-md  transition-opacity duration-500 ease-in hover:bg-gradient-to-tr sm:block  ${
+        className={`fixed bottom-6 right-6 hidden cursor-pointer rounded-full bg-gradient-to-br from-gray-700 to-sky-700 p-2 text-gray-100 shadow-md  transition-opacity duration-500 ease-in hover:bg-gradient-to-tr sm:block  ${
           inViewA ? "opacity-0 " : "opacity-100"
         }`}
       >

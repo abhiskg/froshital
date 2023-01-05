@@ -53,7 +53,7 @@ export default function Testimonial() {
 
   return (
     <>
-      <section className="mt-20">
+      <section className="mx-auto mt-20  w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-center text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
           What Our Clients Say
         </h2>
@@ -78,7 +78,7 @@ export default function Testimonial() {
           />
         </Slider>
       </section>
-      <section className="mt-20">
+      <section className="mx-auto mt-20  w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
         <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
           Our Patners
         </h2>
