@@ -42,8 +42,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "hsl(221, 45%, 11%)",
-        secondary: "#00e073",
-        secondary2: "hsl(222, 70%, 9%)",
+        secondary: "hsl(222, 70%, 9%)",
       },
       transitionProperty: {
         primary: "opacity, transform",

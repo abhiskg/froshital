@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import PatnersCard from "./PatnersCard";
+import "slick-carousel/slick/slick-theme.css";
+import PatnersCard from "./PatnersCard";
 import TestimonialCard from "./TestimonialCard";
 
 export default function Testimonial() {
@@ -16,40 +16,40 @@ export default function Testimonial() {
     arrows: false,
   };
 
-  // var settings = {
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 6000,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 6000,
-  //   cssEase: "linear",
-  //   arrows: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1130,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 880,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 400,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // };
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 6000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000,
+    cssEase: "linear",
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1130,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 880,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
@@ -57,7 +57,7 @@ export default function Testimonial() {
         <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-center text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
           What Our Clients Say
         </h2>
-        <p className="mt-2 text-center text-lg font-medium text-gray-800">
+        <p className="mt-2 text-center text-lg font-medium text-gray-300">
           Our Clients send us bunch of smiles with our services and we love them
         </p>
         <Slider {...testimonialSettings}>
@@ -78,7 +78,7 @@ export default function Testimonial() {
           />
         </Slider>
       </section>
-      {/* <section className="mt-20">
+      <section className="mt-20">
         <h2 className="bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text  text-3xl font-bold text-transparent   sm:text-4xl lg:text-5xl ">
           Our Patners
         </h2>
@@ -114,7 +114,7 @@ export default function Testimonial() {
             />
           </Slider>
         </div>
-      </section> */}
+      </section>
     </>
   );
 }

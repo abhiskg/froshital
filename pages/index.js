@@ -6,6 +6,8 @@ import { useInView } from "react-intersection-observer";
 import Layout from "@/components/Layout";
 import {
   IconArrowUp,
+  Layer,
+  FooterLayer,
   IconHospital,
   IconLab,
   IconLeftQuote,
@@ -92,8 +94,8 @@ export default function Home() {
       </Head> */}
 
       {/* Hero Section */}
-      <div className="mx-auto w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
-        <section>
+      <div className="mx-auto  w-11/12 md:w-10/12 2xl:w-auto 2xl:max-w-7xl">
+        <section className="">
           <div ref={refH}>
             <div
               ref={refA}
@@ -430,9 +432,9 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        {/* <FooterLayer /> */}
         {/* Why Choose Us Section */}
-        <section className="mt-10 flex flex-col items-center text-[#F3F4F6]">
+        <section className="mt-10 flex flex-col items-center bg-primary text-[#F3F4F6]">
           <h2 className=" bg-gradient-to-br from-emerald-500 to-blue-500 bg-clip-text text-3xl font-bold text-transparent  sm:text-4xl lg:text-5xl ">
             Why Choose Us
           </h2>

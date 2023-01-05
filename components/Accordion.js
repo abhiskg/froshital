@@ -15,7 +15,9 @@ export default function Accordion({ faq, page }) {
       {faq.map((item, i) => (
         <div
           className={` mb-2 rounded ${
-            page === "main" ? "bg-white" : "bg-white"
+            page === "main"
+              ? "bg-gradient-to-br from-sky-900 via-gray-800 to-sky-900"
+              : "bg-white"
           }  p-3 shadow-md`}
           key={item.id}
         >
@@ -25,13 +27,13 @@ export default function Accordion({ faq, page }) {
           >
             <h3
               className={`select-none font-semibold ${
-                page === "main" ? "text-gray-500" : "text-gray-600"
+                page === "main" ? "text-gray-300" : "text-gray-600"
               }  md:text-lg`}
             >
               {item.question}
             </h3>
             <span
-              className={`${page === "main" ? "text-gray-500" : "text-black"}`}
+              className={`${page === "main" ? "text-gray-300" : "text-black"}`}
             >
               {selected === i ? "-" : "+"}
             </span>
@@ -41,7 +43,7 @@ export default function Accordion({ faq, page }) {
               selected === i
                 ? "mt-px h-auto max-h-fit "
                 : "max-h-0 overflow-hidden "
-            } text-sm ${page === "main" ? "text-gray-500" : "text-gray-600"}`}
+            } text-sm ${page === "main" ? "text-gray-300" : "text-gray-600"}`}
           >
             {item.answer}
           </p>

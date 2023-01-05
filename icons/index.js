@@ -25,3 +25,5 @@ export { default as IconRightQuote } from "./IconRightQuote";
 export { default as IconArrowUp } from "./IconArrowUp";
 export { default as IconAddress } from "./IconAddress";
 export { default as IconLogo } from "./IconLogo";
+export { default as Layer } from "./Layer";
+export { default as FooterLayer } from "./FooterLayer";

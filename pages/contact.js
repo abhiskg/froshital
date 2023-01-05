@@ -85,7 +85,7 @@ const Contact = () => {
               Contact Information
             </h1>
             <div className="flex items-center gap-3">
-              <div className="rounded-full bg-green-700 p-2 text-white">
+              <div className="rounded-full bg-gray-800 p-2 text-white">
                 <IconMail />
               </div>
               <div>
@@ -99,7 +99,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="my-3 flex items-center gap-3">
-              <div className="rounded-full border bg-green-700 p-2 text-white">
+              <div className="rounded-full border bg-gray-800 p-2 text-white">
                 <IconPhone />
               </div>
               <div>
@@ -111,7 +111,7 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="rounded-full border bg-green-700 p-2 text-white">
+              <div className="rounded-full border bg-gray-800 p-2 text-white">
                 <Whatsapp scale="21" />
               </div>
               <div>
@@ -126,7 +126,7 @@ const Contact = () => {
             </div>
 
             <div className="mt-3 flex items-center gap-3">
-              <div className="rounded-full border bg-green-700 p-2 text-white">
+              <div className="rounded-full border bg-gray-800 p-2 text-white">
                 <IconAddress />
               </div>
               <div>
@@ -273,7 +273,7 @@ const Contact = () => {
               <button
                 onClick={() => setError(true)}
                 type="submit"
-                className="w-20 rounded bg-green-700 py-2 text-sm font-medium text-white transition-transform duration-200 hover:scale-105 hover:bg-gray-900"
+                className="w-20 rounded bg-gray-800 py-2 text-sm font-medium text-white transition-transform duration-200 hover:scale-105 hover:bg-gray-900"
               >
                 {loading ? (
                   <ButtonLoader />
