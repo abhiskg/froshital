@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h2>Froshital</h2>
 
-## Getting Started
+**Website Link:** [https://froshital-asg.vercel.app/](https://froshital-asg.vercel.app/)
+**Dashboard Link:** [https://froshital-asg.vercel.app/admin/dashboard](https://froshital-asg.vercel.app/admin/dashboard)
 
-First, run the development server:
+**Credentials:**
 
-```bash
-npm run dev
-# or
-yarn dev
+```
+Admin Email: froshital34
+Admin Password: GjhGUobEr68b
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Website Overview:** Froshital is a Medical Service Providing platform with services like Medical Tourism, Hospital Referrals and Lab Booking.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Achievements:**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- I focused on design, user experience, and performance for this website. Based on Lighthouse Test results, I achieved 99% on performance, 93% on accessibility, and 92% on best practices.
+- A Markdown Static Blog Section is created for better performance and cost-effectiveness.
+- The animation on the landing page is handled by tailwind CSS and Intersection observer without any additional animation libraries, which reduced the bundle size.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Features:**
 
-## Learn More
+- A user can go to every route and can select the suitable service for him.
+- Then the user can book a service by filling up a simple form or he can contact via WhatsApp, email, or phone no.
+- A admin can log in a see all bookings and then he can contact the user and discuss further.
+- A admin can add a new blog, simply by uploading a markdown file.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Technologies Used:** NextJS, Tailwind CSS, Mongoose, Next-auth, Bcryptjs, Gray-matter, Marked, Axios, Prop-types, React-intersection-observer, React-slick, Slick-carouse
